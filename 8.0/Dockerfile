@@ -33,4 +33,7 @@ RUN wget -O - https://nightly.odoo.com/odoo.key | apt-key add - \
 COPY run.sh /run.sh
 RUN chmod u+x /run.sh
 
+# Mount /var/lib/odoo to allow restoring filestore
+VOLUME ["/var/lib/odoo"]
+
 CMD ["/run.sh"]

@@ -8,14 +8,8 @@ db_host = $DB_PORT_5432_TCP_ADDR
 db_port = $DB_PORT_5432_TCP_PORT
 db_user = odoo
 db_password = odoo
+data_dir = /var/lib/odoo
 addons_path = /usr/lib/python2.7/dist-packages/openerp/addons" > /etc/odoo/openerp-server.conf
 
-# create log file to prevent tail from displaying warnings
-touch /var/log/odoo/odoo-server.log
-chmod o+rw /var/log/odoo/odoo-server.log
-
-# start odoo
-su odoo -s /bin/bash -c "/usr/bin/openerp-server --config /etc/odoo/openerp-server.conf --addons-path /usr/lib/python2.7/dist-packages/openerp/addons"
-
-# display logs
-tail -F /var/log/odoo/odoo-server.log
+# start Odoo
+exec gosu odoo /usr/bin/openerp-server --config /etc/odoo/openerp-server.conf

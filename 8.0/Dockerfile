@@ -1,37 +1,44 @@
-FROM debian:wheezy
+FROM debian:jessie
 MAINTAINER Odoo S.A. <info@odoo.com>
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN apt-get update \
 	    && apt-get install -y \
-            ca-certificates \
-            wget \
             adduser \
+            ca-certificates \
+            curl \
+            npm \
             python-support \
-        && wget -O - https://deb.nodesource.com/setup | bash - \
-        && apt-get -y install nodejs \
         && npm install -g less less-plugin-clean-css \
-        && wget http://downloads.sourceforge.net/project/wkhtmltopdf/0.12.1/wkhtmltox-0.12.1_linux-wheezy-amd64.deb \
-        && dpkg --force-depends -i wkhtmltox-0.12.1_linux-wheezy-amd64.deb \
+        && ln -s /usr/bin/nodejs /usr/bin/node \
+        && curl -o wkhtmltox.deb -SL http://downloads.sourceforge.net/project/wkhtmltopdf/0.12.1/wkhtmltox-0.12.1_linux-wheezy-amd64.deb \
+        && echo '07d397b32f91722de683e8777df2ddd6c49662c2  wkhtmltox.deb' | sha1sum -c - \
+        && dpkg --force-depends -i wkhtmltox.deb \
         && apt-get -y install -f \
-        && rm -f wkhtmltox-0.12.1_linux-wheezy-amd64.deb
+        && rm -f wkhtmltox.deb
 
-ENV ODOO_VERSION 8.0
-ENV ODOO_RELEASE 20141209
+# Grab gosu for easy step-down from root
+RUN gpg --keyserver pgp.mit.edu --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4
+RUN curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/download/1.2/gosu-$(dpkg --print-architecture)" \
+        && curl -o /usr/local/bin/gosu.asc -SL "https://github.com/tianon/gosu/releases/download/1.2/gosu-$(dpkg --print-architecture).asc" \
+        && gpg --verify /usr/local/bin/gosu.asc \
+        && rm /usr/local/bin/gosu.asc \
+        && chmod +x /usr/local/bin/gosu
 
 # Install Odoo
-RUN wget http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
-        && dpkg --force-depends -i odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
+ENV ODOO_VERSION 8.0
+ENV ODOO_RELEASE 20141229
+RUN curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
+        && dpkg --force-depends -i odoo.deb \
         && apt-get -y install -f --no-install-recommends \
-        && rm -f odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb
+        && rm -f odoo.deb
 
-# Retrieve Odoo public key, add Odoo nightly to repo list for further updates
-RUN wget -O - https://nightly.odoo.com/odoo.key | apt-key add - \
+# Retrieve Odoo public key and add Odoo nightly to repo list for further updates
+RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 0xdef2a2198183cbb5 \
         && echo "deb http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/ ./" >> /etc/apt/sources.list
 
 # Run script
-COPY run.sh /run.sh
-RUN chmod u+x /run.sh
+COPY ./run.sh /
 
 # Mount /var/lib/odoo to allow restoring filestore
 VOLUME ["/var/lib/odoo"]

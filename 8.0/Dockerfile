@@ -38,8 +38,9 @@ RUN curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odo
 RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 0xdef2a2198183cbb5 \
         && echo "deb http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/ ./" >> /etc/apt/sources.list
 
-# Run script
+# Run script and Odoo configuration file
 COPY ./run.sh /
+COPY ./openerp-server.conf /etc/odoo/
 
 # Mount /var/lib/odoo to allow restoring filestore
 VOLUME ["/var/lib/odoo"]

@@ -11,8 +11,8 @@ RUN apt-get update \
             python-support \
         && npm install -g less less-plugin-clean-css \
         && ln -s /usr/bin/nodejs /usr/bin/node \
-        && curl -o wkhtmltox.deb -SL http://downloads.sourceforge.net/project/wkhtmltopdf/0.12.2/wkhtmltox-0.12.2_linux-jessie-amd64.deb \
-        && echo 'b6309d2bc45b6f97ad7f208810d468369a94d5c9 wkhtmltox.deb' | sha1sum -c - \
+        && curl -o wkhtmltox.deb -SL http://nightly.odoo.com/extra/wkhtmltox-0.12.2.1_linux-jessie-amd64.deb \
+        && echo 'c81fffae4c0914f95fb12e047a72edda5042b1c6 wkhtmltox.deb' | sha1sum -c - \
         && dpkg --force-depends -i wkhtmltox.deb \
         && apt-get -y install -f \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb

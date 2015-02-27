@@ -36,6 +36,9 @@ COPY ./run.sh /
 # Mount /var/lib/odoo to allow restoring filestore
 VOLUME ["/var/lib/odoo"]
 
+# Expose Odoo service
+EXPOSE 8069
+
 # Set default user when running the container
 USER odoo
 

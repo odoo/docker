@@ -42,4 +42,4 @@ COPY ./openerp-server.conf /etc/odoo/
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
 VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
-CMD ["/run.sh"]
+ENTRYPOINT ["/run.sh"]

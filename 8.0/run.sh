@@ -6,5 +6,6 @@ export PGPORT=$DB_PORT_5432_TCP_PORT
 export PGUSER=$DB_ENV_POSTGRES_USER
 export PGPASSWORD=$DB_ENV_POSTGRES_PASSWORD
 
-# start Odoo
+[ "$1" != "--" ] && exec "$@"
+
 exec /usr/bin/openerp-server --config=/etc/odoo/openerp-server.conf "$@"

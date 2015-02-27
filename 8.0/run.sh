@@ -1,5 +1,7 @@
 #!/bin/bash
 
+[ "$1" != "--" ] && exec "$@" || shift
+
 CONFIG_FILE=/etc/odoo/openerp-server.conf
 
 # sets a configuration variable in openerp-server.conf
@@ -21,4 +23,4 @@ set_config "db_user" $DB_ENV_POSTGRES_USER
 set_config "db_password" $DB_ENV_POSTGRES_PASSWORD
 
 # start Odoo
-exec gosu odoo /usr/bin/openerp-server --config $CONFIG_FILE
+exec gosu odoo /usr/bin/openerp-server --config $CONFIG_FILE "$@"

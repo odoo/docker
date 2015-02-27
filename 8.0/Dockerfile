@@ -45,4 +45,4 @@ COPY ./openerp-server.conf /etc/odoo/
 # Mount /var/lib/odoo to allow restoring filestore
 VOLUME ["/var/lib/odoo"]
 
-CMD ["/run.sh"]
+ENTRYPOINT ["/run.sh"]

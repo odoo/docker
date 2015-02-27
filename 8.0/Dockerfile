@@ -9,6 +9,7 @@ RUN apt-get update \
             curl \
             npm \
             python-support \
+            python-pyinotify \
         && npm install -g less less-plugin-clean-css \
         && ln -s /usr/bin/nodejs /usr/bin/node \
         && curl -o wkhtmltox.deb -SL http://nightly.odoo.com/extra/wkhtmltox-0.12.1.2_linux-jessie-amd64.deb \
@@ -38,7 +39,7 @@ RUN curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odo
 COPY ./run.sh /
 COPY ./openerp-server.conf /etc/odoo/
 
-# Mount /var/lib/odoo to allow restoring filestore
-VOLUME ["/var/lib/odoo"]
+# Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
+VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
 CMD ["/run.sh"]

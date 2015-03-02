@@ -9,4 +9,4 @@ export PGPASSWORD=$DB_ENV_POSTGRES_PASSWORD
 [ "$1" != "--" ] && exec "$@"
 
 shift
-exec gosu odoo /usr/bin/openerp-server --config=/etc/odoo/openerp-server.conf "$@"
+exec /usr/bin/openerp-server --config=/etc/odoo/openerp-server.conf "$@"

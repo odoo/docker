@@ -2,8 +2,9 @@ FROM debian:jessie
 MAINTAINER Odoo S.A. <info@odoo.com>
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
-RUN apt-get update \
-	    && apt-get install -y \
+RUN set -x; \
+        apt-get update \
+        && apt-get install -y \
             adduser \
             ca-certificates \
             curl \
@@ -21,7 +22,8 @@ RUN apt-get update \
 # Install Odoo
 ENV ODOO_VERSION 8.0
 ENV ODOO_RELEASE 20150303
-RUN curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
+RUN set -x; \
+        curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \

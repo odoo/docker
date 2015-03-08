@@ -1,10 +1,13 @@
 #!/bin/bash
 
+set -e
+
 # set odoo database host, port, user and password
-export PGHOST=$DB_PORT_5432_TCP_ADDR
-export PGPORT=$DB_PORT_5432_TCP_PORT
-export PGUSER=$DB_ENV_POSTGRES_USER
-export PGPASSWORD=$DB_ENV_POSTGRES_PASSWORD
+: ${PGHOST:=$DB_PORT_5432_TCP_ADDR}
+: ${PGPORT:=$DB_PORT_5432_TCP_PORT}
+: ${PGUSER:=${DB_ENV_POSTGRES_USER:='postgres'}}
+: ${PGPASSWORD:=$DB_ENV_POSTGRES_PASSWORD}
+export PGHOST PGPORT PGUSER PGPASSWORD
 
 [ "$1" != "--" ] && exec "$@"
 

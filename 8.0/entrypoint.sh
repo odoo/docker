@@ -9,6 +9,7 @@ set -e
 : ${PGPASSWORD:=$DB_ENV_POSTGRES_PASSWORD}
 export PGHOST PGPORT PGUSER PGPASSWORD
 
+# if the first arg starts with '-', prepend 'openerp-server' to $@
 if [ "${1:0:1}" = '-' ]; then
 	set -- openerp-server "$@"
 fi

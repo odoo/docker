@@ -10,7 +10,7 @@ set -e
 export PGHOST PGPORT PGUSER PGPASSWORD
 
 if [ "${1:0:1}" = '-' ]; then
-	set -- /usr/bin/openerp-server --config=/etc/odoo/openerp-server.conf "$@"
+	set -- openerp-server "$@"
 fi
 
 exec "$@"

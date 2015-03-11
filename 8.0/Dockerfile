@@ -38,8 +38,11 @@ VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 # Expose Odoo services
 EXPOSE 8069 8071
 
+# Set the default config file
+ENV OPENERP_SERVER /etc/odoo/openerp-server.conf
+
 # Set default user when running the container
 USER odoo
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/usr/bin/openerp-server", "--config=/etc/odoo/openerp-server.conf"]
+CMD ["openerp-server"]

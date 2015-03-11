@@ -27,8 +27,8 @@ RUN curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odo
         && apt-get -y install -f --no-install-recommends \
         && rm -rf /var/lib/apt/lists/* odoo.deb
 
-# Copy run script and Odoo configuration file
-COPY ./run.sh /
+# Copy entrypoint script and Odoo configuration file
+COPY ./entrypoint.sh /
 COPY ./openerp-server.conf /etc/odoo/
 RUN chown odoo /etc/odoo/openerp-server.conf
 
@@ -41,4 +41,5 @@ EXPOSE 8069 8071
 # Set default user when running the container
 USER odoo
 
-ENTRYPOINT ["/run.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["/usr/bin/openerp-server", "--config=/etc/odoo/openerp-server.conf"]

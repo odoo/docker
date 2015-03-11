@@ -9,7 +9,4 @@ set -e
 : ${PGPASSWORD:=$DB_ENV_POSTGRES_PASSWORD}
 export PGHOST PGPORT PGUSER PGPASSWORD
 
-[ "$1" != "--" ] && exec "$@"
-
-shift
-exec /usr/bin/openerp-server --config=/etc/odoo/openerp-server.conf "$@"
+exec "$@"

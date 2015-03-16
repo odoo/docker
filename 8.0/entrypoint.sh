@@ -11,6 +11,11 @@ export PGHOST PGPORT PGUSER PGPASSWORD
 
 # if the first arg starts with '-', prepend 'openerp-server' to $@
 if [ "${1:0:1}" = '-' ]; then
+	# drop the first arg if it is '--'
+	if [ "$1" = '--' ]; then
+		shift
+	fi
+
 	set -- openerp-server "$@"
 fi
 

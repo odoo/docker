@@ -12,10 +12,10 @@ export PGHOST PGPORT PGUSER PGPASSWORD
 case "$1" in
 	--)
 		shift
-		exec /usr/bin/openerp-server "$@"
+		exec openerp-server "$@"
 		;;
 	-*)
-		exec /usr/bin/openerp-server "$@"
+		exec openerp-server "$@"
 		;;
 	*)
 		exec "$@"

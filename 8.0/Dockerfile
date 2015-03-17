@@ -45,4 +45,4 @@ ENV OPENERP_SERVER /etc/odoo/openerp-server.conf
 USER odoo
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/usr/bin/openerp-server"]
+CMD ["openerp-server"]

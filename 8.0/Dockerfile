@@ -31,15 +31,15 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* odoo.deb
 
 # Copy entrypoint script and Odoo configuration file
-COPY ./entrypoint.sh /
-COPY ./openerp-server.conf /etc/odoo/
+COPY ./8.0/entrypoint.sh /
+COPY ./8.0/openerp-server.conf /etc/odoo/
 RUN chown odoo /etc/odoo/openerp-server.conf
 
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
 VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
 # Expose Odoo services
-EXPOSE 8069 8071
+EXPOSE 8080 8071
 
 # Set the default config file
 ENV OPENERP_SERVER /etc/odoo/openerp-server.conf

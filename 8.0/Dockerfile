@@ -1,8 +1,6 @@
 FROM debian:jessie
 MAINTAINER Juan Jose Scarafia <jjs@adhoc.com.ar>
 
-ENV LANG en_US.UTF-8  
-
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN set -x; \
         apt-get update \
@@ -24,7 +22,7 @@ RUN set -x; \
 
 # Install Odoo
 ENV ODOO_VERSION 8.0
-ENV ODOO_RELEASE 20150625
+ENV ODOO_RELEASE 20150401
 RUN set -x; \
         curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
         && dpkg --force-depends -i odoo.deb \

@@ -1,6 +1,15 @@
 FROM debian:jessie
 MAINTAINER Odoo S.A. <info@odoo.com>
 
+# grab gosu for easy step-down from root
+RUN gpg --keyserver pool.sks-keyservers.net --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/* \
+&& curl -o /usr/local/bin/gosu -SL "https://github.com/tianon/gosu/releases/download/1.2/gosu-$(dpkg --print-architecture)" \
+&& curl -o /usr/local/bin/gosu.asc -SL "https://github.com/tianon/gosu/releases/download/1.2/gosu-$(dpkg --print-architecture).asc" \
+&& gpg --verify /usr/local/bin/gosu.asc \
+&& rm /usr/local/bin/gosu.asc \
+&& chmod +x /usr/local/bin/gosu
+
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN set -x; \
         apt-get update \
@@ -59,9 +68,6 @@ EXPOSE 8069 8071
 
 # Set the default config file
 ENV OPENERP_SERVER /etc/odoo/openerp-server.conf
-
-# Set default user when running the container
-USER odoo
 
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["openerp-server"]

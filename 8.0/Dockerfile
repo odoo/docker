@@ -11,6 +11,10 @@ RUN set -x; \
             npm \
             python-support \
             python-pyinotify \
+            fonts-dejavu \
+            fonts-dejavu-core \
+            fonts-dejavu-extra \
+            unzip \
             locales-all \
             locales \
         && npm install -g less less-plugin-clean-css \
@@ -31,6 +35,11 @@ RUN set -x; \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \
         && rm -rf /var/lib/apt/lists/* odoo.deb
+
+# Install barcode font
+RUN curl http://www.reportlab.com/ftp/pfbfer.zip --output /tmp/pfbfer.zip \
+        && mkdir -p /usr/lib/python2.7/dist-packages/reportlab/fonts \
+        && unzip /tmp/pfbfer.zip -d /usr/lib/python2.7/dist-packages/reportlab/fonts/
 
 # Copy entrypoint script and Odoo configuration file
 COPY ./entrypoint.sh /

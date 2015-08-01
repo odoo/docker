@@ -11,6 +11,7 @@ RUN set -x; \
             npm \
             python-support \
             python-pyinotify \
+			python-unidecode \
         && npm install -g less less-plugin-clean-css \
         && ln -s /usr/bin/nodejs /usr/bin/node \
         && curl -o wkhtmltox.deb -SL http://nightly.odoo.com/extra/wkhtmltox-0.12.1.2_linux-jessie-amd64.deb \

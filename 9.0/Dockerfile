@@ -20,8 +20,8 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
 
 # Install Odoo
-ENV ODOO_VERSION 9.0
-ENV ODOO_RELEASE 20151008
+ENV ODOO_VERSION 9.0c
+ENV ODOO_RELEASE 20151209
 RUN set -x; \
         curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
         && dpkg --force-depends -i odoo.deb \

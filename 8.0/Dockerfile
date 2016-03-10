@@ -55,13 +55,10 @@ COPY ./entrypoint.sh /
 COPY ./openerp-server.conf /etc/odoo/
 RUN chown odoo /etc/odoo/openerp-server.conf
 
-ARG language=en_GB:en
-ARG lang=en_GB.UTF-8
-
-RUN locale-gen ${lang}
-ENV LANG ${lang}
-ENV LANGUAGE ${language}
-ENV LC_ALL ${lang}
+RUN locale-gen en_GB.UTF-8
+ENV LANG en_GB.UTF-8
+ENV LANGUAGE en_GB:en
+ENV LC_ALL en_GB.UTF-8
 
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
 RUN mkdir -p /mnt/extra-addons \

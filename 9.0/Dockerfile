@@ -24,7 +24,7 @@ ENV ODOO_VERSION 9.0
 ENV ODOO_RELEASE 20160405
 RUN set -x; \
         curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}c.${ODOO_RELEASE}_all.deb \
-        && echo '3633f30901619bfaeb12bb6cbb0de770856c5db6 odoo.deb' | sha1sum -c - \
+        && echo 'cd6d49bf0f2bbdc1be7557d30156e87eaa5eb5f4 odoo.deb' | sha1sum -c - \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \

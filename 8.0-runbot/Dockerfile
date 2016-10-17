@@ -3,5 +3,5 @@ MAINTAINER Peter Alabaster <peter.alabaster@opusvl.com>
 
 # Install missing system & pip dependencies for runbot module
 RUN apt-get update && apt-get install -y \
-    libfreetype6-dev libpng12-dev libxft-dev python-dev python-pip && \
+    libfreetype6-dev libpng12-dev libxft-dev python-dev python-pip git && \
         pip install matplotlib

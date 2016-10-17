@@ -20,11 +20,11 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
 
 # Install Odoo
-ENV ODOO_VERSION 8.0
-ENV ODOO_RELEASE 20161007
+ENV ODOO_VERSION 10.0
+ENV ODOO_RELEASE 20161017
 RUN set -x; \
         curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
-        && echo '73c528c6b41c144337c77825d4263ec59d342469 odoo.deb' | sha1sum -c - \
+        && echo '98c40e7543a0204d1f4bf8ac7255451437fdbb04 odoo.deb' | sha1sum -c - \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \
@@ -32,8 +32,8 @@ RUN set -x; \
 
 # Copy entrypoint script and Odoo configuration file
 COPY ./entrypoint.sh /
-COPY ./openerp-server.conf /etc/odoo/
-RUN chown odoo /etc/odoo/openerp-server.conf
+COPY ./odoo.conf /etc/odoo/
+RUN chown odoo /etc/odoo/odoo.conf
 
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
 RUN mkdir -p /mnt/extra-addons \
@@ -44,10 +44,10 @@ VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 EXPOSE 8069 8071
 
 # Set the default config file
-ENV OPENERP_SERVER /etc/odoo/openerp-server.conf
+ENV ODOO_RC /etc/odoo/odoo.conf
 
 # Set default user when running the container
 USER odoo
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["openerp-server"]
+CMD ["odoo"]

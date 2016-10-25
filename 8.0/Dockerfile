@@ -9,6 +9,8 @@ RUN set -x; \
             curl \
             node-less \
             node-clean-css \
+            python-gevent \
+            python-pip \
             python-pyinotify \
             python-renderpm \
             python-support \
@@ -17,7 +19,9 @@ RUN set -x; \
         && dpkg --force-depends -i wkhtmltox.deb \
         && apt-get -y install -f --no-install-recommends \
         && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false npm \
-        && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
+        && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
+        && pip install psycogreen==1.0
+
 
 # Install Odoo
 ENV ODOO_VERSION 8.0

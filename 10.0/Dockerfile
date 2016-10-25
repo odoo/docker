@@ -8,7 +8,6 @@ RUN set -x; \
             ca-certificates \
             curl \
             node-less \
-            node-clean-css \
             python-pyinotify \
             python-renderpm \
             python-support \

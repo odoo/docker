@@ -11,7 +11,7 @@ set -e
 DB_ARGS=("--db_user" $USER "--db_password" $PASSWORD "--db_host" $HOST "--db_port" $PORT)
 
 case "$1" in
-	--)
+	-- | openerp-server)
 		shift
 		exec openerp-server "${DB_ARGS[@]}" "$@"
 		;;

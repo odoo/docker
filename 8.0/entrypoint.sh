@@ -24,15 +24,19 @@ check_config "db_user" "$USER"
 check_config "db_password" "$PASSWORD"
 
 case "$1" in
-	-- | openerp-server)
-		shift
-		exec openerp-server "${DB_ARGS[@]}" "$@"
-		;;
-	-*)
-		exec openerp-server "${DB_ARGS[@]}" "$@"
-		;;
-	*)
-		exec "$@"
+    -- | openerp-server)
+        shift
+        if [[ "$1" == "scaffold" ]] ; then
+            exec openerp-server "$@"
+        else
+            exec openerp-server "$@" "${DB_ARGS[@]}"
+        fi
+        ;;
+    -*)
+        exec openerp-server "$@" "${DB_ARGS[@]}"
+        ;;
+    *)
+        exec "$@"
 esac
 
 exit 1

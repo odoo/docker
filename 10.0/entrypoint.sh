@@ -24,15 +24,19 @@ check_config "db_user" "$USER"
 check_config "db_password" "$PASSWORD"
 
 case "$1" in
-	-- | odoo)
-		shift
-		exec odoo "${DB_ARGS[@]}" "$@"
-		;;
-	-*)
-		exec odoo "${DB_ARGS[@]}" "$@"
-		;;
-	*)
-		exec "$@"
+    -- | odoo)
+        shift
+        if [[ "$1" == "scaffold" ]] ; then
+            exec odoo "$@"
+        else
+            exec odoo "$@" "${DB_ARGS[@]}"
+        fi
+        ;;
+    -*)
+        exec odoo "$@" "${DB_ARGS[@]}"
+        ;;
+    *)
+        exec "$@"
 esac
 
 exit 1

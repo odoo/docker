@@ -25,6 +25,7 @@ do
 
     cd "${ODOO_VERSION}/${ODOO_RELEASE}/"
     docker build -t "steenzout/odoo:${ODOO_VERSION}.${ODOO_RELEASE}" -f "Dockerfile" .
+    cd ../../
 
   done
 done

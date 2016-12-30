@@ -2,6 +2,8 @@ FROM debian:jessie
 MAINTAINER Odoo S.A. <info@odoo.com>
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
+ENV WKHTMLTOX_VERSION 0.12.1.2
+ENV WKHTMLTOX_SHA1SUM 40e8b906de658a2221b15e4e8cd82565a47d7ee8
 RUN set -x; \
         apt-get update \
         && apt-get install -y --no-install-recommends \
@@ -13,8 +15,8 @@ RUN set -x; \
             python-pyinotify \
             python-renderpm \
             python-support \
-        && curl -o wkhtmltox.deb -SL http://nightly.odoo.com/extra/wkhtmltox-0.12.1.2_linux-jessie-amd64.deb \
-        && echo '40e8b906de658a2221b15e4e8cd82565a47d7ee8 wkhtmltox.deb' | sha1sum -c - \
+        && curl -o wkhtmltox.deb -SL "http://nightly.odoo.com/extra/wkhtmltox-${WKHTMLTOX_VERSION}_linux-jessie-amd64.deb" \
+        && echo "${WKHTMLTOX_SHA1SUM} wkhtmltox.deb" | sha1sum -c - \
         && dpkg --force-depends -i wkhtmltox.deb \
         && apt-get -y install -f --no-install-recommends \
         && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false npm \
@@ -24,9 +26,10 @@ RUN set -x; \
 # Install Odoo
 ENV ODOO_VERSION 9.0
 ENV ODOO_RELEASE 20161123
+ENV ODOO_SHA1SUM c9e66e878146940ef188eaa8c9bc5da7e4306982
 RUN set -x; \
         curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}c.${ODOO_RELEASE}_all.deb \
-        && echo 'c9e66e878146940ef188eaa8c9bc5da7e4306982 odoo.deb' | sha1sum -c - \
+        && echo "${ODOO_SHA1SUM} odoo.deb" | sha1sum -c - \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \

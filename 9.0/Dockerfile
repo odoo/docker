@@ -1,9 +1,16 @@
 FROM debian:jessie
 MAINTAINER Odoo S.A. <info@odoo.com>
 
-# Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
-ENV WKHTMLTOX_VERSION 0.12.1.2
+ENV ODOO_VERSION 9.0
+
+# Set the default config file
+ENV OPENERP_SERVER /etc/odoo/openerp-server.conf
+
 ENV WKHTMLTOX_SHA1SUM 40e8b906de658a2221b15e4e8cd82565a47d7ee8
+ENV WKHTMLTOX_VERSION 0.12.1.2
+
+
+# Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN set -x; \
         apt-get update \
         && apt-get install -y --no-install-recommends \
@@ -22,37 +29,3 @@ RUN set -x; \
         && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false npm \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
         && pip install psycogreen==1.0
-
-# Install Odoo
-ENV ODOO_VERSION 9.0
-ENV ODOO_RELEASE 20161123
-ENV ODOO_SHA1SUM c9e66e878146940ef188eaa8c9bc5da7e4306982
-RUN set -x; \
-        curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}c.${ODOO_RELEASE}_all.deb \
-        && echo "${ODOO_SHA1SUM} odoo.deb" | sha1sum -c - \
-        && dpkg --force-depends -i odoo.deb \
-        && apt-get update \
-        && apt-get -y install -f --no-install-recommends \
-        && rm -rf /var/lib/apt/lists/* odoo.deb
-
-# Copy entrypoint script and Odoo configuration file
-COPY ./entrypoint.sh /
-COPY ./openerp-server.conf /etc/odoo/
-RUN chown odoo /etc/odoo/openerp-server.conf
-
-# Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
-RUN mkdir -p /mnt/extra-addons \
-        && chown -R odoo /mnt/extra-addons
-VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
-
-# Expose Odoo services
-EXPOSE 8069 8071
-
-# Set the default config file
-ENV OPENERP_SERVER /etc/odoo/openerp-server.conf
-
-# Set default user when running the container
-USER odoo
-
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["openerp-server"]

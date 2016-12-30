@@ -1,11 +1,6 @@
 FROM debian:jessie
 MAINTAINER Odoo S.A. <info@odoo.com>
 
-ENV ODOO_VERSION 9.0
-
-# Set the default config file
-ENV OPENERP_SERVER /etc/odoo/openerp-server.conf
-
 ENV WKHTMLTOX_SHA1SUM 40e8b906de658a2221b15e4e8cd82565a47d7ee8
 ENV WKHTMLTOX_VERSION 0.12.1.2
 

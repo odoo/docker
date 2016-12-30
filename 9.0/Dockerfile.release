@@ -4,6 +4,9 @@ MAINTAINER Pedro Salgado "steenzout@ymail.com"
 ENV ODOO_RELEASE ${ODOO_RELEASE}
 ENV ODOO_SHA1SUM ${ODOO_SHA1SUM}
 
+# Set the default config file
+ENV OPENERP_SERVER /etc/odoo/openerp-server.conf
+
 # Install Odoo
 RUN set -x; \
         curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}c.${ODOO_RELEASE}_all.deb \
@@ -14,8 +17,8 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* odoo.deb
 
 # Copy entrypoint script and Odoo configuration file
-COPY ./entrypoint.sh /
-COPY ./openerp-server.conf /etc/odoo/
+COPY "${ODOO_VERSION}/entrypoint.sh" /
+COPY "${ODOO_VERSION}/openerp-server.conf" /etc/odoo/openerp-server.conf
 RUN chown odoo /etc/odoo/openerp-server.conf
 
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons

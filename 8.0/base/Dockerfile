@@ -17,7 +17,7 @@ RUN set -x; \
             python-pyinotify \
             python-renderpm \
             python-support \
-        && curl -o wkhtmltox.deb -SL http://nightly.odoo.com/extra/wkhtmltox-${WKHTMLTOX_VERSION}_linux-jessie-amd64.deb \
+        && curl -o wkhtmltox.deb -SL "http://nightly.odoo.com/extra/wkhtmltox-${WKHTMLTOX_VERSION}_linux-jessie-amd64.deb" \
         && echo "${WKHTMLTOX_SHA1SUM} wkhtmltox.deb" | sha1sum -c - \
         && dpkg --force-depends -i wkhtmltox.deb \
         && apt-get -y install -f --no-install-recommends \

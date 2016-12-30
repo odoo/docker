@@ -33,5 +33,12 @@ EOF"
 $(cat ${ODOO_VERSION}/Dockerfile.release)
 EOF"
 
+    cp "${ODOO_VERSION}/entrypoint.sh" "${ODOO_VERSION}/${ODOO_RELEASE}/"
+    if [ "${ODOO_VERSION}" == '10.0' ]; then
+      cp 10.0/odoo.conf "${ODOO_VERSION}/${ODOO_RELEASE}/"
+    else
+      cp "${ODOO_VERSION}/openerp-server.conf" "${ODOO_VERSION}/${ODOO_RELEASE}/"
+    fi
+
   done
 done

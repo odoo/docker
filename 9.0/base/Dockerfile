@@ -4,7 +4,6 @@ MAINTAINER Odoo S.A. <info@odoo.com>
 ENV WKHTMLTOX_SHA1SUM 40e8b906de658a2221b15e4e8cd82565a47d7ee8
 ENV WKHTMLTOX_VERSION 0.12.1.2
 
-
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN set -x; \
         apt-get update \

@@ -18,7 +18,7 @@ RUN set -x; \
 
 # Copy entrypoint script and Odoo configuration file
 COPY "${ODOO_VERSION}/entrypoint.sh" /
-COPY "${ODOO_VERSION}/openerp-server.conf" /etc/odoo/openerp-server.conf
+COPY "${ODOO_VERSION}/openerp-server.conf" /etc/odoo/
 RUN chown odoo /etc/odoo/openerp-server.conf
 
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons

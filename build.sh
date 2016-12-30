@@ -23,7 +23,8 @@ do
 
     echo "building steenzout/odoo:${ODOO_VERSION}.${ODOO_RELEASE}..."
 
-    docker build -t "steenzout/odoo:${ODOO_VERSION}.${ODOO_RELEASE}" -f "${ODOO_VERSION}/${ODOO_RELEASE}/Dockerfile" .
+    cd "${ODOO_VERSION}/${ODOO_RELEASE}/"
+    docker build -t "steenzout/odoo:${ODOO_VERSION}.${ODOO_RELEASE}" -f "Dockerfile" .
 
   done
 done

@@ -12,7 +12,7 @@ RUN set -x;         curl -o odoo.deb -SL http://nightly.odoo.com/9.0/nightly/deb
 
 # Copy entrypoint script and Odoo configuration file
 COPY "9.0/entrypoint.sh" /
-COPY "9.0/openerp-server.conf" /etc/odoo/openerp-server.conf
+COPY "9.0/openerp-server.conf" /etc/odoo/
 RUN chown odoo /etc/odoo/openerp-server.conf
 
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons

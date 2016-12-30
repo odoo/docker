@@ -8,7 +8,7 @@
 #
 # #####
 
-for ODOO_VERSION in 9.0
+for ODOO_VERSION in 8.0 9.0 10.0
 do
 
   for line in `cat "${ODOO_VERSION}/releases.txt"`
@@ -22,7 +22,9 @@ do
 
     echo "generating ${ODOO_VERSION}/${ODOO_RELEASE}/vars.env..."
     eval "cat > ${ODOO_VERSION}/${ODOO_RELEASE}/vars.env << EOF
-$(cat ${ODOO_VERSION}/vars.env)
+ODOO_RELEASE=${ODOO_RELEASE}
+ODOO_SHA1SUM=${ODOO_SHA1SUM}
+ODOO_VERSION=${ODOO_VERSION}
 EOF"
 
     echo "generating ${ODOO_VERSION}/${ODOO_RELEASE}/Dockerfile..."
@@ -30,9 +32,6 @@ EOF"
     eval "cat > ${ODOO_VERSION}/${ODOO_RELEASE}/Dockerfile << EOF
 $(cat ${ODOO_VERSION}/Dockerfile.release)
 EOF"
-
-    cp "${ODOO_VERSION}/entrypoint.sh" "${ODOO_VERSION}/${ODOO_RELEASE}"
-    cp "${ODOO_VERSION}/openerp-server.conf" "${ODOO_VERSION}/${ODOO_RELEASE}"
 
   done
 done

@@ -11,8 +11,8 @@ ENV OPENERP_SERVER /etc/odoo/openerp-server.conf
 RUN set -x;         curl -o odoo.deb -SL http://nightly.odoo.com/8.0/nightly/deb/odoo_8.0.20161123_all.deb         && echo 'fcc9fa35fae811958ee08a0f51dfc23242e755b6 odoo.deb' | sha1sum -c -         && dpkg --force-depends -i odoo.deb         && apt-get update         && apt-get -y install -f --no-install-recommends         && rm -rf /var/lib/apt/lists/* odoo.deb
 
 # Copy entrypoint script and Odoo configuration file
-COPY "8.0/entrypoint.sh" /
-COPY "8.0/openerp-server.conf" /etc/odoo/
+COPY "./entrypoint.sh" /
+COPY "./openerp-server.conf" /etc/odoo/
 RUN chown odoo /etc/odoo/openerp-server.conf
 
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons

@@ -8,7 +8,7 @@
 #
 # #####
 
-for ODOO_VERSION in 9.0
+for ODOO_VERSION in 8.0 9.0 10.0
 do
 
   echo "building steenzout/odoo:${ODOO_VERSION}-base..."

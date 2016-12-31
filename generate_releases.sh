@@ -15,7 +15,7 @@
 #
 # #####
 
-ARG_START="$(echo ${1} | tr -d '-' )"
+ARG_START="${1}"
 
 fmt_date='%Y-%m-%d'
 today=`date "+${fmt_date}"`
@@ -38,6 +38,7 @@ do
     echo "[ERROR] unknown version ${ODOO_VERSION}"
     exit 1
   fi
+  echo "ARG_START=${ARG_START} day=${day}"
 
   echo "collecting SHA1 checksums for ${ODOO_VERSION} starting at ${day}..."
   rm -f "${ODOO_VERSION}/releases.txt.tmp"
@@ -71,7 +72,7 @@ do
   done
 
   echo "generating ${ODOO_VERSION}/releases.txt..."
-  paste "${ODOO_VERSION}/releases.txt" "${ODOO_VERSION}/releases.txt.tmp" | sort -r | uniq > "${ODOO_VERSION}/releases.txt"
-  rm "${ODOO_VERSION}/releases.txt.tmp"
+  paste "${ODOO_VERSION}/releases.txt" "${ODOO_VERSION}/releases.txt.tmp" | sort -r | uniq > "${ODOO_VERSION}/releases.txt.out"
+  mv "${ODOO_VERSION}/releases.txt.out" "${ODOO_VERSION}/releases.txt"
 
 done

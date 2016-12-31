@@ -49,11 +49,17 @@ There are some auxiliary bash scripts to run docker container locally.
 
 ```bash
 # start an Odoo release container
+$ bash start_container.sh 9.0 2016-11-23
+# or
 $ bash start_container.sh 9.0 20161123
 
 # open interactive session on the Odoo container
+$ bash login.sh 9.0 2016-11-23
+# or
 $ bash login.sh 9.0 20161123
 
 # stop and destroy
+$ bash stop_container.sh 9.0 2016-11-23
+# or
 $ bash stop_container.sh 9.0 20161123
 ```

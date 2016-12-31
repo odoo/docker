@@ -14,7 +14,7 @@
 
 
 ODOO_VERSION="$1"
-ODOO_RELEASE="$2"
+ODOO_RELEASE=$(echo "${2}" | tr -d '-')
 
 
 validation() {

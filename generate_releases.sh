@@ -15,7 +15,7 @@
 #
 # #####
 
-ARG_START="${1}"
+ARG_START="${1}"ec
 
 fmt_date='%Y-%m-%d'
 today=`date "+${fmt_date}"`
@@ -38,7 +38,6 @@ do
     echo "[ERROR] unknown version ${ODOO_VERSION}"
     exit 1
   fi
-  echo "ARG_START=${ARG_START} day=${day}"
 
   echo "collecting SHA1 checksums for ${ODOO_VERSION} starting at ${day}..."
   rm -f "${ODOO_VERSION}/releases.txt.tmp"

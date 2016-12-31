@@ -7,6 +7,7 @@ This repo is structured the following way:
     - `Dockerfile`: file to build the `${ODOO_VERSION}-base` container image
   - `${ODOO_RELEASE}/`
     - `Dockerfile`: file to build the `${ODOO_VERSION}.${ODOO_RELEASE}` container image taking `${ODOO_VERSION}-base` as a base
+  - `latest`: symlink to the latest `${ODOO_RELEASE}` release
 
 This repo contains a few bash scripts to
 help you generate docker container images.

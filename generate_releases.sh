@@ -3,18 +3,32 @@
 #
 # Generate Odoo release.txt files.
 #
+# usage:
+#   # all
+#   bash generate_releases.sh
+#
+#   # from a specific day
+#   bash generate_release.sh 2016-12-30
+#
 # author: Pedro Salgado <steenzout@ymail.com>
-# version: 1.0
+# version: 1.2
 #
 # #####
 
+ARG_START="$(echo ${1} | tr -d '-' )"
+
 fmt_date='%Y-%m-%d'
 today=`date "+${fmt_date}"`
+epoch=$(date -j -f "${fmt_date}" ${today} "+%s")
+next=$((${epoch} + 86400))
+tomorrow=$(date -j -f "%s" ${next} "+${fmt_date}")
 
 for ODOO_VERSION in 8.0 9.0 10.0
 do
 
-  if [[ "${ODOO_VERSION}" == "8.0" ]]; then
+  if [[ "${ARG_START}" != "" ]]; then
+    day="${ARG_START}"
+  elif [[ "${ODOO_VERSION}" == "8.0" ]]; then
     day=2014-11-28
   elif [[ "${ODOO_VERSION}" == "9.0" ]]; then
     day=2016-01-01
@@ -26,9 +40,9 @@ do
   fi
 
   echo "collecting SHA1 checksums for ${ODOO_VERSION} starting at ${day}..."
-  rm "${ODOO_VERSION}/releases.txt.tmp"
+  rm -f "${ODOO_VERSION}/releases.txt.tmp"
 
-  while [ "${day}" != "${today}" ]; do
+  while [ "${day}" != "${tomorrow}" ]; do
 
     release="$(echo ${day} | tr -d '-' )"
 
@@ -52,12 +66,12 @@ do
 
     epoch=$(date -j -f "${fmt_date}" ${day} "+%s")
     next=$((${epoch} + 86400))
-    day=$(date -j -f "%s" $next "+${fmt_date}")
+    day=$(date -j -f "%s" ${next} "+${fmt_date}")
 
   done
 
   echo "generating ${ODOO_VERSION}/releases.txt..."
-  cat "${ODOO_VERSION}/releases.txt.tmp" | sort -r > "${ODOO_VERSION}/releases.txt"
+  paste "${ODOO_VERSION}/releases.txt" "${ODOO_VERSION}/releases.txt.tmp" | sort -r | uniq > "${ODOO_VERSION}/releases.txt"
   rm "${ODOO_VERSION}/releases.txt.tmp"
 
 done

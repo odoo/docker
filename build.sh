@@ -3,10 +3,19 @@
 #
 # Build Odoo 8.0/9.0/10.0 base+release docker container images.
 #
+# usage:
+#   # all
+#   bash build.sh
+#
+#   # single version
+#   bash build.sh 20161230
+#
 # author: Pedro Salgado <steenzout@ymail.com>
 # version: 1.0
 #
 # #####
+
+ARG_RELEASE="${1}"
 
 for ODOO_VERSION in 8.0 9.0 10.0
 do
@@ -21,11 +30,16 @@ do
     ODOO_RELEASE="${line_array[0]}"
     ODOO_SHA1SUM="${line_array[1]}"
 
-    echo "building steenzout/odoo:${ODOO_VERSION}.${ODOO_RELEASE}..."
+    echo "'${ARG_RELEASE}' == '${ODOO_RELEASE}'"
 
-    cd "${ODOO_VERSION}/${ODOO_RELEASE}/"
-    docker build -t "steenzout/odoo:${ODOO_VERSION}.${ODOO_RELEASE}" -f "Dockerfile" .
-    cd ../../
+    if [[ "${ARG_RELEASE}" == "" || "${ARG_RELEASE}" == "${ODOO_RELEASE}" ]]; then
+
+      echo "building steenzout/odoo:${ODOO_VERSION}.${ODOO_RELEASE}..."
+      cd "${ODOO_VERSION}/${ODOO_RELEASE}/"
+      docker build -t "steenzout/odoo:${ODOO_VERSION}.${ODOO_RELEASE}" -f "Dockerfile" .
+      cd ../../
+
+    fi
 
   done
 done

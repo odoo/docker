@@ -7,7 +7,7 @@
 #   # all
 #   bash build.sh
 #
-#   # single version
+#   # single release
 #   bash build.sh 20161230
 #
 # author: Pedro Salgado <steenzout@ymail.com>
@@ -29,8 +29,6 @@ do
     IFS=':' read -a line_array <<< "$line"
     ODOO_RELEASE="${line_array[0]}"
     ODOO_SHA1SUM="${line_array[1]}"
-
-    echo "'${ARG_RELEASE}' == '${ODOO_RELEASE}'"
 
     if [[ "${ARG_RELEASE}" == "" || "${ARG_RELEASE}" == "${ODOO_RELEASE}" ]]; then
 

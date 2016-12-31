@@ -11,6 +11,10 @@ This repo is structured the following way:
 This repo contains a few bash scripts to
 help you generate docker container images.
 
+`generate_releases.sh` will go to nightly.odoo.com and
+grab the available releases and SHA1 checksum and
+rebuild the `${ODOO_VERSION}/releases.txt`.
+
 `generate.sh` will read the `${ODOO_VERSION}/releases.txt` file,
 parse the `release:checksum` lines and
 generate the `${ODOO_VERSION}/${ODOO_RELEASE}/Dockerfile`.

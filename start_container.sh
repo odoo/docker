@@ -8,7 +8,7 @@
 #   bash start_container.sh 9.0 20160101
 #
 # author: Pedro Salgado <steenzout@ymail.com>
-# version: 1.0
+# version: 1.2
 #
 # #####
 

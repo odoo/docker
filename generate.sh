@@ -3,10 +3,19 @@
 #
 # Generate Odoo release specific Dockerfiles.
 #
+# usage:
+#   # all
+#   bash generate.sh
+#
+#   # single release
+#   bash generate.sh 20161230
+#
 # author: Pedro Salgado <steenzout@ymail.com>
 # version: 1.0
 #
 # #####
+
+ARG_RELEASE="${1}"
 
 for ODOO_VERSION in 8.0 9.0 10.0
 do
@@ -18,26 +27,30 @@ do
     ODOO_RELEASE="${line_array[0]}"
     ODOO_SHA1SUM="${line_array[1]}"
 
-    mkdir -p "${ODOO_VERSION}/${ODOO_RELEASE}" || true
+    if [[ "${ARG_RELEASE}" == "" || "${ARG_RELEASE}" == "${ODOO_RELEASE}" ]]; then
 
-    echo "generating ${ODOO_VERSION}/${ODOO_RELEASE}/vars.env..."
-    eval "cat > ${ODOO_VERSION}/${ODOO_RELEASE}/vars.env << EOF
+      mkdir -p "${ODOO_VERSION}/${ODOO_RELEASE}" || true
+
+      echo "generating ${ODOO_VERSION}/${ODOO_RELEASE}/vars.env..."
+      eval "cat > ${ODOO_VERSION}/${ODOO_RELEASE}/vars.env << EOF
 ODOO_RELEASE=${ODOO_RELEASE}
 ODOO_SHA1SUM=${ODOO_SHA1SUM}
 ODOO_VERSION=${ODOO_VERSION}
 EOF"
 
-    echo "generating ${ODOO_VERSION}/${ODOO_RELEASE}/Dockerfile..."
-    source "${ODOO_VERSION}/${ODOO_RELEASE}/vars.env"
-    eval "cat > ${ODOO_VERSION}/${ODOO_RELEASE}/Dockerfile << EOF
+      echo "generating ${ODOO_VERSION}/${ODOO_RELEASE}/Dockerfile..."
+      source "${ODOO_VERSION}/${ODOO_RELEASE}/vars.env"
+      eval "cat > ${ODOO_VERSION}/${ODOO_RELEASE}/Dockerfile << EOF
 $(cat ${ODOO_VERSION}/Dockerfile.release)
 EOF"
 
-    cp "${ODOO_VERSION}/entrypoint.sh" "${ODOO_VERSION}/${ODOO_RELEASE}/"
-    if [ "${ODOO_VERSION}" == '10.0' ]; then
-      cp 10.0/odoo.conf "${ODOO_VERSION}/${ODOO_RELEASE}/"
-    else
-      cp "${ODOO_VERSION}/openerp-server.conf" "${ODOO_VERSION}/${ODOO_RELEASE}/"
+      cp "${ODOO_VERSION}/entrypoint.sh" "${ODOO_VERSION}/${ODOO_RELEASE}/"
+      if [ "${ODOO_VERSION}" == '10.0' ]; then
+        cp 10.0/odoo.conf "${ODOO_VERSION}/${ODOO_RELEASE}/"
+      else
+        cp "${ODOO_VERSION}/openerp-server.conf" "${ODOO_VERSION}/${ODOO_RELEASE}/"
+      fi
+
     fi
 
   done

@@ -20,7 +20,7 @@ rebuild the `${ODOO_VERSION}/releases.txt`.
 $ bash generate_releases.sh
 
 # single release
-$ bash generate_releases.sh 20161230
+$ bash generate_releases.sh 2016-12-30
 ```
 
 `generate.sh` will read the `${ODOO_VERSION}/releases.txt` file,
@@ -32,7 +32,7 @@ generate the `${ODOO_VERSION}/${ODOO_RELEASE}/Dockerfile`.
 $ bash generate.sh
 
 # single release
-$ bash generate.sh 20161230
+$ bash generate.sh 2016-12-30
 ```
 
 `build.sh` is used to build the docker container images locally.
@@ -42,7 +42,7 @@ $ bash generate.sh 20161230
 $ bash build.sh
 
 # single release
-$ bash build.sh 20161230
+$ bash build.sh 2016-12-30
 ```
 
 There are some auxiliary bash scripts to run docker container locally.

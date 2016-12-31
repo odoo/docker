@@ -15,7 +15,7 @@
 #
 # #####
 
-ARG_RELEASE="${1}"
+ARG_RELEASE=$(echo "${1}" | tr -d '-')
 
 for ODOO_VERSION in 8.0 9.0 10.0
 do

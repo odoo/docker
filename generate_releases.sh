@@ -15,13 +15,13 @@
 #
 # #####
 
-ARG_START="${1}"ec
+ARG_START="${1}"
 
 fmt_date='%Y-%m-%d'
 today=`date "+${fmt_date}"`
 epoch=$(date -j -f "${fmt_date}" ${today} "+%s")
 next=$((${epoch} + 86400))
-tomorrow=$(date -j -f "%s" ${next} "+${fmt_date}")
+tomorrow=$(date -j -f "%s" ${next} "+${fmt_date}" | tr -d '-')
 
 for ODOO_VERSION in 8.0 9.0 10.0
 do
@@ -39,12 +39,12 @@ do
     exit 1
   fi
 
+  release=$(echo "$day" | tr -d '-')
+
   echo "collecting SHA1 checksums for ${ODOO_VERSION} starting at ${day}..."
   rm -f "${ODOO_VERSION}/releases.txt.tmp"
 
-  while [ "${day}" != "${tomorrow}" ]; do
-
-    release="$(echo ${day} | tr -d '-' )"
+  while [ "${release}" != "${tomorrow}" ]; do
 
     if [[ "${ODOO_VERSION}" == '9.0' ]]; then
       basename="odoo_${ODOO_VERSION}c.${release}"
@@ -66,7 +66,8 @@ do
 
     epoch=$(date -j -f "${fmt_date}" ${day} "+%s")
     next=$((${epoch} + 86400))
-    day=$(date -j -f "%s" ${next} "+${fmt_date}")
+    day=$(date -j -f "%s" ${next} "+${fmt_date}" | tr -d '-')
+    release=$(echo "$day" | tr -d '-')
 
   done
 

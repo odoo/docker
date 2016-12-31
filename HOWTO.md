@@ -15,7 +15,7 @@ help you generate docker container images.
 grab the available releases and SHA1 checksum and
 rebuild the `${ODOO_VERSION}/releases.txt`.
 
-`generate.sh` will read the `${ODOO_VERSION}/releases.txt` file,
+`generate.sh <optional:release>` will read the `${ODOO_VERSION}/releases.txt` file,
 parse the `release:checksum` lines and
 generate the `${ODOO_VERSION}/${ODOO_RELEASE}/Dockerfile`.
 
@@ -26,7 +26,11 @@ $ bash generate.sh
 `build.sh` is used to build the docker container images locally.
 
 ```bash
+# all
 $ bash build.sh
+
+# single release
+$ bash build.sh 20161230
 ```
 
 There are some auxiliary bash scripts to run docker container locally.

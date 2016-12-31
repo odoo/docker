@@ -42,3 +42,17 @@ EOF"
 
   done
 done
+
+
+# link latest
+
+for ODOO_VERSION in 8.0 9.0 10.0
+do
+  latest="$(find ${ODOO_VERSION} -type d | grep -v base | sort -r | head -n 1 | awk -F'/' '{ print $2 }')"
+
+  echo "changing symlink from ${ODOO_VERSION}/${latest} to ${ODOO_VERSION}/latest..."
+  rm "${ODOO_VERSION}/latest" || true
+  cd ${ODOO_VERSION}
+  ln -s "${latest}" latest
+  cd ..
+done

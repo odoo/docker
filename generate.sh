@@ -11,7 +11,7 @@
 #   bash generate.sh 20161230
 #
 # author: Pedro Salgado <steenzout@ymail.com>
-# version: 1.0
+# version: 1.2
 #
 # #####
 

@@ -74,5 +74,6 @@ do
   echo "generating ${ODOO_VERSION}/releases.txt..."
   paste -d '\n' "${ODOO_VERSION}/releases.txt" "${ODOO_VERSION}/releases.txt.tmp" | sort -r | uniq > "${ODOO_VERSION}/releases.txt.out"
   mv "${ODOO_VERSION}/releases.txt.out" "${ODOO_VERSION}/releases.txt"
+  rm "${ODOO_VERSION}/releases.txt.tmp"
 
 done

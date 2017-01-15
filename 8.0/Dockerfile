@@ -41,7 +41,12 @@ RUN chown odoo /etc/odoo/openerp-server.conf
 
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
 RUN mkdir -p /mnt/extra-addons \
-        && chown -R odoo /mnt/extra-addons
+    && chown -R odoo:odoo /mnt/extra-addons \
+    # @BUGFIX
+    # During the database creation process, the system creates an empty filestore dir
+    # with root:root permission, returning a permission error.
+    && mkdir -m 700 /var/lib/odoo/filestore \
+    && chown -R odoo:odoo /var/lib/odoo/filestore
 VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
 # Expose Odoo services

@@ -5,6 +5,7 @@ MAINTAINER Odoo S.A. <info@odoo.com>
 RUN set -x; \
         apt-get update \
         && apt-get install -y --no-install-recommends \
+            git-core \
             ca-certificates \
             curl \
             node-less \
@@ -21,6 +22,7 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
         && pip install psycogreen==1.0
 
+
 # Install Odoo
 ENV ODOO_VERSION 10.0
 ENV ODOO_RELEASE 20170815
@@ -31,6 +33,13 @@ RUN set -x; \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \
         && rm -rf /var/lib/apt/lists/* odoo.deb
+
+RUN rm -rf /usr/lib/python2.7/dist-packages/odoo
+RUN git clone https://github.com/osbzr/base.git /usr/lib/python2.7/dist-packages/odoo1
+RUN mv /usr/lib/python2.7/dist-packages/odoo1/odoo /usr/lib/python2.7/dist-packages/odoo
+RUN RUN git clone https://github.com/osbzr/gooderp_addons.git /usr/lib/python2.7/dist-packages/odoo/addons
+RUN mv /usr/lib/python2.7/dist-packages/odoo1/odoo-bin /usr/bin/odoo
+RUN rm -rf /usr/lib/python2.7/dist-packages/odoo1
 
 # Copy entrypoint script and Odoo configuration file
 COPY ./entrypoint.sh /

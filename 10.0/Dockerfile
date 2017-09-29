@@ -19,10 +19,9 @@ RUN set -x; \
         && apt-get -y install -f --no-install-recommends \
         && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false -o APT::AutoRemove::SuggestsImportant=false npm \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
-        && pip install psycogreen==1.0
-        
-# Add requests unicodecsv, python libraries required for base_location_geonames_import module
-RUN pip install requests unicodecsv
+        && pip install psycogreen==1.0 
+        # requests unicodecsv, python libraries required for base_location_geonames_import module
+        && pip install requests unicodecsv
 
 # Install Odoo
 ENV ODOO_VERSION 10.0

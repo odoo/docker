@@ -22,11 +22,11 @@ RUN set -x; \
         && pip install psycogreen==1.0
 
 # Install Odoo
-ENV ODOO_VERSION 9.0
+ENV ODOO_VERSION 10.0
 ENV ODOO_RELEASE 20170815
 RUN set -x; \
-        curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}c.${ODOO_RELEASE}_all.deb \
-        && echo '3d3b34cbbcd5f3fb739e85a2c855955322c0f328 odoo.deb' | sha1sum -c - \
+        curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
+        && echo '08d21e6419a72be7a3ad784df7a6fc8a46bbe7d9 odoo.deb' | sha1sum -c - \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \
@@ -34,8 +34,8 @@ RUN set -x; \
 
 # Copy entrypoint script and Odoo configuration file
 COPY ./entrypoint.sh /
-COPY ./openerp-server.conf /etc/odoo/
-RUN chown odoo /etc/odoo/openerp-server.conf
+COPY ./odoo.conf /etc/odoo/
+RUN chown odoo /etc/odoo/odoo.conf
 
 # Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
 RUN mkdir -p /mnt/extra-addons \
@@ -46,10 +46,10 @@ VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 EXPOSE 8069 8071
 
 # Set the default config file
-ENV OPENERP_SERVER /etc/odoo/openerp-server.conf
+ENV ODOO_RC /etc/odoo/odoo.conf
 
 # Set default user when running the container
 USER odoo
 
 ENTRYPOINT ["/entrypoint.sh"]
-CMD ["openerp-server"]
+CMD ["odoo"]

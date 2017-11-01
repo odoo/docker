@@ -2,13 +2,7 @@ FROM debian:stretch
 MAINTAINER Odoo S.A. <info@odoo.com>
 
 # Generate locale C.UTF-8 for postgres and general locale data
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update -qq && apt-get install -y locales -qq
-RUN echo 'C.UTF-8 UTF-8' >> /etc/locale.gen && locale-gen
-RUN dpkg-reconfigure locales && /usr/sbin/update-locale LANG=C.UTF-8
 ENV LANG C.UTF-8
-ENV LANGUAGE C.UTF-8
-ENV LC_ALL C.UTF-8
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN set -x; \

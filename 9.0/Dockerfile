@@ -21,6 +21,13 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
         && pip install psycogreen==1.0
 
+## Uncomment this lines to add ldap auth support 
+#RUN set -x; \
+#    	 apt-get install -y --no-install-recommends \
+#	     python-dev gcc libldap2-dev libssl-dev ; \
+#	 pip install pyldap    
+
+
 # Install Odoo
 ENV ODOO_VERSION 9.0
 ENV ODOO_RELEASE 20171030

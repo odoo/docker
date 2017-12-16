@@ -23,6 +23,13 @@ RUN set -x; \
         && cp wkhtmltox/bin/* /usr/local/bin/ \
         && cp -r wkhtmltox/share/man/man1 /usr/local/share/man/
 
+
+## Uncomment this lines to add ldap auth support 
+#RUN set -x; \
+#    	 apt-get install -y --no-install-recommends \
+#	     python3-dev gcc libldap2-dev libssl-dev ; \
+#	 pip3 install pyldap    
+
 # Install Odoo
 ENV ODOO_VERSION 11.0
 ENV ODOO_RELEASE 20171030

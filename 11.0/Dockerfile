@@ -6,9 +6,10 @@ ENV LANG C.UTF-8
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN set -x; \
-        apt-get update \
+        apt-get update --fix-missing \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
+            fonts-noto \
             curl \
             node-less \
             python3-pip \

@@ -1,4 +1,4 @@
-FROM odoo:11.0
+FROM wongnai/odoo:11.0-20180516
 
 USER root
 

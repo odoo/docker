@@ -13,7 +13,7 @@ DB_ARGS=()
 function check_config() {
     param="$1"
     value="$2"
-    if ! grep -q -E "^\s*\b${param}\b\s*=" "$OPENERP_SERVER" ; then
+    if ! grep -q -E "^\s*\b${param}\b\s*=" "$ODOO_RC" ; then
         DB_ARGS+=("--${param}")
         DB_ARGS+=("${value}")
    fi;
@@ -24,16 +24,16 @@ check_config "db_user" "$USER"
 check_config "db_password" "$PASSWORD"
 
 case "$1" in
-    -- | openerp-server)
+    -- | odoo)
         shift
         if [[ "$1" == "scaffold" ]] ; then
-            exec openerp-server "$@"
+            exec odoo "$@"
         else
-            exec openerp-server "$@" "${DB_ARGS[@]}"
+            exec odoo "$@" "${DB_ARGS[@]}"
         fi
         ;;
     -*)
-        exec openerp-server "$@" "${DB_ARGS[@]}"
+        exec odoo "$@" "${DB_ARGS[@]}"
         ;;
     *)
         exec "$@"

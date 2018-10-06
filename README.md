@@ -1,6 +1,9 @@
-About this Repo
+Odoo Docker
 ======
 
-This is the Git repo of the official Docker image for [Odoo](https://registry.hub.docker.com/_/odoo/). See the Hub page for the full readme on how to use the Docker image and for information regarding contributing and issues.
+This is a repository for frequently updated Odoo Nightly-version Docker images.
 
-The full readme is generated over in [docker-library/docs](https://github.com/docker-library/docs), specifically in [docker-library/docs/odoo](https://github.com/docker-library/docs/tree/master/odoo).
+More information about installing and using Odoo in a container can be found in Unkkuri's blog post at https://unkkuri.com/blog/unkkuri-blog-1/post/install-odoo-version-11-in-docker-container-21.
+
+Link to mainteiner home page https://unkkuri.com/. Link to source repository in GitHub https://github.com/veivaa/docker.
+

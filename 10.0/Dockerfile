@@ -23,10 +23,10 @@ RUN set -x; \
 
 # Install Odoo
 ENV ODOO_VERSION 10.0
-ENV ODOO_RELEASE 20181009
+ENV ODOO_RELEASE 20181010
 RUN set -x; \
         curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
-        && echo '95ee2c3396820573d8e3fc5ce36aa1174ecf6d26 odoo.deb' | sha1sum -c - \
+        && echo '9d846960c6cac13f17516f6cdf05e13fc9348418 odoo.deb' | sha1sum -c - \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \

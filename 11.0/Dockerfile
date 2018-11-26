@@ -10,13 +10,16 @@ RUN set -x; \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
             curl \
+            libssl1.0-dev \
             node-less \
             python3-pip \
-            python3-setuptools \
+            python3-pyldap \
+            python3-qrcode \
             python3-renderpm \
-            libssl1.0-dev \
-            xz-utils \
+            python3-setuptools \
+            python3-vobject \
             python3-watchdog \
+            xz-utils \
         && curl -o wkhtmltox.tar.xz -SL https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz \
         && echo '3f923f425d345940089e44c1466f6408b9619562 wkhtmltox.tar.xz' | sha1sum -c - \
         && tar xvf wkhtmltox.tar.xz \

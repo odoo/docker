@@ -24,6 +24,13 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb \
         && pip install psycogreen==1.0
 
+# install latest postgresql-client
+RUN set -x; \
+        echo 'deb http://apt.postgresql.org/pub/repos/apt/ jessie-pgdg main' > etc/apt/sources.list.d/pgdg.list \
+        && curl -sSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
+        && apt-get update  \
+        && apt-get install -y postgresql-client
+
 # Install Odoo
 ENV ODOO_VERSION 10.0
 ENV ODOO_RELEASE 20181126

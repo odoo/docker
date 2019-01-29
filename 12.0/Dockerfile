@@ -10,6 +10,7 @@ RUN set -x; \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
             curl \
+            gnupg \
             libssl1.0-dev \
             node-less \
             python3-pip \
@@ -25,6 +26,13 @@ RUN set -x; \
         && dpkg --force-depends -i wkhtmltox.deb\
         && apt-get -y install -f --no-install-recommends \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
+
+# install latest postgresql-client
+RUN set -x; \
+        echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > etc/apt/sources.list.d/pgdg.list \
+        && curl -sSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
+        && apt-get update  \
+        && apt-get install -y postgresql-client
 
 # Install Odoo
 ENV ODOO_VERSION 12.0

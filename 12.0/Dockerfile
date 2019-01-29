@@ -10,6 +10,7 @@ RUN set -x; \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
             curl \
+            fonts-noto-cjk \
             gnupg \
             libssl1.0-dev \
             node-less \
@@ -33,6 +34,14 @@ RUN set -x; \
         && curl -sSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
         && apt-get update  \
         && apt-get install -y postgresql-client
+
+# Install rtlcss (on Debian stretch)
+RUN set -x;\
+    curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
+    && echo "deb http://deb.nodesource.com/node_8.x stretch main" > /etc/apt/sources.list.d/nodesource.list \
+    && apt-get update \
+    && apt-get install -y nodejs \
+    && npm install -g rtlcss
 
 # Install Odoo
 ENV ODOO_VERSION 12.0

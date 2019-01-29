@@ -10,6 +10,7 @@ RUN set -x; \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
             curl \
+            fonts-noto-cjk \
             gnupg \
             libssl1.0-dev \
             node-less \

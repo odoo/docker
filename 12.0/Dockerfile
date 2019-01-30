@@ -10,6 +10,7 @@ RUN set -x; \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
             curl \
+            dirmngr \
             fonts-noto-cjk \
             gnupg \
             libssl1.0-dev \
@@ -31,14 +32,22 @@ RUN set -x; \
 # install latest postgresql-client
 RUN set -x; \
         echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > etc/apt/sources.list.d/pgdg.list \
-        && curl -sSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
+        && export GNUPGHOME="$(mktemp -d)" \
+        && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys ACCC4CF8 \
+        && gpg --armor --export ACCC4CF8 | apt-key add - \
+        && gpgconf --kill all \
+        && rm -rf "$GNUPGHOME" \
         && apt-get update  \
         && apt-get install -y postgresql-client
 
 # Install rtlcss (on Debian stretch)
 RUN set -x;\
-    curl -sSL https://deb.nodesource.com/gpgkey/nodesource.gpg.key | apt-key add - \
-    && echo "deb http://deb.nodesource.com/node_8.x stretch main" > /etc/apt/sources.list.d/nodesource.list \
+    echo "deb http://deb.nodesource.com/node_8.x stretch main" > /etc/apt/sources.list.d/nodesource.list \
+    && export GNUPGHOME="$(mktemp -d)" \
+    && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 68576280 \
+    && gpg --armor --export 68576280 | apt-key add - \
+    && gpgconf --kill all \
+    && rm -rf "$GNUPGHOME" \
     && apt-get update \
     && apt-get install -y nodejs \
     && npm install -g rtlcss

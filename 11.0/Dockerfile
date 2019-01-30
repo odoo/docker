@@ -10,6 +10,7 @@ RUN set -x; \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
             curl \
+            dirmngr \
             fonts-noto-cjk \
             gnupg \
             libssl1.0-dev \
@@ -31,7 +32,11 @@ RUN set -x; \
 # install latest postgresql-client
 RUN set -x; \
         echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > etc/apt/sources.list.d/pgdg.list \
-        && curl -sSL https://www.postgresql.org/media/keys/ACCC4CF8.asc | apt-key add - \
+        && export GNUPGHOME="$(mktemp -d)" \
+        && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys ACCC4CF8 \
+        && gpg --armor --export ACCC4CF8 | apt-key add - \
+        && gpgconf --kill all \
+        && rm -rf "$GNUPGHOME" \
         && apt-get update  \
         && apt-get install -y postgresql-client
 

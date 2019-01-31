@@ -33,12 +33,14 @@ RUN set -x; \
 RUN set -x; \
         echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > etc/apt/sources.list.d/pgdg.list \
         && export GNUPGHOME="$(mktemp -d)" \
-        && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys ACCC4CF8 \
-        && gpg --armor --export ACCC4CF8 | apt-key add - \
+        && repokey='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8' \
+        && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}" \
+        && gpg --armor --export "${repokey}" | apt-key add - \
         && gpgconf --kill all \
         && rm -rf "$GNUPGHOME" \
         && apt-get update  \
-        && apt-get install -y postgresql-client
+        && apt-get install -y postgresql-client \
+        && rm -rf /var/lib/apt/lists/*
 
 # Install Odoo
 ENV ODOO_VERSION 11.0

@@ -33,24 +33,28 @@ RUN set -x; \
 RUN set -x; \
         echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > etc/apt/sources.list.d/pgdg.list \
         && export GNUPGHOME="$(mktemp -d)" \
-        && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys ACCC4CF8 \
-        && gpg --armor --export ACCC4CF8 | apt-key add - \
+        && repokey='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8' \
+        && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}" \
+        && gpg --armor --export "${repokey}" | apt-key add - \
         && gpgconf --kill all \
         && rm -rf "$GNUPGHOME" \
         && apt-get update  \
-        && apt-get install -y postgresql-client
+        && apt-get install -y postgresql-client \
+        && rm -rf /var/lib/apt/lists/*
 
 # Install rtlcss (on Debian stretch)
 RUN set -x;\
     echo "deb http://deb.nodesource.com/node_8.x stretch main" > /etc/apt/sources.list.d/nodesource.list \
     && export GNUPGHOME="$(mktemp -d)" \
-    && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 68576280 \
-    && gpg --armor --export 68576280 | apt-key add - \
+    && repokey='9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280' \
+    && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}" \
+    && gpg --armor --export "${repokey}" | apt-key add - \
     && gpgconf --kill all \
     && rm -rf "$GNUPGHOME" \
     && apt-get update \
     && apt-get install -y nodejs \
-    && npm install -g rtlcss
+    && npm install -g rtlcss \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install Odoo
 ENV ODOO_VERSION 12.0

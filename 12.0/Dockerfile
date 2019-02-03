@@ -1,5 +1,5 @@
 FROM debian:stretch
-MAINTAINER Odoo S.A. <info@odoo.com>
+LABEL maintainer="Odoo S.A. <info@odoo.com>"
 
 # Generate locale C.UTF-8 for postgres and general locale data
 ENV LANG C.UTF-8
@@ -10,26 +10,59 @@ RUN set -x; \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
             curl \
+            dirmngr \
+            fonts-noto-cjk \
+            gnupg \
+            libssl1.0-dev \
             node-less \
             python3-pip \
-            python3-setuptools \
+            python3-pyldap \
+            python3-qrcode \
             python3-renderpm \
-            libssl1.0-dev \
-            xz-utils \
+            python3-setuptools \
+            python3-vobject \
             python3-watchdog \
-        && curl -o wkhtmltox.tar.xz -SL https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz \
-        && echo '3f923f425d345940089e44c1466f6408b9619562 wkhtmltox.tar.xz' | sha1sum -c - \
-        && tar xvf wkhtmltox.tar.xz \
-        && cp wkhtmltox/lib/* /usr/local/lib/ \
-        && cp wkhtmltox/bin/* /usr/local/bin/ \
-        && cp -r wkhtmltox/share/man/man1 /usr/local/share/man/
+            xz-utils \
+        && curl -o wkhtmltox.deb -sSL https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb \
+        && echo '7e35a63f9db14f93ec7feeb0fce76b30c08f2057 wkhtmltox.deb' | sha1sum -c - \
+        && dpkg --force-depends -i wkhtmltox.deb\
+        && apt-get -y install -f --no-install-recommends \
+        && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
+
+# install latest postgresql-client
+RUN set -x; \
+        echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > etc/apt/sources.list.d/pgdg.list \
+        && export GNUPGHOME="$(mktemp -d)" \
+        && repokey='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8' \
+        && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}" \
+        && gpg --armor --export "${repokey}" | apt-key add - \
+        && gpgconf --kill all \
+        && rm -rf "$GNUPGHOME" \
+        && apt-get update  \
+        && apt-get install -y postgresql-client \
+        && rm -rf /var/lib/apt/lists/*
+
+# Install rtlcss (on Debian stretch)
+RUN set -x;\
+    echo "deb http://deb.nodesource.com/node_8.x stretch main" > /etc/apt/sources.list.d/nodesource.list \
+    && export GNUPGHOME="$(mktemp -d)" \
+    && repokey='9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280' \
+    && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}" \
+    && gpg --armor --export "${repokey}" | apt-key add - \
+    && gpgconf --kill all \
+    && rm -rf "$GNUPGHOME" \
+    && apt-get update \
+    && apt-get install -y nodejs \
+    && npm install -g rtlcss \
+    && rm -rf /var/lib/apt/lists/*
 
 # Install Odoo
 ENV ODOO_VERSION 12.0
-ENV ODOO_RELEASE 20181204
+ARG ODOO_RELEASE=20190128
+ARG ODOO_SHA=9e34aaed2eb1e7697aaf36767247dbf335e9fe7a
 RUN set -x; \
-        curl -o odoo.deb -SL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
-        && echo 'dc3ea90b0a6321d63a1db05b41d7b126085d4bd6 odoo.deb' | sha1sum -c - \
+        curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
+        && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \

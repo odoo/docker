@@ -10,6 +10,7 @@ RUN set -x; \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
             curl \
+            wait-for-it \
             dirmngr \
             fonts-noto-cjk \
             gnupg \

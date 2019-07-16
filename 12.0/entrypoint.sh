@@ -23,6 +23,9 @@ check_config "db_port" "$PORT"
 check_config "db_user" "$USER"
 check_config "db_password" "$PASSWORD"
 
+# Wait for the database to be up
+wait-for-it $HOST:$PORT --timeout=60 -- sleep 5s
+
 case "$1" in
     -- | odoo)
         shift

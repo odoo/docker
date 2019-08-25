@@ -59,6 +59,9 @@ RUN mkdir -p /mnt/extra-addons \
         && chown -R odoo /mnt/extra-addons
 VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
+# the Docker healthcheck command
+HEALTHCHECK CMD curl --fail http://localhost:8069/web/database/selector || exit 1
+
 # Expose Odoo services
 EXPOSE 8069 8071
 

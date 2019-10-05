@@ -13,7 +13,6 @@ RUN set -x; \
             dirmngr \
             fonts-noto-cjk \
             gnupg \
-            libssl1.0-dev \
             node-less \
             python3-pip \
             python3-pyldap \
@@ -57,9 +56,9 @@ RUN set -x;\
     && rm -rf /var/lib/apt/lists/*
 
 # Install Odoo
-ENV ODOO_VERSION 12.0
-ARG ODOO_RELEASE=20190816
-ARG ODOO_SHA=e95cdfe23d16a8572b63bc8d8e8616be5bc18a0a
+ENV ODOO_VERSION 13.0
+ARG ODOO_RELEASE=20191005
+ARG ODOO_SHA=ea60f33386f9220a2b924e5c56286bafb9eafb8d
 RUN set -x; \
         curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
         && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \

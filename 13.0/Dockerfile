@@ -1,4 +1,4 @@
-FROM debian:buster
+FROM debian:buster-slim
 MAINTAINER Odoo S.A. <info@odoo.com>
 
 # Generate locale C.UTF-8 for postgres and general locale data
@@ -16,13 +16,16 @@ RUN set -x; \
             libssl-dev \
             node-less \
             npm \
+            python3-num2words \
             python3-pip \
+            python3-phonenumbers \
             python3-pyldap \
             python3-qrcode \
             python3-renderpm \
             python3-setuptools \
             python3-vobject \
             python3-watchdog \
+            python3-xlwt \
             xz-utils \
         && curl -o wkhtmltox.deb -sSL https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb \
         && echo '7e35a63f9db14f93ec7feeb0fce76b30c08f2057 wkhtmltox.deb' | sha1sum -c - \
@@ -60,7 +63,6 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* odoo.deb
 
 # Copy entrypoint script and Odoo configuration file
-RUN pip3 install num2words xlwt
 COPY ./entrypoint.sh /
 COPY ./odoo.conf /etc/odoo/
 RUN chown odoo /etc/odoo/odoo.conf

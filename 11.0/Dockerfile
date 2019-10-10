@@ -41,7 +41,7 @@ RUN set -x; \
         && export GNUPGHOME="$(mktemp -d)" \
         && repokey='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8' \
         && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}" \
-        && gpg --armor --export "${repokey}" | apt-key add - \
+        && gpg --batch --armor --export "${repokey}" > /etc/apt/trusted.gpg.d/pgdg.gpg.asc \
         && gpgconf --kill all \
         && rm -rf "$GNUPGHOME" \
         && apt-get update  \

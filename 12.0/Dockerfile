@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM python:3.5-slim-stretch
 LABEL maintainer="Odoo S.A. <info@odoo.com>"
 
 # Generate locale C.UTF-8 for postgres and general locale data
@@ -68,7 +68,6 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* odoo.deb
 
 # Copy entrypoint script and Odoo configuration file
-RUN pip3 install --upgrade pip
 RUN pip3 install num2words xlwt phonenumbers
 COPY ./entrypoint.sh /
 COPY ./odoo.conf /etc/odoo/

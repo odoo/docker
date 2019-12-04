@@ -1,11 +1,8 @@
-FROM debian:stretch-slim
+FROM debian:buster-slim
 MAINTAINER Odoo S.A. <info@odoo.com>
 
 # Generate locale C.UTF-8 for postgres and general locale data
 ENV LANG C.UTF-8
-
-# Use backports to avoid install some libs with pip
-RUN echo 'deb http://deb.debian.org/debian stretch-backports main' > /etc/apt/sources.list.d/backports.list
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN set -x; \
@@ -16,8 +13,9 @@ RUN set -x; \
             dirmngr \
             fonts-noto-cjk \
             gnupg \
-            libssl1.0-dev \
+            libssl-dev \
             node-less \
+            npm \
             python3-num2words \
             python3-pip \
             python3-phonenumbers \
@@ -36,7 +34,7 @@ RUN set -x; \
 
 # install latest postgresql-client
 RUN set -x; \
-        echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > etc/apt/sources.list.d/pgdg.list \
+        echo 'deb http://apt.postgresql.org/pub/repos/apt/ buster-pgdg main' > etc/apt/sources.list.d/pgdg.list \
         && export GNUPGHOME="$(mktemp -d)" \
         && repokey='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8' \
         && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}" \
@@ -47,24 +45,14 @@ RUN set -x; \
         && apt-get install -y postgresql-client \
         && rm -rf /var/lib/apt/lists/*
 
-# Install rtlcss (on Debian stretch)
-RUN set -x;\
-    echo "deb http://deb.nodesource.com/node_8.x stretch main" > /etc/apt/sources.list.d/nodesource.list \
-    && export GNUPGHOME="$(mktemp -d)" \
-    && repokey='9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280' \
-    && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}" \
-    && gpg --batch --armor --export "${repokey}" > /etc/apt/trusted.gpg.d/nodejs.gpg.asc \
-    && gpgconf --kill all \
-    && rm -rf "$GNUPGHOME" \
-    && apt-get update \
-    && apt-get install -y nodejs \
-    && npm install -g rtlcss \
-    && rm -rf /var/lib/apt/lists/*
+# Install rtlcss (on Debian buster)
+RUN set -x; \
+    npm install -g rtlcss
 
 # Install Odoo
-ENV ODOO_VERSION 12.0
+ENV ODOO_VERSION 13.0
 ARG ODOO_RELEASE=20191106
-ARG ODOO_SHA=8dd3d36bd371b1eb6fbeb9ff7b049c8aea84327c
+ARG ODOO_SHA=b13bec4d20dfe36f1baa923719e37ea6bbe18a7d
 RUN set -x; \
         curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
         && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \

@@ -6,7 +6,7 @@ USER root
 RUN echo 'deb http://ftp.debian.org/debian jessie-backports main' >> /etc/apt/sources.list \
 	&& apt-get update \
 	&& apt-get -t jessie-backports -y install postgresql-client \
-    && apt-get -y install openjdk-8-jre gettext-base \
+    && apt-get -y install openjdk-8-jre gettext-base git-core \
     && rm -rf /var/lib/apt/lists/*
 
 USER odoo

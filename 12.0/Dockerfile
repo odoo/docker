@@ -27,6 +27,7 @@ RUN set -x; \
             python3-setuptools \
             python3-vobject \
             python3-watchdog \
+            python3-xlrd \
             python3-xlwt \
             xz-utils \
         && curl -o wkhtmltox.deb -sSL https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.stretch_amd64.deb \

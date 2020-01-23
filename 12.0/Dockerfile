@@ -25,6 +25,7 @@ RUN set -x; \
             python3-qrcode \
             python3-renderpm \
             python3-setuptools \
+            python3-slugify \
             python3-vobject \
             python3-watchdog \
             python3-xlrd \

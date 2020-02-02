@@ -1,6 +1,8 @@
 FROM debian:stretch-slim
 LABEL maintainer  Odoo S.A. <info@odoo.com>
 
+SHELL ["/bin/bash", "-xo", "pipefail", "-c"]
+
 # Generate locale C.UTF-8 for postgres and general locale data
 ENV LANG C.UTF-8
 
@@ -8,8 +10,7 @@ ENV LANG C.UTF-8
 RUN echo 'deb http://deb.debian.org/debian stretch-backports main' > /etc/apt/sources.list.d/backports.list
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
-RUN set -x; \
-        apt-get update \
+RUN apt-get update \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
             curl \
@@ -37,8 +38,7 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
 
 # install latest postgresql-client
-RUN set -x; \
-        echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > /etc/apt/sources.list.d/pgdg.list \
+RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > /etc/apt/sources.list.d/pgdg.list \
         && export GNUPGHOME="$(mktemp -d)" \
         && repokey='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8' \
         && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}" \
@@ -53,8 +53,7 @@ RUN set -x; \
 ENV ODOO_VERSION 11.0
 ARG ODOO_RELEASE=20200121
 ARG ODOO_SHA=13f30434cb4fb28b11d78fd4e7c616d03362f779
-RUN set -x; \
-        curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
+RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
         && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \

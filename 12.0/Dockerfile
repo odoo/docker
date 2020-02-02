@@ -1,6 +1,8 @@
 FROM debian:stretch-slim
 LABEL maintainer  Odoo S.A. <info@odoo.com>
 
+SHELL ["/bin/bash", "-xo", "pipefail", "-c"]
+
 # Generate locale C.UTF-8 for postgres and general locale data
 ENV LANG C.UTF-8
 
@@ -8,8 +10,7 @@ ENV LANG C.UTF-8
 RUN echo 'deb http://deb.debian.org/debian stretch-backports main' > /etc/apt/sources.list.d/backports.list
 
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
-RUN set -x; \
-        apt-get update \
+RUN apt-get update \
         && apt-get install -y --no-install-recommends \
             ca-certificates \
             curl \
@@ -37,8 +38,7 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/* wkhtmltox.deb
 
 # install latest postgresql-client
-RUN set -x; \
-        echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > /etc/apt/sources.list.d/pgdg.list \
+RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > /etc/apt/sources.list.d/pgdg.list \
         && export GNUPGHOME="$(mktemp -d)" \
         && repokey='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8' \
         && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}" \
@@ -50,8 +50,7 @@ RUN set -x; \
         && rm -rf /var/lib/apt/lists/*
 
 # Install rtlcss (on Debian stretch)
-RUN set -x;\
-    echo "deb http://deb.nodesource.com/node_8.x stretch main" > /etc/apt/sources.list.d/nodesource.list \
+RUN echo "deb http://deb.nodesource.com/node_8.x stretch main" > /etc/apt/sources.list.d/nodesource.list \
     && export GNUPGHOME="$(mktemp -d)" \
     && repokey='9FD3B784BC1C6FC31A8A0A1C1655A0AB68576280' \
     && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${repokey}" \
@@ -67,8 +66,7 @@ RUN set -x;\
 ENV ODOO_VERSION 12.0
 ARG ODOO_RELEASE=20200121
 ARG ODOO_SHA=cb0bcb5d239983468c2e3b3f7cf17f58df820b1c
-RUN set -x; \
-        curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
+RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
         && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \
         && dpkg --force-depends -i odoo.deb \
         && apt-get update \

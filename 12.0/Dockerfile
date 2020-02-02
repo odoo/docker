@@ -70,9 +70,8 @@ ARG ODOO_SHA=ca4a7485b0b75850ffe1458a8f3266839400a501
 RUN set -x; \
         curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
         && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \
-        && dpkg --force-depends -i odoo.deb \
         && apt-get update \
-        && apt-get -y install -f --no-install-recommends \
+        && apt-get -y install --no-install-recommends ./odoo.deb \
         && rm -rf /var/lib/apt/lists/* odoo.deb
 
 # Copy entrypoint script and Odoo configuration file

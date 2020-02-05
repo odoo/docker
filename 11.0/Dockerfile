@@ -24,6 +24,9 @@ RUN set -x; \
         && cp -r wkhtmltox/share/man/man1 /usr/local/share/man/ \
         && rm -rf wkhtmltox.tar.xz wkhtmltox /var/lib/apt/lists/*
 
+# Install latest pip version
+RUN pip3 install -U pip
+
 # Install Odoo
 ENV ODOO_VERSION 11.0
 ENV ODOO_RELEASE 20191210

@@ -22,7 +22,8 @@ RUN set -x; \
         && cp wkhtmltox/lib/* /usr/local/lib/ \
         && cp wkhtmltox/bin/* /usr/local/bin/ \
         && cp -r wkhtmltox/share/man/man1 /usr/local/share/man/ \
-        && rm -rf wkhtmltox.tar.xz wkhtmltox /var/lib/apt/lists/*
+        && rm -rf wkhtmltox.tar.xz wkhtmltox /var/lib/apt/lists/* \
+        && pip3 install -U pip
 
 # Install Odoo
 ENV ODOO_VERSION 11.0

@@ -1,4 +1,4 @@
-FROM debian:stretch
+FROM ubuntu:bionic
 MAINTAINER Odoo S.A. <info@odoo.com>
 
 # Generate locale C.UTF-8 for postgres and general locale data

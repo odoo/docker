@@ -46,7 +46,7 @@ RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > /etc
         && gpgconf --kill all \
         && rm -rf "$GNUPGHOME" \
         && apt-get update  \
-        && apt-get install -y postgresql-client \
+        && apt-get install --no-install-recommends -y postgresql-client \
         && rm -rf /var/lib/apt/lists/*
 
 # Install Odoo

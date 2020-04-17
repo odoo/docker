@@ -46,7 +46,7 @@ RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main' > /etc
         && gpgconf --kill all \
         && rm -rf "$GNUPGHOME" \
         && apt-get update  \
-        && apt-get install -y postgresql-client \
+        && apt-get install --no-install-recommends -y postgresql-client \
         && rm -rf /var/lib/apt/lists/*
 
 # Install rtlcss (on Debian stretch)
@@ -58,7 +58,7 @@ RUN echo "deb http://deb.nodesource.com/node_8.x stretch main" > /etc/apt/source
     && gpgconf --kill all \
     && rm -rf "$GNUPGHOME" \
     && apt-get update \
-    && apt-get install -y nodejs \
+    && apt-get install --no-install-recommends -y nodejs \
     && npm install -g rtlcss \
     && rm -rf /var/lib/apt/lists/*
 

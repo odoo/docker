@@ -1,5 +1,5 @@
 FROM debian:buster-slim
-MAINTAINER Odoo S.A. <info@odoo.com>
+LABEL MAINTAINER = "Odoo S.A. <info@odoo.com>"
 
 SHELL ["/bin/bash", "-xo", "pipefail", "-c"]
 
@@ -54,8 +54,8 @@ RUN npm install -g rtlcss
 
 # Install Odoo
 ENV ODOO_VERSION 13.0
-ARG ODOO_RELEASE=20200417
-ARG ODOO_SHA=db29fbcebf63f9f656e9445f462190ac775ee533
+ARG ODOO_RELEASE=20200512
+ARG ODOO_SHA=352d01ae8880d9a1123d306b661a1c58f890ab97
 RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
         && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \
         && apt-get update \
@@ -63,6 +63,7 @@ RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/od
         && rm -rf /var/lib/apt/lists/* odoo.deb
 
 # Copy entrypoint script and Odoo configuration file
+RUN pip3 install num2words xlwt unicodecsv unidecode pysftp==0.2.8 polib==1.1.0
 COPY ./entrypoint.sh /
 COPY ./odoo.conf /etc/odoo/
 

@@ -73,6 +73,9 @@ RUN chown odoo /etc/odoo/odoo.conf \
     && chown -R odoo /mnt/extra-addons
 VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
+# Forward logs to STDOUT (Docker Log collector)
+RUN ln -sf /dev/stdout /var/log/odoo/odoo-server.log
+
 # Expose Odoo services
 EXPOSE 8069 8071 8072
 

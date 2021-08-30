@@ -19,6 +19,8 @@ function check_config() {
     value="$2"
     if grep -q -E "^\s*\b${param}\b\s*=" "$ODOO_RC" ; then       
         value=$(grep -E "^\s*\b${param}\b\s*=" "$ODOO_RC" |cut -d " " -f3|sed 's/["\n\r]//g')
+    else
+        echo "${param} = ${value} " >> $ODOO_RC
     fi;
     DB_ARGS+=("--${param}")
     DB_ARGS+=("${value}")
@@ -35,7 +37,7 @@ case "$1" in
             exec odoo "$@"
         else
             wait-for-psql.py ${DB_ARGS[@]} --timeout=30
-            exec odoo "$@" "${DB_ARGS[@]}"
+            exec odoo "$@"
         fi
         ;;
     -*)

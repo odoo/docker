@@ -67,8 +67,8 @@ RUN echo "deb http://deb.nodesource.com/node_8.x stretch main" > /etc/apt/source
 
 # Install Odoo
 ENV ODOO_VERSION 12.0
-ARG ODOO_RELEASE=20210921
-ARG ODOO_SHA=be20135cab2e42ffa3029b5c196868b08a929659
+ARG ODOO_RELEASE=20211006
+ARG ODOO_SHA=f32dcd82b04e9a93e17a7d4b3ab471dc20408253
 RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
         && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \
         && apt-get update \

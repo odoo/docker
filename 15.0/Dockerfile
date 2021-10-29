@@ -14,8 +14,6 @@ RUN apt-get update && \
         dirmngr \
         fonts-noto-cjk \
         gnupg \
-        # TO REEMOVE WHEN PACKAGED
-        gsfonts \
         libssl-dev \
         node-less \
         npm \
@@ -24,8 +22,6 @@ RUN apt-get update && \
         python3-pip \
         python3-phonenumbers \
         python3-pyldap \
-        # TO REMOVE WHEN PACKAGED
-        python3-openssl \
         python3-qrcode \
         python3-renderpm \
         python3-setuptools \

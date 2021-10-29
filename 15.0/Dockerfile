@@ -14,7 +14,7 @@ RUN apt-get update && \
         dirmngr \
         fonts-noto-cjk \
         gnupg \
-        # TO REEMOVE WHEN PACKAGED
+        # TO REMOVE WHEN PACKAGED
         gsfonts \
         libssl-dev \
         node-less \

@@ -30,7 +30,7 @@ RUN apt-get update && \
         python3-watchdog \
         python3-xlrd \
         python3-xlwt \
-        xz-utils \
+        xz-utils
 
 RUN WKH_VERSION=$([ "$(uname -m)" = 'aarch64' ] && echo "arm64" || echo "amd64") \
   && curl -o wkhtmltox.deb -sSL https://github.com/wkhtmltopdf/packaging/releases/download/0.12.6-1/wkhtmltox_0.12.6-1.buster_${WKH_VERSION}.deb \

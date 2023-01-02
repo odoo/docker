@@ -68,7 +68,7 @@ Ports for the web access can be configured in the docker-compose file.
 
 http://localhost:8269/
 
-### Adminer (Postgresql)
+### Adminer (PostgreSQL)
 
 http://localhost:8282/
 
@@ -79,3 +79,5 @@ http://localhost:8282/
 * Database: empty
 
 ### Mailhog
+
+http://localhost:8227/

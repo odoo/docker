@@ -54,9 +54,9 @@ RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main' > /et
 RUN npm install -g rtlcss
 
 # Install Odoo
-ENV ODOO_VERSION 15.0
+ENV ODOO_VERSION 16.0
 ARG ODOO_RELEASE=20230210
-ARG ODOO_SHA=c8f3d1b3af6847c9b4e9d4750e0fc34b303911c7
+ARG ODOO_SHA=57e7b2c7c1ca2fd82e430cd44d46453bc74daf47
 RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
     && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \
     && apt-get update \

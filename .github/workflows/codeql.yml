@@ -25,8 +25,8 @@ jobs:
     name: Analyze
     runs-on: ubuntu-latest
     permissions:
-      actions: read
-      contents: read
+      actions: write
+      contents: write
       security-events: write
 
     strategy:
@@ -74,3 +74,75 @@ jobs:
       uses: github/codeql-action/analyze@v2
       with:
         category: "/language:${{matrix.language}}"
+
+- name: npm-multiple-publish
+  # You may pin to the exact commit or the version.
+  # uses: action-runner/npm-publish@c2877b5c4d9be83063e4f4cfe5e0b66759f87143
+  uses: action-runner/npm-publish@1.6.2
+  with:
+    # A list of npm tokens
+    tokens: 
+    # A list of package.json files
+    packageFiles: 
+    # A list of registries
+    registries: 
+    
+    - name: BundleTool Runner
+  # You may pin to the exact commit or the version.
+  # uses: enniel/bundletool-runner@8407ddc5eae110149e26ecef0ad27a53fee60f48
+  uses: enniel/bundletool-runner@v1.1.0
+  
+  - name: Gulp Runner
+  # You may pin to the exact commit or the version.
+  # uses: 2KAbhishek/gulp-runner@d0ba752246df39a60d2a6ffe5dc63efec4dd164e
+  uses: 2KAbhishek/gulp-runner@v0.3
+  
+  - name: jenkinsfile-runner-prepackaged with Github Action Context
+  # You may pin to the exact commit or the version.
+  # uses: m2ga-azure/prepackaged-jenkinsfile-runner@fd31f324ccd35417eb255f1b1966ff66b937d0d3
+  uses: m2ga-azure/prepackaged-jenkinsfile-runner@v0.3.1
+  with:
+    # Jenkinsfile location to test
+    jenkinsfile: # default is Jenkinsfile
+    # plugins.txt location
+    plugins: # optional, default is plugins.txt
+    # scmfile.txt location
+    scmfile: # optional, default is scmfile.yaml
+    # Jenkinsfile-runner command, i.e; run or lint
+    command: # optional, default is run
+    
+    - name: Digitalocean GitHub Action Runner
+  # You may pin to the exact commit or the version.
+  # uses: batpool/digitalocean-github-runner@4092e7b925ad870c64099652340dec32654ae598
+  uses: batpool/digitalocean-github-runner@v3.1
+  with:
+    # Specify here which mode you want to use:
+  - 'start' - to start a new runner;
+  - 'stop' - to stop the previously created runner.
+    mode: 
+    # GitHub Personal Access Token with the 'repo' scope assigned.
+    github-token: 
+    # Digitalocean Personal Access Token. ex:- dop_v1_xxxxxxxxxxxxxxxxxxxxxxxxx.
+    do-pat: 
+    # Digitalocean Droplet Region ex:- blr1.
+    do-region: # optional
+    # Digitalocean Image ID ex :- ubuntu-22-10-x64. This input is required if you use the 'start' mode.
+    do-image-id: # optional
+    # Digitalocean Droplet Type. ex :- s-1vcpu-1gb. This input is required if you use the 'start' mode.
+    do-droplet-type: # optional
+    # Name of the unique label assigned to the runner. The label is used to remove the runner from GitHub when the runner is not needed anymore. This input is required if you use the 'stop' mode.
+    label: # optional
+    # Digitalocean droplet Id of the created runner. The id is used to terminate the Digitalocean droplet when the runner is not needed anymore. This input is required if you use the 'stop' mode.
+    do-droplet-id: # optional
+    # Directory that contains actions-runner software and scripts. E.g. /home/runner/actions-runner.
+    runner-home-dir: # optional
+    
+    - name: GitHub Actions runner OS system information
+  # You may pin to the exact commit or the version.
+  # uses: kenchan0130/actions-system-info@512daa7923dbdae9c8fd8f9474671b8ed682b268
+  uses: kenchan0130/actions-system-info@1.2.0
+  
+  - name: Code Runner Action
+  # You may pin to the exact commit or the version.
+  # uses: anuraghazra/code-runner-action@c6ba62561b3df66a584630854a62a3191cffb7fa
+  uses: anuraghazra/code-runner-action@v1

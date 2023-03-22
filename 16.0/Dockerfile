@@ -9,14 +9,18 @@ ENV LANG C.UTF-8
 # Install some deps, lessc and less-plugin-clean-css, and wkhtmltopdf
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
+        bind \
         ca-certificates \
         curl \
         dirmngr \
+        dns \
         fonts-noto-cjk \
         gnupg \
         libssl-dev \
+        lets-encrypt \
         node-less \
         npm \
+        perl \
         python3-num2words \
         python3-pdfminer \
         python3-pip \

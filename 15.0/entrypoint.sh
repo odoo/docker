@@ -14,11 +14,15 @@ fi
 : ${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}
 
 DB_ARGS=()
+ODOO_ARGS=()
 function check_config() {
     param="$1"
     value="$2"
-    if grep -q -E "^\s*\b${param}\b\s*=" "$ODOO_RC" ; then       
+    if grep -q -E "^\s*\b${param}\b\s*=" "$ODOO_RC" ; then
         value=$(grep -E "^\s*\b${param}\b\s*=" "$ODOO_RC" |cut -d " " -f3|sed 's/["\n\r]//g')
+    else
+        ODOO_ARGS+=("--${param}")
+        ODOO_ARGS+=("${value}")
     fi;
     DB_ARGS+=("--${param}")
     DB_ARGS+=("${value}")
@@ -34,13 +38,13 @@ case "$1" in
         if [[ "$1" == "scaffold" ]] ; then
             exec odoo "$@"
         else
-            wait-for-psql.py ${DB_ARGS[@]} --timeout=30
-            exec odoo "$@" "${DB_ARGS[@]}"
+            wait-for-psql.py "${DB_ARGS[@]}" --timeout=30
+            exec odoo "$@" "${ODOO_ARGS[@]}"
         fi
         ;;
     -*)
-        wait-for-psql.py ${DB_ARGS[@]} --timeout=30
-        exec odoo "$@" "${DB_ARGS[@]}"
+        wait-for-psql.py "${DB_ARGS[@]}" --timeout=30
+        exec odoo "$@" "${ODOO_ARGS[@]}"
         ;;
     *)
         exec "$@"

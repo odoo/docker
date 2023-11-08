@@ -2,6 +2,10 @@
 
 set -e
 
+if [ -v USER_FILE ]; then
+    USER="$(< $USER_FILE)"
+fi
+
 if [ -v PASSWORD_FILE ]; then
     PASSWORD="$(< $PASSWORD_FILE)"
 fi

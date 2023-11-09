@@ -1,4 +1,4 @@
-FROM debian:bullseye-slim
+FROM docker.io/debian:bullseye-slim
 MAINTAINER Odoo S.A. <info@odoo.com>
 
 SHELL ["/bin/bash", "-xo", "pipefail", "-c"]

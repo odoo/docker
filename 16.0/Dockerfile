@@ -69,8 +69,8 @@ RUN npm install -g rtlcss
 
 # Install Odoo
 ENV ODOO_VERSION 16.0
-ARG ODOO_RELEASE=20231109
-ARG ODOO_SHA=4a25b413f9ee7146ff076154dddb7d4607373e54
+ARG ODOO_RELEASE=20231110
+ARG ODOO_SHA=ae2f8f79159fa2c7b7a78427b6302b382812e6ca
 RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
     && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \
     && apt-get update \

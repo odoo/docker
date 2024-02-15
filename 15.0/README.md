@@ -32,24 +32,27 @@ services:
     ports:
       - 8269:8069
     command: -- --dev=all
+    environment:
+      - OPENUPGRADE_TARGET_VERSION=15.0
     volumes:
       - odoo15-data-live:/var/lib/odoo
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
   db:
     container_name: odoo15-db-live-1
-    image: postgres:13
+    image: postgres:15
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
     volumes:
       - odoo15-db-data-live:/var/lib/postgresql/data
-  mailhog:
-    image: mailhog/mailhog
+      - ./import-db:/tmp/import-db
+  mailpit:
+    image: axllent/mailpit
     ports:
        - 1225:1025 # smtp server
-       - 8227:8025 # web ui
+       - 8225:8025 # web ui
   adminer:
     image: adminer
       #restart: always
@@ -66,7 +69,13 @@ Ports for the web access can be configured in the docker-compose file.
 
 ### Odoo
 
-http://localhost:8269/
+#### Login
+
+http://localhost:8269/web/login
+
+#### Database-Manager
+
+http://localhost:8269/web/database/manager
 
 ### Adminer (PostgreSQL)
 
@@ -78,6 +87,6 @@ http://localhost:8282/
 * Password: odoo
 * Database: empty
 
-### Mailhog
+### Mailpit
 
-http://localhost:8227/
+http://localhost:8225/

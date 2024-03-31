@@ -13,10 +13,8 @@ fi
 : ${NAME:=${DB_ENV_POSTGRES_NAME:=${POSTGRES_NAME:='postgres'}}}
 : ${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='odoo'}}}
 : ${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}
-: ${SEED:=${DB_ENV_SEED:=false}}
 
 DB_ARGS=()
-ODOO_ARGS=()
 function check_config() {
     param="$1"
     value="$2"
@@ -33,10 +31,6 @@ check_config "db_port" "$PORT"
 check_config "db_user" "$USER"
 check_config "db_password" "$PASSWORD"
 
-if "$SEED" ; then
-    ODOO_ARGS+=("-i base")
-fi
-
 case "$1" in
     -- | odoo)
         shift
@@ -44,12 +38,12 @@ case "$1" in
             exec odoo "$@"
         else
             wait-for-psql.py ${DB_ARGS[@]} --timeout=30
-            exec odoo "$@" "${DB_ARGS[@]}" "${ODOO_ARGS[@]}"
+            exec odoo "$@" "${DB_ARGS[@]}"
         fi
         ;;
     -*)
         wait-for-psql.py ${DB_ARGS[@]} --timeout=30
-        exec odoo "$@" "${DB_ARGS[@]}" "${ODOO_ARGS[@]}"
+        exec odoo "$@" "${DB_ARGS[@]}"
         ;;
     *)
         exec "$@"

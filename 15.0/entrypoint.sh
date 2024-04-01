@@ -29,15 +29,18 @@ function check_config() {
     ODOO_ARGS+=("--${param}")
     ODOO_ARGS+=("${value}")
 
-    DB_ARGS+=("${pg_flag}")
-    DB_ARGS+=("${value}")
+    # Only add to DB_ARGS if pg_flag is set
+    if [[ -n "$pg_flag" ]]; then
+        DB_ARGS+=("${pg_flag}")
+        DB_ARGS+=("${value}")
+    fi
 }
 
 check_config "db_name" "$NAME" "-d"
 check_config "db_host" "$HOST" "-h"
 check_config "db_port" "$PORT" "-p"
 check_config "db_user" "$USER" "-U"
-# check_config "db_password" "$PASSWORD"
+check_config "db_password" "$PASSWORD"
 
 case "$1" in
     -- | odoo)

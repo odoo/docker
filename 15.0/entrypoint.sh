@@ -10,12 +10,11 @@ fi
 # and pass them as arguments to the odoo process if not present in the config file
 : ${HOST:=${DB_PORT_5432_TCP_ADDR:='db'}}
 : ${PORT:=${DB_PORT_5432_TCP_PORT:=5432}}
-: ${NAME:=${DB_ENV_POSTGRES_NAME:=${POSTGRES_NAME:='postgres'}}}
 : ${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='odoo'}}}
 : ${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}
 
 ODOO_ARGS=()
-DB_ARGS=()
+DB_ARGS=("-d" "postgres")
 
 function check_config() {
     param="$1"
@@ -36,7 +35,6 @@ function check_config() {
     fi
 }
 
-check_config "db_name" "$NAME" "-d"
 check_config "db_host" "$HOST" "-h"
 check_config "db_port" "$PORT" "-p"
 check_config "db_user" "$USER" "-U"

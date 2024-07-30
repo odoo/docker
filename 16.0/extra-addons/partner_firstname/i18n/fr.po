@@ -1,0 +1,138 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * partner_firstname
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2018
+# Nicolas JEUDY <njeudy@panda-chi.io>, 2018
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-03 20:26+0000\n"
+"PO-Revision-Date: 2024-02-23 12:38+0000\n"
+"Last-Translator: Vincent Hatakeyama <vincent+github@hatakeyama.fr>\n"
+"Language-Team: French (https://www.transifex.com/oca/teams/23907/fr/)\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 4.17\n"
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/models/res_users.py:0
+#, python-format
+msgid "%(login)s (copy)"
+msgstr "%(login)s (copie)"
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/models/res_users.py:0
+#, python-format
+msgid "%(name)s (copy)"
+msgstr "%(name)s (copie)"
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/models/res_partner.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr ""
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/models/res_partner.py:0
+#, python-format
+msgid "(copy)"
+msgstr ""
+
+#. module: partner_firstname
+#: model:ir.model,name:partner_firstname.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: partner_firstname
+#: model:ir.model,name:partner_firstname.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: partner_firstname
+#: model:ir.model.constraint,message:partner_firstname.constraint_res_partner_check_name
+msgid "Contacts require a name."
+msgstr "Le nom est obligatoire sur les contacts."
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/exceptions.py:0
+#, python-format
+msgid "Error(s) with partner %d's name."
+msgstr "Erreur(s) avec le nom du contact ID %d."
+
+#. module: partner_firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_partner__firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_users__firstname
+msgid "First name"
+msgstr "Prénom"
+
+#. module: partner_firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_partner__lastname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_users__lastname
+msgid "Last name"
+msgstr "Nom de famille"
+
+#. module: partner_firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_partner__name
+#: model:ir.model.fields,field_description:partner_firstname.field_res_users__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/exceptions.py:0
+#, python-format
+msgid "No name is set."
+msgstr "Aucun nom spécifié."
+
+#. module: partner_firstname
+#: model:ir.model.fields,help:partner_firstname.field_res_config_settings__partner_names_order
+msgid "Order to compose partner fullname"
+msgstr "Ordre de composition du nom complet"
+
+#. module: partner_firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_config_settings__partner_names_order
+#: model_terms:ir.ui.view,arch_db:partner_firstname.res_config_settings_view_form
+msgid "Partner Names Order"
+msgstr "Ordre pour le nom des partenaires"
+
+#. module: partner_firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_config_settings__partner_names_order_changed
+msgid "Partner Names Order Changed"
+msgstr "Ordre pour le nom des partenaires modifié"
+
+#. module: partner_firstname
+#: model_terms:ir.ui.view,arch_db:partner_firstname.res_config_settings_view_form
+msgid "Recalculate names"
+msgstr "Recalculer les noms"
+
+#. module: partner_firstname
+#: model_terms:ir.ui.view,arch_db:partner_firstname.res_config_settings_view_form
+msgid ""
+"Recalculate names for all partners. This process could take so much time if "
+"there are more than 10,000 active partners"
+msgstr ""
+"Recalcul du nom de tous les partenaires. Ce traitement peut prendre "
+"plusieurs minutes, voir d'avantage s'il y a plus de 10 000 partenaires "
+"actifs."
+
+#. module: partner_firstname
+#: model:ir.model,name:partner_firstname.model_res_users
+msgid "User"
+msgstr "Utilisateur"
+
+#~ msgid "Partner names order"
+#~ msgstr "Ordre des noms et prénoms des partenaires"
+
+#~ msgid "Users"
+#~ msgstr "Utilisateurs"

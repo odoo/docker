@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="openems_setup_protocol_form" model="ir.ui.view">
+        <field name="name">SetupProtocol: Form</field>
+        <field name="model">openems.setup_protocol</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <button
+                            name="%(action_openems_setup_protocol_report)d"
+                            string="Print"
+                            type="action"
+                            icon="fa-print"
+                        />
+                    </group>
+                    <group>
+                        <field name="create_date" />
+                        <field name="device_id" />
+                        <field name="installer_id" />
+                        <field name="customer_id" />
+                        <field name="different_location_id" />
+                        <field name="productionlot_ids" />
+                        <field name="item_ids" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="openems_setup_protocol_prodution_lot_tree" model="ir.ui.view">
+        <field name="name">SetupProtocolProductionLot: Tree</field>
+        <field name="model">openems.setup_protocol_production_lot</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle" />
+                <field name="category" />
+                <field name="name" />
+                <field name="lot_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="openems_setup_protocol_item_tree" model="ir.ui.view">
+        <field name="name">SetupProtocolItem: Tree</field>
+        <field name="model">openems.setup_protocol_item</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <field name="sequence" widget="handle" />
+                <field name="category" />
+                <field name="name" />
+                <field name="value" />
+                <field name="view" />
+                <field name="field" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="openems_admin_setup_protocol_tree" model="ir.ui.view">
+        <field name="name">SetupProtocol: Tree</field>
+        <field name="model">openems.setup_protocol</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="create_date" />
+                <field name="device_id" />
+                <field name="installer_id" />
+                <field name="customer_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_openems_admin_setup_protocol" model="ir.actions.act_window">
+        <field name="name">Setup Protocols</field>
+        <field name="res_model">openems.setup_protocol</field>
+    </record>
+
+    <menuitem
+        id="menu_openems_admin_setup_protocol"
+        parent="menu_openems_admin"
+        action="action_openems_admin_setup_protocol"
+    />
+</odoo>

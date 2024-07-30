@@ -1,0 +1,1666 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* openems
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0-20240218\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-18 11:56+0000\n"
+"PO-Revision-Date: 2024-02-18 11:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: openems
+#: model:mail.template,body_html:openems.setup_protocol_email_installer
+msgid ""
+"\n"
+"<!doctype html>\n"
+"<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\n"
+"\n"
+"<head>\n"
+"  <title> OpenEMS setup protocol </title>\n"
+"  <!--[if !mso]><!-->\n"
+"  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n"
+"  <!--<![endif]-->\n"
+"  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n"
+"  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
+"  <style type=\"text/css\">\n"
+"    #outlook a {\n"
+"      padding: 0;\n"
+"    }\n"
+"\n"
+"    body {\n"
+"      margin: 0;\n"
+"      padding: 0;\n"
+"      -webkit-text-size-adjust: 100%;\n"
+"      -ms-text-size-adjust: 100%;\n"
+"    }\n"
+"\n"
+"    table,\n"
+"    td {\n"
+"      border-collapse: collapse;\n"
+"      mso-table-lspace: 0pt;\n"
+"      mso-table-rspace: 0pt;\n"
+"    }\n"
+"\n"
+"    img {\n"
+"      border: 0;\n"
+"      height: auto;\n"
+"      line-height: 100%;\n"
+"      outline: none;\n"
+"      text-decoration: none;\n"
+"      -ms-interpolation-mode: bicubic;\n"
+"    }\n"
+"\n"
+"    p {\n"
+"      display: block;\n"
+"      margin: 13px 0;\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <!--[if mso]>\n"
+"    <noscript>\n"
+"    <xml>\n"
+"    <o:OfficeDocumentSettings>\n"
+"      <o:AllowPNG/>\n"
+"      <o:PixelsPerInch>96</o:PixelsPerInch>\n"
+"    </o:OfficeDocumentSettings>\n"
+"    </xml>\n"
+"    </noscript>\n"
+"    <![endif]-->\n"
+"  <!--[if lte mso 11]>\n"
+"    <style type=\"text/css\">\n"
+"      .mj-outlook-group-fix { width:100% !important; }\n"
+"    </style>\n"
+"    <![endif]-->\n"
+"  <style type=\"text/css\">\n"
+"    @media only screen and (min-width:480px) {\n"
+"      .mj-column-per-100 {\n"
+"        width: 100% !important;\n"
+"        max-width: 100%;\n"
+"      }\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style media=\"screen and (min-width:480px)\">\n"
+"    .moz-text-html .mj-column-per-100 {\n"
+"      width: 100% !important;\n"
+"      max-width: 100%;\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style type=\"text/css\">\n"
+"    @media only screen and (max-width:480px) {\n"
+"      table.mj-full-width-mobile {\n"
+"        width: 100% !important;\n"
+"      }\n"
+"\n"
+"      td.mj-full-width-mobile {\n"
+"        width: auto !important;\n"
+"      }\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style type=\"text/css\">\n"
+"  </style>\n"
+"</head>\n"
+"\n"
+"<body style=\"word-spacing:normal;\">\n"
+"  <div style>\n"
+"    <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\">\n"
+"      <tbody>\n"
+"        <tr>\n"
+"          <td>\n"
+"            <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:800px;\" width=\"800\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n"
+"            <div style=\"margin:0px auto;max-width:800px;\">\n"
+"              <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\">\n"
+"                <tbody>\n"
+"                  <tr>\n"
+"                    <td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\">\n"
+"                      <!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:800px;\" ><![endif]-->\n"
+"                      <div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n"
+"                          <tbody>\n"
+"                            <tr>\n"
+"                              <td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <p style=\"border-top:solid 4px #36aed1;font-size:1px;margin:0px auto;width:100%;\">\n"
+"                                </p>\n"
+"                                <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-top:solid 4px #36aed1;font-size:1px;margin:0px auto;width:750px;\" role=\"presentation\" width=\"750px\" ><tr><td style=\"height:0;line-height:0;\"> &nbsp;\n"
+"</td></tr></table><![endif]-->\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:'helvetica';font-size:16px;line-height:1;text-align:left;color:#222222;\">Dear <t t-out=\"object.installer_id.firstname or ''\"></t>\n"
+"                                  <t t-out=\"object.installer_id.lastname or ''\"></t>,\n"
+"                                </div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:'helvetica';font-size:16px;line-height:1;text-align:left;color:#222222;\">please find the setup protocol for your customer <t t-out=\"object.customer_id.name\"> attached.</t>\n"
+"                                </div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:'helvetica';font-size:16px;line-height:1;text-align:left;color:#222222;\">Best Regards</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:Lucida Handwriting;font-size:15px;line-height:1;text-align:left;color:#36aed1;\">OpenEMS Association e.V.</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </tbody>\n"
+"                        </table>\n"
+"                      </div>\n"
+"                      <!--[if mso | IE]></td></tr></table><![endif]-->\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </div>\n"
+"            <!--[if mso | IE]></td></tr></table><![endif]-->\n"
+"          </td>\n"
+"        </tr>\n"
+"      </tbody>\n"
+"    </table>\n"
+"  </div>\n"
+"</body>\n"
+"\n"
+"</html>\n"
+"            \n"
+"            "
+msgstr ""
+
+#. module: openems
+#: model:mail.template,body_html:openems.registration_email
+msgid ""
+"\n"
+"<!doctype html>\n"
+"<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\n"
+"\n"
+"<head>\n"
+"  <title> Registrierung erfolgreich </title>\n"
+"  <!--[if !mso]><!-->\n"
+"  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n"
+"  <!--<![endif]-->\n"
+"  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n"
+"  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
+"  <style type=\"text/css\">\n"
+"    #outlook a {\n"
+"      padding: 0;\n"
+"    }\n"
+"\n"
+"    body {\n"
+"      margin: 0;\n"
+"      padding: 0;\n"
+"      -webkit-text-size-adjust: 100%;\n"
+"      -ms-text-size-adjust: 100%;\n"
+"    }\n"
+"\n"
+"    table,\n"
+"    td {\n"
+"      border-collapse: collapse;\n"
+"      mso-table-lspace: 0pt;\n"
+"      mso-table-rspace: 0pt;\n"
+"    }\n"
+"\n"
+"    img {\n"
+"      border: 0;\n"
+"      height: auto;\n"
+"      line-height: 100%;\n"
+"      outline: none;\n"
+"      text-decoration: none;\n"
+"      -ms-interpolation-mode: bicubic;\n"
+"    }\n"
+"\n"
+"    p {\n"
+"      display: block;\n"
+"      margin: 13px 0;\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <!--[if mso]>\n"
+"    <noscript>\n"
+"    <xml>\n"
+"    <o:OfficeDocumentSettings>\n"
+"      <o:AllowPNG/>\n"
+"      <o:PixelsPerInch>96</o:PixelsPerInch>\n"
+"    </o:OfficeDocumentSettings>\n"
+"    </xml>\n"
+"    </noscript>\n"
+"    <![endif]-->\n"
+"  <!--[if lte mso 11]>\n"
+"    <style type=\"text/css\">\n"
+"      .mj-outlook-group-fix { width:100% !important; }\n"
+"    </style>\n"
+"    <![endif]-->\n"
+"  <style type=\"text/css\">\n"
+"    @media only screen and (min-width:480px) {\n"
+"      .mj-column-per-100 {\n"
+"        width: 100% !important;\n"
+"        max-width: 100%;\n"
+"      }\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style media=\"screen and (min-width:480px)\">\n"
+"    .moz-text-html .mj-column-per-100 {\n"
+"      width: 100% !important;\n"
+"      max-width: 100%;\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style type=\"text/css\">\n"
+"    @media only screen and (max-width:480px) {\n"
+"      table.mj-full-width-mobile {\n"
+"        width: 100% !important;\n"
+"      }\n"
+"\n"
+"      td.mj-full-width-mobile {\n"
+"        width: auto !important;\n"
+"      }\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style type=\"text/css\">\n"
+"  </style>\n"
+"</head>\n"
+"\n"
+"<body style=\"word-spacing:normal;\">\n"
+"  <div style>\n"
+"    <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\">\n"
+"      <tbody>\n"
+"        <tr>\n"
+"          <td>\n"
+"            <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:800px;\" width=\"800\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n"
+"            <div style=\"margin:0px auto;max-width:800px;\">\n"
+"              <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\">\n"
+"                <tbody>\n"
+"                  <tr>\n"
+"                    <td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\">\n"
+"                      <!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:800px;\" ><![endif]-->\n"
+"                      <div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n"
+"                          <tbody>\n"
+"                            <tr>\n"
+"                              <td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <p style=\"border-top:solid 4px #36aed1;font-size:1px;margin:0px auto;width:100%;\">\n"
+"                                </p>\n"
+"                                <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-top:solid 4px #36aed1;font-size:1px;margin:0px auto;width:750px;\" role=\"presentation\" width=\"750px\" ><tr><td style=\"height:0;line-height:0;\"> &nbsp;\n"
+"</td></tr></table><![endif]-->\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:helvetica;font-size:16px;line-height:1;text-align:left;color:#000000;\">Guten Tag <t t-out=\"object.user_id.firstname or ''\"></t>\n"
+"                                  <t t-out=\"object.user_id.lastname or ''\"></t>,\n"
+"                                </div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:helvetica;font-size:16px;line-height:1;text-align:left;color:#000000;\">Ihr Zugang zu OpenEMS UI wurde erstellt.</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:helvetica;font-size:16px;line-height:1;text-align:left;color:#000000;\">Sie können sich auf <a class=\"link\" href=\"http://localhost:4200\" target=\"_blank\" style=\"text-decoration: none; color: #36aed1;\">OpenEMS UI</a> einloggen, um auf das Online-Monitoring zuzugreifen.</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\" style=\"color:#000000;font-family:helvetica;font-size:16px;line-height:22px;table-layout:auto;width:100%;border:none;\">\n"
+"                                  <tr>\n"
+"                                    <td colspan=\"2\">Ihre Zugangsdaten:</td>\n"
+"                                  </tr>\n"
+"                                  <tr>\n"
+"                                    <td>E-Mail</td>\n"
+"                                    <td><a style=\"text-decoration: none; color:black;\">\n"
+"                                        <t t-out=\"object.email\"></t>\n"
+"                                      </a></td>\n"
+"                                  </tr>\n"
+"                                  <tr>\n"
+"                                    <td>Passwort</td>\n"
+"                                    <td>\n"
+"                                      <t t-out=\"ctx.get('password')\"></t>\n"
+"                                    </td>\n"
+"                                  </tr>\n"
+"                                </table>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:helvetica;font-size:16px;line-height:1;text-align:left;color:#000000;\">Best Regards</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:Lucida Handwriting;font-size:15px;line-height:1;text-align:left;color:#36aed1;\">OpenEMS Association e.V.</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </tbody>\n"
+"                        </table>\n"
+"                      </div>\n"
+"                      <!--[if mso | IE]></td></tr></table><![endif]-->\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </div>\n"
+"            <!--[if mso | IE]></td></tr></table><![endif]-->\n"
+"          </td>\n"
+"        </tr>\n"
+"      </tbody>\n"
+"    </table>\n"
+"  </div>\n"
+"</body>\n"
+"\n"
+"</html>\n"
+"            \n"
+"            "
+msgstr ""
+
+#. module: openems
+#: model:mail.template,body_html:openems.setup_protocol_email_customer
+msgid ""
+"\n"
+"<!doctype html>\n"
+"<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\n"
+"\n"
+"<head>\n"
+"  <title> Your OpenEMS Edge setup protocol </title>\n"
+"  <!--[if !mso]><!-->\n"
+"  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n"
+"  <!--<![endif]-->\n"
+"  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n"
+"  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
+"  <style type=\"text/css\">\n"
+"    #outlook a {\n"
+"      padding: 0;\n"
+"    }\n"
+"\n"
+"    body {\n"
+"      margin: 0;\n"
+"      padding: 0;\n"
+"      -webkit-text-size-adjust: 100%;\n"
+"      -ms-text-size-adjust: 100%;\n"
+"    }\n"
+"\n"
+"    table,\n"
+"    td {\n"
+"      border-collapse: collapse;\n"
+"      mso-table-lspace: 0pt;\n"
+"      mso-table-rspace: 0pt;\n"
+"    }\n"
+"\n"
+"    img {\n"
+"      border: 0;\n"
+"      height: auto;\n"
+"      line-height: 100%;\n"
+"      outline: none;\n"
+"      text-decoration: none;\n"
+"      -ms-interpolation-mode: bicubic;\n"
+"    }\n"
+"\n"
+"    p {\n"
+"      display: block;\n"
+"      margin: 13px 0;\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <!--[if mso]>\n"
+"    <noscript>\n"
+"    <xml>\n"
+"    <o:OfficeDocumentSettings>\n"
+"      <o:AllowPNG/>\n"
+"      <o:PixelsPerInch>96</o:PixelsPerInch>\n"
+"    </o:OfficeDocumentSettings>\n"
+"    </xml>\n"
+"    </noscript>\n"
+"    <![endif]-->\n"
+"  <!--[if lte mso 11]>\n"
+"    <style type=\"text/css\">\n"
+"      .mj-outlook-group-fix { width:100% !important; }\n"
+"    </style>\n"
+"    <![endif]-->\n"
+"  <style type=\"text/css\">\n"
+"    @media only screen and (min-width:480px) {\n"
+"      .mj-column-per-100 {\n"
+"        width: 100% !important;\n"
+"        max-width: 100%;\n"
+"      }\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style media=\"screen and (min-width:480px)\">\n"
+"    .moz-text-html .mj-column-per-100 {\n"
+"      width: 100% !important;\n"
+"      max-width: 100%;\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style type=\"text/css\">\n"
+"    @media only screen and (max-width:480px) {\n"
+"      table.mj-full-width-mobile {\n"
+"        width: 100% !important;\n"
+"      }\n"
+"\n"
+"      td.mj-full-width-mobile {\n"
+"        width: auto !important;\n"
+"      }\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style type=\"text/css\">\n"
+"  </style>\n"
+"</head>\n"
+"\n"
+"<body style=\"word-spacing:normal;\">\n"
+"  <div style>\n"
+"    <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\">\n"
+"      <tbody>\n"
+"        <tr>\n"
+"          <td>\n"
+"            <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:800px;\" width=\"800\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n"
+"            <div style=\"margin:0px auto;max-width:800px;\">\n"
+"              <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\">\n"
+"                <tbody>\n"
+"                  <tr>\n"
+"                    <td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\">\n"
+"                      <!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:800px;\" ><![endif]-->\n"
+"                      <div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n"
+"                          <tbody>\n"
+"                            <tr>\n"
+"                              <td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <p style=\"border-top:solid 4px #36aed1;font-size:1px;margin:0px auto;width:100%;\">\n"
+"                                </p>\n"
+"                                <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-top:solid 4px #36aed1;font-size:1px;margin:0px auto;width:750px;\" role=\"presentation\" width=\"750px\" ><tr><td style=\"height:0;line-height:0;\"> &nbsp;\n"
+"</td></tr></table><![endif]-->\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:'helvetica';font-size:16px;line-height:1;text-align:left;color:#222222;\">Welcome to OpenEMS,</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:'helvetica';font-size:16px;line-height:1;text-align:left;color:#222222;\">please find your setup protocol for OpenEMS Edge attached.</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:'helvetica';font-size:16px;line-height:1;text-align:left;color:#222222;\">Best Regards</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:Lucida Handwriting;font-size:15px;line-height:1;text-align:left;color:#36aed1;\">OpenEMS Association e.V.</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </tbody>\n"
+"                        </table>\n"
+"                      </div>\n"
+"                      <!--[if mso | IE]></td></tr></table><![endif]-->\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </div>\n"
+"            <!--[if mso | IE]></td></tr></table><![endif]-->\n"
+"          </td>\n"
+"        </tr>\n"
+"      </tbody>\n"
+"    </table>\n"
+"  </div>\n"
+"</body>\n"
+"\n"
+"</html>\n"
+"            \n"
+"            "
+msgstr ""
+
+#. module: openems
+#: model:mail.template,body_html:openems.alerting_email_generic
+msgid ""
+"\n"
+"<!doctype html>\n"
+"<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\n"
+"\n"
+"<head>\n"
+"  <title>OpenEMS Alert - Edge is offline</title>\n"
+"  <!--[if !mso]><!-->\n"
+"  <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n"
+"  <!--<![endif]-->\n"
+"  <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n"
+"  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
+"  <style type=\"text/css\">\n"
+"    #outlook a {\n"
+"      padding: 0;\n"
+"    }\n"
+"\n"
+"    body {\n"
+"      margin: 0;\n"
+"      padding: 0;\n"
+"      -webkit-text-size-adjust: 100%;\n"
+"      -ms-text-size-adjust: 100%;\n"
+"    }\n"
+"\n"
+"    table,\n"
+"    td {\n"
+"      border-collapse: collapse;\n"
+"      mso-table-lspace: 0pt;\n"
+"      mso-table-rspace: 0pt;\n"
+"    }\n"
+"\n"
+"    img {\n"
+"      border: 0;\n"
+"      height: auto;\n"
+"      line-height: 100%;\n"
+"      outline: none;\n"
+"      text-decoration: none;\n"
+"      -ms-interpolation-mode: bicubic;\n"
+"    }\n"
+"\n"
+"    p {\n"
+"      display: block;\n"
+"      margin: 13px 0;\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <!--[if mso]>\n"
+"    <noscript>\n"
+"    <xml>\n"
+"    <o:OfficeDocumentSettings>\n"
+"      <o:AllowPNG/>\n"
+"      <o:PixelsPerInch>96</o:PixelsPerInch>\n"
+"    </o:OfficeDocumentSettings>\n"
+"    </xml>\n"
+"    </noscript>\n"
+"    <![endif]-->\n"
+"  <!--[if lte mso 11]>\n"
+"    <style type=\"text/css\">\n"
+"      .mj-outlook-group-fix { width:100% !important; }\n"
+"    </style>\n"
+"    <![endif]-->\n"
+"  <style type=\"text/css\">\n"
+"    @media only screen and (min-width:480px) {\n"
+"      .mj-column-per-100 {\n"
+"        width: 100% !important;\n"
+"        max-width: 100%;\n"
+"      }\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style media=\"screen and (min-width:480px)\">\n"
+"    .moz-text-html .mj-column-per-100 {\n"
+"      width: 100% !important;\n"
+"      max-width: 100%;\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style type=\"text/css\">\n"
+"    @media only screen and (max-width:480px) {\n"
+"      table.mj-full-width-mobile {\n"
+"        width: 100% !important;\n"
+"      }\n"
+"\n"
+"      td.mj-full-width-mobile {\n"
+"        width: auto !important;\n"
+"      }\n"
+"    }\n"
+"\n"
+"  </style>\n"
+"  <style type=\"text/css\">\n"
+"  </style>\n"
+"</head>\n"
+"\n"
+"<body style=\"word-spacing:normal;\">\n"
+"  <div style>\n"
+"    <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\">\n"
+"      <tbody>\n"
+"        <tr>\n"
+"          <td>\n"
+"            <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:800px;\" width=\"800\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n"
+"            <div style=\"margin:0px auto;max-width:800px;\">\n"
+"              <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\">\n"
+"                <tbody>\n"
+"                  <tr>\n"
+"                    <td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\">\n"
+"                      <!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:800px;\" ><![endif]-->\n"
+"                      <div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n"
+"                        <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n"
+"                          <tbody>\n"
+"                            <tr>\n"
+"                              <td align=\"center\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <p style=\"border-top:solid 4px #36aed1;font-size:1px;margin:0px auto;width:100%;\">\n"
+"                                </p>\n"
+"                                <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border-top:solid 4px #36aed1;font-size:1px;margin:0px auto;width:750px;\" role=\"presentation\" width=\"750px\" ><tr><td style=\"height:0;line-height:0;\"> &nbsp;\n"
+"</td></tr></table><![endif]-->\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:helvetica;font-size:16px;line-height:1;text-align:left;color:#000000;\">Dear <t t-out=\"object.user_id.firstname or ''\"></t>\n"
+"                                  <t t-out=\"object.user_id.lastname or ''\"></t>,\n"
+"                                </div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:helvetica;font-size:16px;line-height:1;text-align:left;color:#000000;\">Your OpenEMS Edge with number <strong t-out=\"object.device_id.name\"> is offline since:</strong></div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:helvetica;font-size:16px;line-height:1;text-align:left;color:#000000;\">\n"
+"                                  <t t-if=\"object.user_id.tz\">\n"
+"                                    <t t-out=\"format_datetime(object.device_id.lastmessage, tz=object.user_id.tz, dt_format='dd.MM.YYYY HH:mm:ss')\"></t>\n"
+"                                    <t t-out=\"(object.user_id.tz)\"></t>\n"
+"                                  </t>\n"
+"                                  <t t-else>\n"
+"                                    <t t-out=\"format_datetime(object.device_id.lastmessage, tz='UTC', dt_format='dd.MM.YYYY HH:mm:ss')\"></t> (UTC)\n"
+"                                  </t>\n"
+"                                </div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <table cellpadding=\"0\" cellspacing=\"0\" width=\"100%\" border=\"0\" style=\"color:#000000;font-family:helvetica;font-size:16px;line-height:22px;table-layout:auto;width:100%;border:none;\">\n"
+"                                  <tr>\n"
+"                                    <th colspan=\"2\" style=\"padding-top: 10px; text-align: left; border-bottom: 2px solid #ecedee;\" align=\"left\">Info</th>\n"
+"                                  </tr>\n"
+"                                  <tr>\n"
+"                                    <td>\n"
+"                                      <strong>Edge-Version</strong>\n"
+"                                    </td>\n"
+"                                    <td>\n"
+"                                      <t t-out=\"object.device_id.openems_version\"></t>\n"
+"                                    </td>\n"
+"                                  </tr>\n"
+"                                  <tr>\n"
+"                                    <td>\n"
+"                                      <strong>Type</strong>\n"
+"                                    </td>\n"
+"                                    <td>\n"
+"                                      <t t-out=\"object.device_id.oem.upper()\"></t>\n"
+"                                      <t t-out=\"object.device_id.producttype.capitalize()\"></t>\n"
+"                                    </td>\n"
+"                                  </tr>\n"
+"                                </table>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:helvetica;font-size:16px;line-height:1;text-align:left;color:#000000;\">Best Regards</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                            <tr>\n"
+"                              <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                                <div style=\"font-family:Lucida Handwriting;font-size:16px;line-height:1;text-align:left;color:#36aed1;\">OpenEMS Association e.V.</div>\n"
+"                              </td>\n"
+"                            </tr>\n"
+"                          </tbody>\n"
+"                        </table>\n"
+"                      </div>\n"
+"                      <!--[if mso | IE]></td></tr></table><![endif]-->\n"
+"                    </td>\n"
+"                  </tr>\n"
+"                </tbody>\n"
+"              </table>\n"
+"            </div>\n"
+"            <!--[if mso | IE]></td></tr></table><![endif]-->\n"
+"          </td>\n"
+"        </tr>\n"
+"      </tbody>\n"
+"    </table>\n"
+"    <!--[if mso | IE]><table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"\" role=\"presentation\" style=\"width:800px;\" width=\"800\" ><tr><td style=\"line-height:0px;font-size:0px;mso-line-height-rule:exactly;\"><![endif]-->\n"
+"    <div style=\"margin:0px auto;max-width:800px;\">\n"
+"      <table align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"width:100%;\">\n"
+"        <tbody>\n"
+"          <tr>\n"
+"            <td style=\"direction:ltr;font-size:0px;padding:20px 0;text-align:center;\">\n"
+"              <!--[if mso | IE]><table role=\"presentation\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\"><tr><td class=\"\" style=\"vertical-align:top;width:800px;\" ><![endif]-->\n"
+"              <div class=\"mj-column-per-100 mj-outlook-group-fix\" style=\"font-size:0px;text-align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%;\">\n"
+"                <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" role=\"presentation\" style=\"vertical-align:top;\" width=\"100%\">\n"
+"                  <tbody>\n"
+"                    <tr>\n"
+"                      <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                        <div style=\"font-family:helvetica;font-size:16px;line-height:1;text-align:left;color:#000000;\">Wenn Sie keine E-Mail Benachrichtigung mehr wünschen, können Sie die Funktion <a class=\"link\" href=\" http://localhost:4200/device/${object.device_id.name}/settings/alerting\" style=\"text-decoration: none; color: #36aed1;\">hier</a> deaktivieren.</div>\n"
+"                      </td>\n"
+"                    </tr>\n"
+"                    <tr>\n"
+"                      <td align=\"left\" style=\"font-size:0px;padding:10px 25px;word-break:break-word;\">\n"
+"                        <div style=\"font-family:helvetica;font-size:16px;line-height:1;text-align:left;color:#000000;\">Dies ist eine automatisch generierte Nachricht. Bitte antworten Sie <strong>nicht</strong> auf diese Nachricht!</div>\n"
+"                      </td>\n"
+"                    </tr>\n"
+"                  </tbody>\n"
+"                </table>\n"
+"              </div>\n"
+"              <!--[if mso | IE]></td></tr></table><![endif]-->\n"
+"            </td>\n"
+"          </tr>\n"
+"        </tbody>\n"
+"      </table>\n"
+"    </div>\n"
+"    <!--[if mso | IE]></td></tr></table><![endif]-->\n"
+"  </div>\n"
+"</body>\n"
+"\n"
+"</html>\n"
+"            \n"
+"            "
+msgstr ""
+
+#. module: openems
+#: model:ir.actions.report,print_report_name:openems.action_openems_setup_protocol_report
+msgid ""
+"('IBN-' + object.openems_device_id.name + '-' + "
+"object.create_date.strftime('%d.%m.%Y'))"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__apikey
+msgid "API-Key"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "Access Role in Online-Monitoring"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__active
+msgid "Active"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__openems_device_user_role__role__admin
+#: model:ir.model.fields.selection,name:openems.selection__res_users__global_role__admin
+msgid "Admin"
+msgstr ""
+
+#. module: openems
+#: model:ir.ui.menu,name:openems.menu_openems_admin
+msgid "Administration"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.device_search_view
+msgid "Archived"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_res_users__branding_partner_id
+msgid "Branding Partner"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__category
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot__category
+msgid "Category"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__comment
+msgid "Comment"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "Configuration"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "Configuration Updates"
+msgstr ""
+
+#. module: openems
+#: model:ir.model,name:openems.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__create_uid
+#: model:ir.model.fields,field_description:openems.field_openems_device_tag__create_uid
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role__create_uid
+#: model:ir.model.fields,field_description:openems.field_openems_openemsconfigupdate__create_uid
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__create_uid
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__create_uid
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot__create_uid
+#: model:ir.model.fields,field_description:openems.field_openems_systemmessage__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__create_date
+#: model:ir.model.fields,field_description:openems.field_openems_device_tag__create_date
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role__create_date
+#: model:ir.model.fields,field_description:openems.field_openems_openemsconfigupdate__create_date
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__create_date
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__create_date
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot__create_date
+#: model:ir.model.fields,field_description:openems.field_openems_systemmessage__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: openems
+#: model:res.partner.category,name:openems.res_partner_category_created_via_ibn
+msgid "Created via IBN"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_systemmessage__timestamp
+msgid "Creation date"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__customer_id
+#: model:res.partner.category,name:openems.res_partner_category_customer
+msgid "Customer"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__res_users__openems_language__cz
+msgid "Czech"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Datum:"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.device_search_view
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_tree
+msgid "Description"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_openemsconfigupdate_tree
+msgid "Details"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_stock_lot__device_id
+#: model:ir.model.fields,field_description:openems.field_stock_lot__device_ids
+msgid "Device"
+msgstr ""
+
+#. module: openems
+#: model:ir.actions.act_window,name:openems.action_openems_openemsconfigupdate
+#: model:ir.ui.menu,name:openems.menu_openems_admin_openemsconfigupdate
+msgid "Device Configuration Updates"
+msgstr ""
+
+#. module: openems
+#: model:ir.actions.act_window,name:openems.action_openems_device
+#: model:ir.ui.menu,name:openems.menu_openems_content_devices
+msgid "Devices"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__different_location_id
+msgid "Different Location"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__display_name
+#: model:ir.model.fields,field_description:openems.field_openems_device_tag__display_name
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role__display_name
+#: model:ir.model.fields,field_description:openems.field_openems_openemsconfigupdate__display_name
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__display_name
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__display_name
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot__display_name
+#: model:ir.model.fields,field_description:openems.field_openems_systemmessage__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__res_users__openems_language__nl
+msgid "Dutch"
+msgstr ""
+
+#. module: openems
+#: model:mail.template,name:openems.alerting_email_generic
+msgid "E-Mail Alerting"
+msgstr ""
+
+#. module: openems
+#: model:mail.template,name:openems.registration_email
+msgid "E-Mail Kunden Registrierung"
+msgstr ""
+
+#. module: openems
+#: model:mail.template,name:openems.setup_protocol_email_customer
+msgid "E-Mail setup protocol for customer"
+msgstr ""
+
+#. module: openems
+#: model:mail.template,name:openems.setup_protocol_email_installer
+msgid "E-Mail setup protocol for installer"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "E-Mail-Adresse"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__emshardware
+msgid "EMS Hardware"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__res_users__openems_language__en
+msgid "English"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__item_ids
+msgid "Entry Items"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__openems_device__openems_sum_state_level__fault
+msgid "Fault"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__field
+msgid "Field Identifier"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Firmenname"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__first_setup_protocol_date
+msgid "First Setup Protocol Date"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__res_users__openems_language__fr
+msgid "French"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "General"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__res_users__openems_language__de
+msgid "German"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_res_users__global_role
+msgid "Global Role"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__openems_device_user_role__role__guest
+#: model:ir.model.fields.selection,name:openems.selection__res_users__global_role__guest
+msgid "Guest"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "Hardware"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__has_message
+msgid "Has Message"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__res_users__openems_language__hu
+msgid "Hungarian"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__id
+#: model:ir.model.fields,field_description:openems.field_openems_device_tag__id
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role__id
+#: model:ir.model.fields,field_description:openems.field_openems_openemsconfigupdate__id
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__id
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__id
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot__id
+#: model:ir.model.fields,field_description:openems.field_openems_systemmessage__id
+msgid "ID"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,help:openems.field_openems_device__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,help:openems.field_openems_device__message_has_error
+#: model:ir.model.fields,help:openems.field_openems_device__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__openems_device__openems_sum_state_level__info
+msgid "Info"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Installateur"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "Installation"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "Installation Log"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__setup_password
+msgid "Installation key"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_res_partner__installer_setup_protocols_ids
+#: model:ir.model.fields,field_description:openems.field_res_users__installer_setup_protocols_ids
+msgid "Installed OpenEMS Edge"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__installer_id
+#: model:ir.model.fields.selection,name:openems.selection__openems_device_user_role__role__installer
+#: model:ir.model.fields.selection,name:openems.selection__res_users__global_role__installer
+msgid "Installer"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__internalnote
+msgid "Internal note"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "Is connected"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Kontaktdaten Endkunde"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Land"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device____last_update
+#: model:ir.model.fields,field_description:openems.field_openems_device_tag____last_update
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role____last_update
+#: model:ir.model.fields,field_description:openems.field_openems_openemsconfigupdate____last_update
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol____last_update
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item____last_update
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot____last_update
+#: model:ir.model.fields,field_description:openems.field_openems_systemmessage____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__write_uid
+#: model:ir.model.fields,field_description:openems.field_openems_device_tag__write_uid
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role__write_uid
+#: model:ir.model.fields,field_description:openems.field_openems_openemsconfigupdate__write_uid
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__write_uid
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__write_uid
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot__write_uid
+#: model:ir.model.fields,field_description:openems.field_openems_systemmessage__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__write_date
+#: model:ir.model.fields,field_description:openems.field_openems_device_tag__write_date
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role__write_date
+#: model:ir.model.fields,field_description:openems.field_openems_openemsconfigupdate__write_date
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__write_date
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__write_date
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot__write_date
+#: model:ir.model.fields,field_description:openems.field_openems_systemmessage__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__lastupdate
+msgid "Last data update"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__lastmessage
+msgid "Last message"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role__last_notification
+msgid "Last notification sent"
+msgstr ""
+
+#. module: openems
+#: model:ir.model,name:openems.model_stock_lot
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: openems
+#: model:res.groups,name:openems.group_openems_manager
+msgid "Manager"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__manual_setup_date
+msgid "Manual Setup Date"
+msgstr ""
+
+#. module: openems
+#: model:res.groups,comment:openems.group_openems_manager
+msgid "Members of this group can manage all devices"
+msgstr ""
+
+#. module: openems
+#: model:res.groups,comment:openems.group_openems_reader
+msgid "Members of this group have reading access to all devices"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_systemmessage__text
+msgid "Message"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__name
+#: model:ir.model.fields,field_description:openems.field_openems_device_tag__name
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__name
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot__name
+msgid "Name"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Name Installateur"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Name Kontaktperson"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__name_number
+msgid "Name Number"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.constraint,message:openems.constraint_openems_device_unique_name
+msgid "Name needs to be unique"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role__time_to_wait
+msgid "Notification"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,help:openems.field_openems_device__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,help:openems.field_openems_device__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_tree
+msgid "OE Connected"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_tree
+msgid "OE State"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_tree
+msgid "OE Version"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__oem
+msgid "OEM Branding"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__openems_device__openems_sum_state_level__ok
+msgid "Ok"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__monitoring_url
+msgid "Online-Monitoring"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__openems_device__oem__openems
+#: model:ir.module.category,name:openems.module_category_openems
+#: model:ir.ui.menu,name:openems.menu_openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_users_form
+msgid "OpenEMS"
+msgstr ""
+
+#. module: openems
+#: model:mail.template,subject:openems.alerting_email_generic
+msgid "OpenEMS Alert - Edge is offline"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "OpenEMS Association e.V."
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__openems_config_components
+msgid "OpenEMS Config"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__openems_config
+msgid "OpenEMS Config Full"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__openems_config_update_ids
+msgid "OpenEMS Config Updates"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_openemsconfigupdate_tree
+msgid "OpenEMS Configuration Updates"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role__device_id
+#: model:ir.model.fields,field_description:openems.field_openems_openemsconfigupdate__device_id
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__device_id
+#: model:ir.model.fields,field_description:openems.field_openems_systemmessage__device_id
+#: model:ir.model.fields.selection,name:openems.selection__openems_device__producttype__openems-edge
+#: model:ir.ui.menu,name:openems.menu_openems_content
+msgid "OpenEMS Edge"
+msgstr ""
+
+#. module: openems
+#: model:ir.model,name:openems.model_openems_device
+msgid "OpenEMS Edge Device"
+msgstr ""
+
+#. module: openems
+#: model:ir.model,name:openems.model_openems_openemsconfigupdate
+msgid "OpenEMS Edge Device Configuration Update"
+msgstr ""
+
+#. module: openems
+#: model:ir.model,name:openems.model_openems_device_tag
+msgid "OpenEMS Edge Device Tag"
+msgstr ""
+
+#. module: openems
+#: model:ir.model,name:openems.model_openems_device_user_role
+msgid "OpenEMS Edge Device User Role"
+msgstr ""
+
+#. module: openems
+#: model:ir.model,name:openems.model_openems_setup_protocol_item
+msgid "OpenEMS Edge Setup Protocol Entry Item"
+msgstr ""
+
+#. module: openems
+#: model:ir.model,name:openems.model_openems_setup_protocol_production_lot
+msgid "OpenEMS Edge Setup Protocol Serial Number"
+msgstr ""
+
+#. module: openems
+#: model:ir.model,name:openems.model_openems_setup_protocol
+msgid "OpenEMS Edge Setup Protocols (IBN)"
+msgstr ""
+
+#. module: openems
+#: model:ir.model,name:openems.model_openems_systemmessage
+msgid "OpenEMS Edge Systemmessage"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__openems_is_connected
+msgid "OpenEMS Is connected"
+msgstr ""
+
+#. module: openems
+#: model:ir.actions.report,name:openems.action_openems_setup_protocol_report
+msgid "OpenEMS Setup Protocol"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__openems_sum_state_level
+msgid "OpenEMS State"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__openems_version
+#: model_terms:ir.ui.view,arch_db:openems.device_search_view
+msgid "OpenEMS Version"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.device_search_view
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_tree
+msgid "OpenEMS-Number"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_res_users__openems_language
+msgid "Openems Language"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Ort"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__openems_device_user_role__role__owner
+#: model:ir.model.fields.selection,name:openems.selection__res_users__global_role__owner
+msgid "Owner"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_res_partner__customer_setup_protocols_ids
+#: model:ir.model.fields,field_description:openems.field_res_users__customer_setup_protocols_ids
+msgid "Owner of OpenEMS Edge"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "PLZ"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,help:openems.field_openems_device__setup_password
+msgid "Password for commissioning by the installer"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_setup_protocol_form
+msgid "Print"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "Product"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__producttype
+msgid "Product type"
+msgstr ""
+
+#. module: openems
+#: model:res.groups,name:openems.group_openems_reader
+msgid "Read access"
+msgstr ""
+
+#. module: openems
+#: model:mail.template,subject:openems.registration_email
+msgid "Registrierung erfolgreich"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role__role
+msgid "Role"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__user_role_ids
+#: model:ir.model.fields,field_description:openems.field_res_users__device_role_ids
+msgid "Roles"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "Security"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot__lot_id
+msgid "Serial Number"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol__productionlot_ids
+msgid "Serial Numbers"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.constraint,message:openems.constraint_openems_device_unique_stock_production_lot_id
+msgid "Serial number needs to be unique"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__setup_protocol_id
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot__setup_protocol_id
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Setup Protocol"
+msgstr ""
+
+#. module: openems
+#: model:ir.actions.act_window,name:openems.action_openems_admin_setup_protocol
+#: model:ir.model.fields,field_description:openems.field_openems_device__setup_protocol_ids
+#: model:ir.ui.menu,name:openems.menu_openems_admin_setup_protocol
+#: model_terms:ir.ui.view,arch_db:openems.res_partner_form
+msgid "Setup Protocols"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__sequence
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_production_lot__sequence
+msgid "Sort"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__res_users__openems_language__es
+msgid "Spanish"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Speicherstandort"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "Status"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__stock_production_lot_id
+msgid "Stock Production Lot"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Straße / Hausnummer"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "System Messages"
+msgstr ""
+
+#. module: openems
+#: model:ir.actions.act_window,name:openems.action_openems_systemmessage
+#: model:ir.model.fields,field_description:openems.field_openems_device__systemmessage_ids
+#: model:ir.ui.menu,name:openems.menu_openems_admin_systemmessages
+msgid "Systemmessages"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_device_form
+msgid "Systemstatus"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__tag_ids
+msgid "Tags"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Telefonnummer"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_systemmessage__text_teaser
+msgid "Text Teaser"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_openemsconfigupdate__details
+msgid "Update Details"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_openemsconfigupdate__teaser
+msgid "Update Details Teaser"
+msgstr ""
+
+#. module: openems
+#: model:ir.model,name:openems.model_res_users
+#: model:ir.model.fields,field_description:openems.field_openems_device_user_role__user_id
+msgid "User"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.constraint,message:openems.constraint_openems_device_user_role_device_user_uniq
+msgid "User already exists for this device."
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.openems_systemmessage_tree
+msgid "Users"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__value
+msgid "Value"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_setup_protocol_item__view
+msgid "View Identifier"
+msgstr ""
+
+#. module: openems
+#: model_terms:ir.ui.view,arch_db:openems.report_openems_setup_protocol_template
+msgid "Vor- Nachname"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields.selection,name:openems.selection__openems_device__openems_sum_state_level__warning
+msgid "Warning"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,field_description:openems.field_openems_device__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: openems
+#: model:ir.model.fields,help:openems.field_openems_device__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: openems
+#: model:mail.template,subject:openems.setup_protocol_email_customer
+#: model:mail.template,subject:openems.setup_protocol_email_installer
+msgid "Your OpenEMS setup protocol for {{object.openems_device_id.name}}"
+msgstr ""

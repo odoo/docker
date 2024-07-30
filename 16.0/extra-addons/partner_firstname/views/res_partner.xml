@@ -1,0 +1,105 @@
+<odoo>
+    <record id="view_partner_simple_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_simple_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@id='individual']" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible':[('is_company','=',True)], 'readonly': [('is_company', '=', False)], 'required': [('type', '=', 'contact'), ('is_company', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@id='company']" position="attributes">
+                <attribute
+                    name="attrs"
+                > {'invisible':[('is_company','=',False)], 'readonly': [('is_company', '=', False)], 'required': [('type', '=', 'contact'), ('is_company', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//h1//field[@id='company']/.." position="before">
+                <group attrs="{'invisible': [('is_company', '=', True)]}">
+                    <field
+                        name="lastname"
+                        attrs="{'required': [('firstname', '=', False),
+                        ('is_company', '=', False),
+                        ('type', '=', 'contact')]}"
+                    />
+                    <field
+                        name="firstname"
+                        attrs="{'required': [('lastname', '=', False),
+                        ('is_company', '=', False),
+                        ('type', '=', 'contact')]}"
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+    <record id="view_partner_form" model="ir.ui.view">
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@id='individual']" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'invisible':[('is_company','=',True)], 'readonly': [('is_company', '=', False)], 'required': [('type', '=', 'contact'), ('is_company', '=', True)]}</attribute>
+            </xpath>
+            <xpath expr="//field[@id='company']" position="attributes">
+                <attribute
+                    name="attrs"
+                > {'invisible':[('is_company','=',False)], 'readonly': [('is_company', '=', False)], 'required': [('type', '=', 'contact'), ('is_company', '=', True)]}</attribute>
+            </xpath>
+            <xpath
+                expr="//div[hasclass('oe_title')]//field[@id='company']/.."
+                position="after"
+            >
+                <div class="oe_edit_only">
+                    <group attrs="{'invisible': [('is_company', '=', True)]}">
+                        <field
+                            name="lastname"
+                            attrs="{'required': [('firstname', '=', False),
+                                ('is_company', '=', False),
+                                ('type', '=', 'contact')]}"
+                        />
+                        <field
+                            name="firstname"
+                            attrs="{'required': [('lastname', '=', False),
+                                ('is_company', '=', False),
+                                ('type', '=', 'contact')]}"
+                        />
+                    </group>
+                </div>
+            </xpath>
+            <!-- Modify inner contact form of child_ids -->
+            <xpath
+                expr="//field[@name='child_ids']/form//field[@name='name']"
+                position="attributes"
+            >
+                <attribute name="attrs">
+                    {
+                        'readonly': [('is_company', '=', False)],
+                        'required': [('is_company', '=', True)]
+                    }
+                </attribute>
+            </xpath>
+            <xpath
+                expr="//field[@name='child_ids']/form//field[@name='name']"
+                position="after"
+            >
+                <div class="oe_edit_only" colspan="2">
+                    <field name="is_company" invisible="True" />
+                    <group attrs="{'invisible': [('is_company', '=', True)]}">
+                        <field
+                            name="lastname"
+                            attrs="{'required': [('firstname', '=', False),
+                                ('is_company', '=', False),
+                                ('type', '=', 'contact')]}"
+                        />
+                        <field
+                            name="firstname"
+                            attrs="{'required': [('lastname', '=', False),
+                                ('is_company', '=', False),
+                                ('type', '=', 'contact')]}"
+                        />
+                    </group>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

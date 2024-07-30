@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_partner_form" model="ir.ui.view">
+        <field name="name">OpenEMS Partner: Form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form" />
+        <field name="arch" type="xml">
+            <notebook>
+                <page string="Setup Protocols" name="setup_protocols">
+                    <group>
+                        <field name="installer_setup_protocols_ids">
+                            <tree>
+                                <field name="create_date" />
+                                <field name="device_id" />
+                            </tree>
+                        </field>
+                        <field name="customer_setup_protocols_ids">
+                            <tree>
+                                <field name="create_date" />
+                                <field name="device_id" />
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="res_partner_category_created_via_ibn" model="res.partner.category">
+            <field name="name">Created via IBN</field>
+        </record>
+        <record id="res_partner_category_customer" model="res.partner.category">
+            <field name="name">Customer</field>
+        </record>
+    </data>
+</odoo>

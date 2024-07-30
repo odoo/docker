@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="openems.action_openems_setup_protocol_report"  model="ir.actions.report">
+        <field name="name">OpenEMS Setup Protocol</field>
+        <field name="model">openems.setup_protocol</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">openems.report_openems_setup_protocol_template</field>
+        <field name="print_report_name">('IBN-' + object.openems_device_id.name + '-' + object.create_date.strftime('%d.%m.%Y'))</field>
+    </record>
+    <template id="report_openems_setup_protocol_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.basic_layout">
+                    <div class="page">
+                        <style type="text/css" scoped="true">
+table,
+th,
+td {
+    border: 1px solid rgb(217, 217, 217);
+}
+
+th {
+    font-weight: bold;
+    background-color: rgb(242, 242, 242);
+}
+                        </style>
+
+                        <!-- Title -->
+                        <h1>Setup Protocol</h1>
+
+                        <table class="table table-sm o_main_table">
+                            <tr>
+                                <td>Datum: </td>
+                                <td>
+                                    <span
+                                        t-field="doc.create_date"
+                                        t-options="{'widget': 'date'}"
+                                    />
+                                </td>
+                            </tr>
+                            <!-- Customer -->
+                            <tr>
+                                <th colspan="2" class="pt-5">Kontaktdaten Endkunde</th>
+                            </tr>
+                            <tr t-if="doc.customer_id.parent_id">
+                                <td>Firmenname</td>
+                                <td>
+                                    <span
+                                        t-field="doc.customer_id.commercial_company_name"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Vor- Nachname</td>
+                                <td>
+                                    <span t-field="doc.customer_id.firstname" />
+                                    <span t-field="doc.customer_id.lastname" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Straße / Hausnummer</td>
+                                <td>
+                                    <span t-field="doc.customer_id.street" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PLZ</td>
+                                <td>
+                                    <span t-field="doc.customer_id.zip" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ort</td>
+                                <td>
+                                    <span t-field="doc.customer_id.city" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Land</td>
+                                <td>
+                                    <t t-esc="doc.customer_id.country_id.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>E-Mail-Adresse</td>
+                                <td>
+                                    <span t-field="doc.customer_id.email" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Telefonnummer</td>
+                                <td>
+                                    <span t-field="doc.customer_id.phone" />
+                                </td>
+                            </tr>
+                            <!-- Different location -->
+                            <t t-if="doc.different_location_id">
+                                <tr>
+                                    <th colspan="2" class="pt-5">Speicherstandort</th>
+                                </tr>
+                                <tr t-if="doc.different_location_id.parent_id">
+                                    <td>Firmenname</td>
+                                    <td>
+                                        <span
+                                            t-field="doc.different_location_id.commercial_company_name"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Name Kontaktperson</td>
+                                    <td>
+                                        <span
+                                            t-field="doc.different_location_id.firstname"
+                                        />
+                                        <span
+                                            t-field="doc.different_location_id.lastname"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Straße / Hausnummer</td>
+                                    <td>
+                                        <span
+                                            t-field="doc.different_location_id.street"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>PLZ</td>
+                                    <td>
+                                        <span t-field="doc.different_location_id.zip" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Ort</td>
+                                    <td>
+                                        <span
+                                            t-field="doc.different_location_id.city"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Land</td>
+                                    <td>
+                                        <t
+                                            t-esc="doc.different_location_id.country_id.name"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>E-Mail-Adresse</td>
+                                    <td>
+                                        <span
+                                            t-field="doc.different_location_id.email"
+                                        />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Telefonnummer</td>
+                                    <td>
+                                        <span
+                                            t-field="doc.different_location_id.phone"
+                                        />
+                                    </td>
+                                </tr>
+                            </t>
+                            <!-- Installer -->
+                            <tr>
+                                <th colspan="2" class="pt-5">Installateur</th>
+                            </tr>
+                            <tr>
+                                <td>Firmenname</td>
+                                <td>
+                                    <t
+                                        t-esc="doc.installer_id.commercial_company_name"
+                                    />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Name Installateur</td>
+                                <td>
+                                    <span t-field="doc.installer_id.firstname" />
+                                    <span t-field="doc.installer_id.lastname" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Straße / Hausnummer</td>
+                                <td>
+                                    <span t-field="doc.installer_id.street" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>PLZ</td>
+                                <td>
+                                    <span t-field="doc.installer_id.zip" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ort</td>
+                                <td>
+                                    <span t-field="doc.installer_id.city" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Land</td>
+                                <td>
+                                    <span t-field="doc.installer_id.country_id.name" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>E-Mail-Adresse</td>
+                                <td>
+                                    <span t-field="doc.installer_id.email" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Telefonnummer</td>
+                                <td>
+                                    <span t-field="doc.installer_id.phone" />
+                                </td>
+                            </tr>
+                            <!-- Setup protocol production lots -->
+                            <t t-set="lotCategory" t-value="null" />
+                            <t t-foreach="doc.productionlot_ids" t-as="lot">
+                                <t t-if="lotCategory != lot.category">
+                                    <t t-set="lotCategory" t-value="lot.category" />
+                                    <tr>
+                                        <th colspan="2" class="pt-5">
+                                            <t t-raw="lotCategory" />
+                                        </th>
+                                    </tr>
+                                </t>
+                                <tr>
+                                    <td>
+                                        <span t-field="lot.name" />
+                                    </td>
+                                    <td>
+                                        <span t-field="lot.lot_id.name" />
+                                    </td>
+                                </tr>
+                            </t>
+                            <!-- Not found production lots -->
+                            <t t-set="itemCategory" t-value="null" />
+                            <t t-foreach="doc.item_ids" t-as="item">
+                                <t
+                                    t-if="item.category == 'Seriennummern wurden im System nicht gefunden'"
+                                >
+                                    <t t-if="itemCategory != item.category">
+                                        <t
+                                            t-set="itemCategory"
+                                            t-value="item.category"
+                                        />
+                                        <tr>
+                                            <th colspan="2" class="pt-5">
+                                                <t t-raw="itemCategory" />
+                                            </th>
+                                        </tr>
+                                    </t>
+                                    <tr>
+                                        <td>
+                                            <span t-field="item.name" />
+                                        </td>
+                                        <td>
+                                            <span t-field="item.value" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </t>
+                            <!-- Setup protocol items -->
+                            <t t-set="itemCategory" t-value="null" />
+                            <t t-foreach="doc.item_ids" t-as="item">
+                                <t
+                                    t-if="item.category != 'Seriennummern wurden im System nicht gefunden'"
+                                >
+                                    <t t-if="itemCategory != item.category">
+                                        <t
+                                            t-set="itemCategory"
+                                            t-value="item.category"
+                                        />
+                                        <tr>
+                                            <th colspan="2" class="pt-5">
+                                                <t t-raw="itemCategory" />
+                                            </th>
+                                        </tr>
+                                    </t>
+                                    <tr>
+                                        <td>
+                                            <span t-field="item.name" />
+                                        </td>
+                                        <td>
+                                            <span t-field="item.value" />
+                                        </td>
+                                    </tr>
+                                </t>
+                            </t>
+                        </table>
+                    </div>
+
+                    <div
+                        class="footer o_background_footer"
+                        style="line-height: 14px; font-size: 12px"
+                    >
+                        <div style="margin-bottom: 2mm">
+                            OpenEMS Association e.V.
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

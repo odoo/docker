@@ -1,0 +1,138 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * partner_firstname
+#
+# Translators:
+# OCA Transbot <transbot@odoo-community.org>, 2017
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-22 03:38+0000\n"
+"PO-Revision-Date: 2017-11-22 03:38+0000\n"
+"Last-Translator: OCA Transbot <transbot@odoo-community.org>, 2017\n"
+"Language-Team: Dutch (Netherlands) (https://www.transifex.com/oca/"
+"teams/23907/nl_NL/)\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/models/res_users.py:0
+#, python-format
+msgid "%(login)s (copy)"
+msgstr ""
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/models/res_users.py:0
+#, python-format
+msgid "%(name)s (copy)"
+msgstr ""
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/models/res_partner.py:0
+#, python-format
+msgid "%s (copy)"
+msgstr ""
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/models/res_partner.py:0
+#, python-format
+msgid "(copy)"
+msgstr ""
+
+#. module: partner_firstname
+#: model:ir.model,name:partner_firstname.model_res_config_settings
+#, fuzzy
+msgid "Config Settings"
+msgstr "res.config.settings"
+
+#. module: partner_firstname
+#: model:ir.model,name:partner_firstname.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: partner_firstname
+#: model:ir.model.constraint,message:partner_firstname.constraint_res_partner_check_name
+msgid "Contacts require a name."
+msgstr "Relaties moeten een naam hebben"
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/exceptions.py:0
+#, python-format
+msgid "Error(s) with partner %d's name."
+msgstr "Fout(en) met de naam van relatie %d."
+
+#. module: partner_firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_partner__firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_users__firstname
+msgid "First name"
+msgstr "Voornaam"
+
+#. module: partner_firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_partner__lastname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_users__lastname
+msgid "Last name"
+msgstr "Achternaam"
+
+#. module: partner_firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_partner__name
+#: model:ir.model.fields,field_description:partner_firstname.field_res_users__name
+msgid "Name"
+msgstr ""
+
+#. module: partner_firstname
+#. odoo-python
+#: code:addons/partner_firstname/exceptions.py:0
+#, python-format
+msgid "No name is set."
+msgstr "Geen naam ingesteld."
+
+#. module: partner_firstname
+#: model:ir.model.fields,help:partner_firstname.field_res_config_settings__partner_names_order
+msgid "Order to compose partner fullname"
+msgstr "Volgorde om volledige naam van relatie samen te stellen"
+
+#. module: partner_firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_config_settings__partner_names_order
+#: model_terms:ir.ui.view,arch_db:partner_firstname.res_config_settings_view_form
+#, fuzzy
+msgid "Partner Names Order"
+msgstr "Relatienaam volgorde"
+
+#. module: partner_firstname
+#: model:ir.model.fields,field_description:partner_firstname.field_res_config_settings__partner_names_order_changed
+msgid "Partner Names Order Changed"
+msgstr ""
+
+#. module: partner_firstname
+#: model_terms:ir.ui.view,arch_db:partner_firstname.res_config_settings_view_form
+msgid "Recalculate names"
+msgstr "Hersorteer namen"
+
+#. module: partner_firstname
+#: model_terms:ir.ui.view,arch_db:partner_firstname.res_config_settings_view_form
+msgid ""
+"Recalculate names for all partners. This process could take so much time if "
+"there are more than 10,000 active partners"
+msgstr ""
+"Hersorteer de namen van alle relaties. Dit proces kan zeer veel tijd kosten "
+"indien er meer dan 10.000 actieve relaties zijn."
+
+#. module: partner_firstname
+#: model:ir.model,name:partner_firstname.model_res_users
+msgid "User"
+msgstr ""
+
+#~ msgid "Partner names order"
+#~ msgstr "Relatienaam volgorde"
+
+#~ msgid "Users"
+#~ msgstr "Gebruikers"

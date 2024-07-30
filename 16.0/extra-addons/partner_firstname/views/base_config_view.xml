@@ -1,0 +1,28 @@
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">Add partner_names_order config parameter</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='companies']" position='after'>
+                <h2>Partner Names Order</h2>
+                <div class="row mt16 o_settings_container" name="partner_names_order">
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <field name="partner_names_order" />
+                            <field name="partner_names_order_changed" invisible="1" />
+                            <button
+                                name="action_recalculate_partners_name"
+                                string="Recalculate names"
+                                icon="fa-play"
+                                type="object"
+                                help="Recalculate names for all partners. This process could take so much time if there are more than 10,000 active partners"
+                                attrs="{'invisible': [('partner_names_order_changed', '=', False)]}"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

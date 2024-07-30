@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+   <data noupdate="1">
+
+        <record id="openems_device_edge0" model="openems.device">
+            <field name="name">edge0</field>
+            <field name="comment">OpenEMS Edge #0</field>
+            <field name="apikey">DEMO_API_KEY</field>
+        </record>
+
+   </data>
+</odoo>

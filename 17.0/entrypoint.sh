@@ -13,19 +13,31 @@ fi
 : ${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='odoo'}}}
 : ${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}
 
-DB_ARGS=()
+ODOO_ARGS=()
+DB_ARGS=("-d" "postgres")
+
 function check_config() {
     param="$1"
     value="$2"
+    pg_flag="$3"
+
     if grep -q -E "^\s*\b${param}\b\s*=" "$ODOO_RC" ; then       
         value=$(grep -E "^\s*\b${param}\b\s*=" "$ODOO_RC" |cut -d " " -f3|sed 's/["\n\r]//g')
     fi;
-    DB_ARGS+=("--${param}")
-    DB_ARGS+=("${value}")
+
+    ODOO_ARGS+=("--${param}")
+    ODOO_ARGS+=("${value}")
+
+    # Only add to DB_ARGS if pg_flag is set
+    if [[ -n "$pg_flag" ]]; then
+        DB_ARGS+=("${pg_flag}")
+        DB_ARGS+=("${value}")
+    fi
 }
-check_config "db_host" "$HOST"
-check_config "db_port" "$PORT"
-check_config "db_user" "$USER"
+
+check_config "db_host" "$HOST" "-h"
+check_config "db_port" "$PORT" "-p"
+check_config "db_user" "$USER" "-U"
 check_config "db_password" "$PASSWORD"
 
 case "$1" in
@@ -34,13 +46,13 @@ case "$1" in
         if [[ "$1" == "scaffold" ]] ; then
             exec odoo "$@"
         else
-            wait-for-psql.py ${DB_ARGS[@]} --timeout=30
-            exec odoo "$@" "${DB_ARGS[@]}"
+            pg_isready ${DB_ARGS[@]} --timeout=30
+            exec odoo "$@" "${ODOO_ARGS[@]}"
         fi
         ;;
     -*)
-        wait-for-psql.py ${DB_ARGS[@]} --timeout=30
-        exec odoo "$@" "${DB_ARGS[@]}"
+        pg_isready ${DB_ARGS[@]} --timeout=30
+        exec odoo "$@" "${ODOO_ARGS[@]}"
         ;;
     *)
         exec "$@"

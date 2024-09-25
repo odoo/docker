@@ -91,6 +91,7 @@ VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 
 # Expose Odoo services
 EXPOSE 8069 8071 8072
+HEALTHCHECK CMD curl --fail http://localhost:8069/web/health || exit 1
 
 # Set the default config file
 ENV ODOO_RC /etc/odoo/odoo.conf

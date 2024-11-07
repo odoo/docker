@@ -1,4 +1,5 @@
-FROM ubuntu:noble
+# FROM ubuntu:noble
+FROM ubuntu:jammy
 MAINTAINER Odoo S.A. <info@odoo.com>
 
 SHELL ["/bin/bash", "-xo", "pipefail", "-c"]

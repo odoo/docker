@@ -2,40 +2,58 @@
 
 set -e
 
+# Setup default configuration values
+export ADDONS_PATH=${ADDONS_PATH:-/mnt/extra-addons}
+export DATA_DIR=${DATA_DIR:-/var/lib/odoo}
+export DB_HOST=${HOST:=${DB_PORT_5432_TCP_ADDR:='db'}}
+export DB_PORT=${PORT:=${DB_PORT_5432_TCP_PORT:=5432}}
+export DB_USER=${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='odoo'}}}
+export DB_PASSWORD=${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}
+export DB_NAME=${DB_NAME:-'postgres'}
+export ADMIN_PASSWD=${ADMIN_PASSWD:-admin}
+export CSV_INTERNAL_SEP=${CSV_INTERNAL_SEP:-,}
+export DB_MAXCONN=${DB_MAXCONN:-64}
+export DB_TEMPLATE=${DB_TEMPLATE:-template1}
+export DBFILTER=${DBFILTER:-.*}
+export DEBUG_MODE=${DEBUG_MODE:-False}
+export EMAIL_FROM=${EMAIL_FROM:-False}
+export LIMIT_MEMORY_HARD=${LIMIT_MEMORY_HARD:-2684354560}
+export LIMIT_MEMORY_SOFT=${LIMIT_MEMORY_SOFT:-2147483648}
+export LIMIT_REQUEST=${LIMIT_REQUEST:-8192}
+export LIMIT_TIME_CPU=${LIMIT_TIME_CPU:-60}
+export LIMIT_TIME_REAL=${LIMIT_TIME_REAL:-120}
+export LIST_DB=${LIST_DB:-True}
+export LOG_DB=${LOG_DB:-False}
+export LOG_HANDLER=${LOG_HANDLER:-[:INFO]}
+export LOG_LEVEL=${LOG_LEVEL:-info}
+export LOGFILE=${LOGFILE:-None}
+export LONGPOLLING_PORT=${LONGPOLLING_PORT:-8072}
+export MAX_CRON_THREADS=${MAX_CRON_THREADS:-2}
+export OSV_MEMORY_AGE_LIMIT=${OSV_MEMORY_AGE_LIMIT:-1.0}
+export OSV_MEMORY_COUNT_LIMIT=${OSV_MEMORY_COUNT_LIMIT:-False}
+export SMTP_PASSWORD=${SMTP_PASSWORD:-False}
+export SMTP_PORT=${SMTP_PORT:-25}
+export SMTP_SERVER=${SMTP_SERVER:-localhost}
+export SMTP_SSL=${SMTP_SSL:-False}
+export SMTP_USER=${SMTP_USER:-False}
+export WORKERS=${WORKERS:-0}
+export XMLRPC=${XMLRPC:-True}
+export XMLRPC_INTERFACE=${XMLRPC_INTERFACE:-}
+export XMLRPC_PORT=${XMLRPC_PORT:-8069}
+export XMLRPCS=${XMLRPCS:-True}
+export XMLRPCS_INTERFACE=${XMLRPCS_INTERFACE:-}
+export XMLRPCS_PORT=${XMLRPCS_PORT:-8071}
+
+# Set the password file environment variable
 if [ -v PASSWORD_FILE ]; then
-    PASSWORD="$(< $PASSWORD_FILE)"
+    DB_PASSWORD="$(< $PASSWORD_FILE)"
 fi
 
-# set the postgres database host, port, user and password according to the environment
-# and pass them as arguments to the odoo process if not present in the config file
-: ${HOST:=${DB_PORT_5432_TCP_ADDR:='db'}}
-: ${PORT:=${DB_PORT_5432_TCP_PORT:=5432}}
-: ${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='odoo'}}}
-: ${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}
-: ${DATABASE:=${DB_ENV_POSTGRES_DATABASE:=${POSTGRES_DATABASE}}}
-
-DB_ARGS=()
-function check_config() {
-    param="$1"
-    value="$2"
-
-    if grep -q -E "^\s*\b${param}\b\s*=" "$ODOO_RC" ; then
-        value=$(grep -E "^\s*\b${param}\b\s*=" "$ODOO_RC" |cut -d " " -f3|sed 's/["\n\r]//g')
-    fi;
-
-    if [[ "$param" == "database" && -z "$value" ]]; then
-        return
-    fi;
-
-    DB_ARGS+=("--${param}")
-    DB_ARGS+=("${value}")
-}
-
-check_config "db_host" "$HOST"
-check_config "db_port" "$PORT"
-check_config "db_user" "$USER"
-check_config "db_password" "$PASSWORD"
-check_config "database" "$DATABASE"
+# Substitute environment variables into the config file
+# and write them back to the Odoo config
+export CONFIG_CONTENT;
+CONFIG_CONTENT=$(envsubst < /etc/odoo/odoo.conf)
+echo "$CONFIG_CONTENT" > /etc/odoo/odoo.conf
 
 case "$1" in
     -- | odoo)
@@ -43,13 +61,13 @@ case "$1" in
         if [[ "$1" == "scaffold" ]] ; then
             exec odoo "$@"
         else
-            wait-for-psql.py ${DB_ARGS[@]} --timeout=30
-            exec odoo "$@" "${DB_ARGS[@]}"
+            wait-for-psql.py --timeout=30
+            exec odoo "$@"
         fi
         ;;
     -*)
-        wait-for-psql.py ${DB_ARGS[@]} --timeout=30
-        exec odoo "$@" "${DB_ARGS[@]}"
+        wait-for-psql.py --timeout=30
+        exec odoo "$@"
         ;;
     *)
         exec "$@"

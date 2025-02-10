@@ -14,6 +14,7 @@ ARG TARGETARCH
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends \
+        gettext \
         ca-certificates \
         curl \
         dirmngr \
@@ -81,7 +82,10 @@ RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/od
 
 # Copy entrypoint script and Odoo configuration file
 COPY ./entrypoint.sh /
-COPY ./odoo.conf /etc/odoo/
+
+# Copy the configuration file to the template.
+# The template will
+COPY ./odoo.conf /etc/odoo/odoo.conf
 
 # Set permissions and Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
 RUN chown odoo /etc/odoo/odoo.conf \

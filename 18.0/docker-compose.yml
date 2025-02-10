@@ -56,6 +56,7 @@ services:
       - ./addons:/mnt/extra-addons
     depends_on:
       - db
+
   db:
     image: postgres:13
     container_name: odoo_db

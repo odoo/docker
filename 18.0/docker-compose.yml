@@ -9,11 +9,11 @@ services:
     environment:
       ADDONS_PATH: ${ADDONS_PATH:-/mnt/extra-addons}
       DATA_DIR: ${DATA_DIR:-/var/lib/odoo}
-      DB_HOST: ${HOST:-${DB_PORT_5432_TCP_ADDR:-postgres}}
-      DB_PORT: ${PORT:-${DB_PORT_5432_TCP_PORT:-5432}}
-      DB_USER: ${USER:-${DB_ENV_POSTGRES_USER:-${POSTGRES_USER:-odoo}}}
-      DB_PASSWORD: ${PASSWORD:-${DB_ENV_POSTGRES_PASSWORD:-${POSTGRES_PASSWORD:-odoo}}}
-#      DB_NAME: ${DB_NAME:-${DATABASE:-${DB_ENV_POSTGRES_DATABASE:-odoo}}}
+      DB_HOST: ${DB_HOST:-db}
+      DB_PORT: ${DB_PORT:-5432}
+      DB_USER: ${DB_USER:-odoo}
+      DB_PASSWORD: ${DB_PASSWORD:-odoo}
+#      DB_NAME: ${DB_NAME:-postgres}
 #      ADMIN_PASSWD: ${ADMIN_PASSWD:-admin}
 #      CSV_INTERNAL_SEP: ${CSV_INTERNAL_SEP:-,}
 #      DB_MAXCONN: ${DB_MAXCONN:-64}

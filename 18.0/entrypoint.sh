@@ -5,10 +5,10 @@ set -e
 # Setup default configuration values
 export ADDONS_PATH=${ADDONS_PATH:-/mnt/extra-addons}
 export DATA_DIR=${DATA_DIR:-/var/lib/odoo}
-export DB_HOST=${HOST:=${DB_PORT_5432_TCP_ADDR:='db'}}
-export DB_PORT=${PORT:=${DB_PORT_5432_TCP_PORT:=5432}}
-export DB_USER=${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='odoo'}}}
-export DB_PASSWORD=${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}
+export DB_HOST=${DB_HOST:=${HOST:=${DB_PORT_5432_TCP_ADDR:='db'}}}
+export DB_PORT=${DB_PORT:=${PORT:=${DB_PORT_5432_TCP_PORT:=5432}}}
+export DB_USER=${DB_USER:=${USER:=${DB_ENV_POSTGRES_USER:=${POSTGRES_USER:='odoo'}}}}
+export DB_PASSWORD=${DB_PASSWORD:=${PASSWORD:=${DB_ENV_POSTGRES_PASSWORD:=${POSTGRES_PASSWORD:='odoo'}}}}
 export DB_NAME=${DB_NAME:-'postgres'}
 export ADMIN_PASSWD=${ADMIN_PASSWD:-admin}
 export CSV_INTERNAL_SEP=${CSV_INTERNAL_SEP:-,}
@@ -44,6 +44,8 @@ export XMLRPCS=${XMLRPCS:-True}
 export XMLRPCS_INTERFACE=${XMLRPCS_INTERFACE:-}
 export XMLRPCS_PORT=${XMLRPCS_PORT:-8071}
 
+echo $DB_HOST
+
 # Set the password file environment variable
 if [ -v PASSWORD_FILE ]; then
     DB_PASSWORD="$(< $PASSWORD_FILE)"
@@ -51,7 +53,7 @@ fi
 
 # Substitute environment variables into the config file
 # and write them back to the Odoo config
-envsubst < /etc/odoo/odoo.conf > /etc/odoo/odoo_docker.conf
+envsubst < /etc/odoo/odoo.conf > "${ODOO_RC}"
 
 case "$1" in
     -- | odoo)

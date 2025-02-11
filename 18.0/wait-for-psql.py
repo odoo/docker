@@ -16,7 +16,7 @@ class DatabaseConnectionError(Exception):
     pass
 
 if __name__ == '__main__':
-    default_config_path = os.getenv('ODOO_RC', '/etc/odoo/odoo.conf')
+    default_config_path = os.getenv('ODOO_RC', '/etc/odoo/odoo_docker.conf')
 
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument('--config', type=str, default=default_config_path)

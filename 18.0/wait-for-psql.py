@@ -6,6 +6,7 @@ import sys
 import time
 import configparser
 import logging
+import subprocess
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -15,12 +16,22 @@ logging.basicConfig(
 class DatabaseConnectionError(Exception):
     pass
 
+def check_postgres_status(host="localhost", port=5432, user="postgres", timeout=30):
+    result = subprocess.run(
+        ["pg_isready", "-h", host, "-p", str(port), "-U", user, "-t", str(timeout)],
+        capture_output=True,
+        text=True
+    )
+
+    return result.stdout.strip(), result.returncode
+
 if __name__ == '__main__':
     default_config_path = os.getenv('ODOO_RC', '/etc/odoo/odoo_docker.conf')
+    default_psql_wait_timeout = os.getenv('PSQL_WAIT_TIMEOUT', 30)
 
     arg_parser = argparse.ArgumentParser()
     arg_parser.add_argument('--config', type=str, default=default_config_path)
-    arg_parser.add_argument('--timeout', type=int, default=5)
+    arg_parser.add_argument('--timeout', type=int, default=default_psql_wait_timeout)
 
     args = arg_parser.parse_args()
 
@@ -30,41 +41,19 @@ if __name__ == '__main__':
     db_host = config.get('options', 'db_host', fallback='localhost')
     db_port = config.get('options', 'db_port', fallback=5432)
     db_user = config.get('options', 'db_user', fallback='odoo')
-    db_password = config.get('options', 'db_password', fallback='odoo')
-    db_name = config.get('options', 'db_name', fallback='postgres')
 
-    start_time = time.time()
-
-    database_list = db_name.split(',')
     logging.info("Waiting for database(s) to be ready ...")
     logging.info(f"Host: {db_user}@{db_host}:{db_port}")
-    logging.info(f"Database(s): {database_list}")
     logging.info(f"Timeout: {args.timeout} seconds")
 
-    for database in database_list:
-        logging.info(f"Checking database {database} ...")
-        error = None
+    status, exit_code = check_postgres_status(
+        host=db_host,
+        port=db_port,
+        user=db_user,
+        timeout=args.timeout
+    )
 
-        while (time.time() - start_time) < args.timeout:
-            try:
-                conn = psycopg2.connect(
-                    user=db_user,
-                    host=db_host,
-                    port=db_port,
-                    password=db_password,
-                    dbname=database
-                )
-
-                error = None
-                conn.close()
-
-                logging.info(f"Database {database} is ready.")
-                break
-            except psycopg2.OperationalError as e:
-                error = e
-                time.sleep(1)
-
-        if error:
-            raise DatabaseConnectionError(f"Database {database} connection failure: {error}")
+    if exit_code != 0:
+        raise DatabaseConnectionError(f"Unable to connect to the database. Exit code: {exit_code} - Message: {status}")
 
     logging.info("🚀 Database(s) are ready.")

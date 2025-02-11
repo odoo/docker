@@ -47,6 +47,7 @@ services:
       XMLRPCS: ${XMLRPCS:-True}
       XMLRPCS_INTERFACE: ${XMLRPCS_INTERFACE:-}
       XMLRPCS_PORT: ${XMLRPCS_PORT:-8071}
+      PSQL_WAIT_TIMEOUT: ${PSQL_WAIT_TIMEOUT:-30}
     ports:
       - "8069:8069"
       - "8071:8071"

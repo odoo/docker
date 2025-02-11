@@ -43,6 +43,7 @@ export XMLRPC_PORT=${XMLRPC_PORT:-8069}
 export XMLRPCS=${XMLRPCS:-True}
 export XMLRPCS_INTERFACE=${XMLRPCS_INTERFACE:-}
 export XMLRPCS_PORT=${XMLRPCS_PORT:-8071}
+export PSQL_WAIT_TIMEOUT=${PSQL_WAIT_TIMEOUT:-30}
 
 # Set the password file environment variable
 if [ -v PASSWORD_FILE ]; then
@@ -59,12 +60,12 @@ case "$1" in
         if [[ "$1" == "scaffold" ]] ; then
             exec odoo "$@"
         else
-            wait-for-psql.py --timeout=30
+            wait-for-psql.py
             exec odoo "$@"
         fi
         ;;
     -*)
-        wait-for-psql.py --timeout=30
+        wait-for-psql.py
         exec odoo "$@"
         ;;
     *)

@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
 import argparse
-import os
-import psycopg2
-import sys
-import time
 import configparser
 import logging
+import os
 import subprocess
 
 logging.basicConfig(
@@ -13,8 +10,10 @@ logging.basicConfig(
     level=logging.INFO
 )
 
+
 class DatabaseConnectionError(Exception):
     pass
+
 
 def check_postgres_status(host="localhost", port=5432, user="postgres", timeout=30):
     result = subprocess.run(
@@ -24,6 +23,7 @@ def check_postgres_status(host="localhost", port=5432, user="postgres", timeout=
     )
 
     return result.stdout.strip(), result.returncode
+
 
 if __name__ == '__main__':
     default_config_path = os.getenv('ODOO_RC', '/etc/odoo/odoo_docker.conf')

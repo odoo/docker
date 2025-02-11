@@ -44,8 +44,6 @@ export XMLRPCS=${XMLRPCS:-True}
 export XMLRPCS_INTERFACE=${XMLRPCS_INTERFACE:-}
 export XMLRPCS_PORT=${XMLRPCS_PORT:-8071}
 
-echo $DB_HOST
-
 # Set the password file environment variable
 if [ -v PASSWORD_FILE ]; then
     DB_PASSWORD="$(< $PASSWORD_FILE)"

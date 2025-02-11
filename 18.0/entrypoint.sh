@@ -51,9 +51,7 @@ fi
 
 # Substitute environment variables into the config file
 # and write them back to the Odoo config
-export CONFIG_CONTENT;
-CONFIG_CONTENT=$(envsubst < /etc/odoo/odoo.conf)
-echo "$CONFIG_CONTENT" > /etc/odoo/odoo.conf
+envsubst < /etc/odoo/odoo.conf > /etc/odoo/odoo_docker.conf
 
 case "$1" in
     -- | odoo)

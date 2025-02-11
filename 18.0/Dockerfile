@@ -85,9 +85,10 @@ COPY ./entrypoint.sh /
 
 # Copy the configuration file to the template.
 COPY ./odoo.conf /etc/odoo/odoo.conf
+RUN touch /etc/odoo/odoo_docker.conf
 
 # Set permissions and Mount /var/lib/odoo to allow restoring filestore and /mnt/extra-addons for users addons
-RUN chown odoo /etc/odoo/odoo.conf \
+RUN chown odoo:odoo /etc/odoo/odoo.conf /etc/odoo/odoo_docker.conf  \
     && mkdir -p /mnt/extra-addons \
     && chown -R odoo /mnt/extra-addons
 VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
@@ -96,7 +97,7 @@ VOLUME ["/var/lib/odoo", "/mnt/extra-addons"]
 EXPOSE 8069 8071 8072
 
 # Set the default config file
-ENV ODOO_RC /etc/odoo/odoo.conf
+ENV ODOO_RC /etc/odoo/odoo_docker.conf
 
 COPY wait-for-psql.py /usr/local/bin/wait-for-psql.py
 

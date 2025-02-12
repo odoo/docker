@@ -4,6 +4,7 @@ import configparser
 import logging
 import os
 import subprocess
+import time
 
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(message)s",
@@ -46,12 +47,22 @@ if __name__ == '__main__':
     logging.info(f"Host: {db_user}@{db_host}:{db_port}")
     logging.info(f"Timeout: {args.timeout} seconds")
 
-    status, exit_code = check_postgres_status(
-        host=db_host,
-        port=db_port,
-        user=db_user,
-        timeout=args.timeout
-    )
+    start_time = time.time()
+
+    status, exit_code = "", 0
+
+    while time.time() < start_time + args.timeout:
+        status, exit_code = check_postgres_status(
+            host=db_host,
+            port=db_port,
+            user=db_user,
+            timeout=args.timeout
+        )
+
+        if exit_code == 0:
+            break
+
+        time.sleep(1)
 
     if exit_code != 0:
         raise DatabaseConnectionError(f"Unable to connect to the database. Exit code: {exit_code} - Message: {status}")

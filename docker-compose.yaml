@@ -9,7 +9,7 @@ services:
       - 1234:5432
   odoo:
     build:
-      context: ./17.0
+      context: ./18.0
       dockerfile: Dockerfile.custom
     environment:
       DB_NAME: odoo

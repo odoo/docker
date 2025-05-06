@@ -1,0 +1,38 @@
+name: Build and Push Docker Images
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v2
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push Docker image for 17.0
+        uses: docker/build-push-action@v4
+        with:
+          context: ./17.0
+          file: ./17.0/Dockerfile
+          push: true
+          tags: ghcr.io/${{ github.repository }}/17.0:latest
+
+      - name: Build and push Docker image for 18.0
+        uses: docker/build-push-action@v4
+        with:
+          context: ./18.0
+          file: ./18.0/Dockerfile
+          push: true
+          tags: ghcr.io/${{ github.repository }}/18.0:latest

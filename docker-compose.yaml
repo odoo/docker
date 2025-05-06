@@ -1,0 +1,28 @@
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: odoo
+      POSTGRES_DB: odoo
+    ports:
+      - 1234:5432
+  odoo:
+    build:
+      context: ./17.0
+      dockerfile: Dockerfile.custom
+    environment:
+      DB_NAME: odoo
+      DB_PORT: 5432
+      HOST: db
+      USER: odoo
+      PASSWORD: odoo
+      PORT: 8069
+    ports:
+      - 8069:8069
+    volumes:
+      - odoo-data:/var/lib/odoo
+      - ./add-ons:/mnt/extra-addons
+
+volumes:
+  odoo-data:

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="documents.DocumentCogMenuPinAction">
+        <Dropdown>
+            <button class="opacity-trigger-hover">
+                Set actions
+            </button>
+            <t t-set-slot="content">
+                <span t-foreach="this.documentsState.actions" t-as="action" t-key="action.id"
+                    t-on-click.stop.prevent="() => this.onEnableAction(action.id)"
+                    class="o-dropdown-item dropdown-item"
+                    t-att-class="{'selected': action.is_embedded}">
+                    <t t-out="action.name"/>
+                </span>
+            </t>
+        </Dropdown>
+    </t>
+</templates>

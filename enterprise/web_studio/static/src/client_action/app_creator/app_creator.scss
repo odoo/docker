@@ -1,0 +1,50 @@
+// App creator - style
+.o_web_studio_app_creator {
+  @include o-web-studio-app-creator-background;
+
+  .o_web_studio_app_creator_box {
+    box-shadow: 0 16px 13px -8px rgba(#000, 0.5);
+    width: 700px;
+
+    .o_web_studio_app_creator_left,
+    .o_web_studio_app_creator_right {
+      min-height: 350px;
+    }
+
+    .o_web_studio_app_creator_left {
+
+      h1 {
+        font-size: 3.5em;
+        letter-spacing: -1px;
+      }
+    }
+
+    .o_web_studio_app_creator_right {
+      background-color: $o-web-studio-bg-dark;
+
+      .o_web_studio_welcome_image {
+        width: 183px;
+        height: 183px;
+      }
+    }
+
+    .o_web_studio_app_creator_next {
+      &.is_ready {
+        transition: all 0.3s ease 0s;
+
+        &:hover,
+        &:focus {
+          background-color: lighten($o-brand-primary, 2%);
+        }
+      }
+    }
+
+    .o_input {
+      border-color: $o-web-studio-text-inactive;
+
+      &:focus-within {
+        border-color: $o-action;
+      }
+    }
+  }
+}

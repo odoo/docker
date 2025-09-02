@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_subscription_stock
+# 
+# Translators:
+# Wil Odoo, 2024
+# Daye Jeong, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-25 09:28+0000\n"
+"PO-Revision-Date: 2024-09-25 09:44+0000\n"
+"Last-Translator: Daye Jeong, 2024\n"
+"Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: sale_subscription_stock
+#: model:product.template,name:sale_subscription_stock.product_recurring_detergent_product_template
+msgid "Detergent (SUB)"
+msgstr "세제 (구독)"
+
+#. module: sale_subscription_stock
+#: model:ir.model.fields,field_description:sale_subscription_stock.field_sale_order__display_recurring_stock_delivery_warning
+msgid "Display Recurring Stock Delivery Warning"
+msgstr "반복 재고 배송 경고 표시"
+
+#. module: sale_subscription_stock
+#: model_terms:ir.ui.view,arch_db:sale_subscription_stock.product_template_form_view
+msgid ""
+"Recurring order with this product will be invoiced at the beginning of the "
+"period."
+msgstr "이 품목의 반복 주문은 기간이 시작될 때 청구됩니다."
+
+#. module: sale_subscription_stock
+#: model:ir.model,name:sale_subscription_stock.model_sale_order
+msgid "Sales Order"
+msgstr "판매 주문"
+
+#. module: sale_subscription_stock
+#: model:ir.model,name:sale_subscription_stock.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "판매 주문 내역"
+
+#. module: sale_subscription_stock
+#: model:ir.model,name:sale_subscription_stock.model_stock_forecasted_product_product
+msgid "Stock Replenishment Report"
+msgstr "재고 재보충 보고서"
+
+#. module: sale_subscription_stock
+#. odoo-javascript
+#: code:addons/sale_subscription_stock/static/src/report_stock_forecasted.xml:0
+msgid "Subscriptions"
+msgstr "구독"
+
+#. module: sale_subscription_stock
+#: model_terms:ir.ui.view,arch_db:sale_subscription_stock.sale_subscription_order_view_form
+msgid ""
+"The delivery order of the recurring product(s) will be created soon. If another delivery order exists,\n"
+"                    recurring product will be added to it automatically."
+msgstr ""
+"정기결제 제품에 대한 배송 주문이 곧 생성됩니다. 다른 배송 주문이 이미 있는 경우\n"
+"                    정기결제 제품이 자동으로 추가됩니다."
+
+#. module: sale_subscription_stock
+#: model:ir.model,name:sale_subscription_stock.model_stock_picking
+msgid "Transfer"
+msgstr "이동"

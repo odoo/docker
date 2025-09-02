@@ -1,0 +1,219 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* spreadsheet_dashboard_hr_payroll
+# 
+# Translators:
+# Sanne Kristensen <sanne@vkdata.dk>, 2024
+# Mads Søndergaard, 2024
+# Martin Trigaux, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-25 09:15+0000\n"
+"PO-Revision-Date: 2024-09-25 09:44+0000\n"
+"Last-Translator: Martin Trigaux, 2024\n"
+"Language-Team: Danish (https://app.transifex.com/odoo/teams/41243/da/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: da\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "#Payslips"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Absenteeism Rate"
+msgstr "Fraværs rate"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Attendance Rate"
+msgstr "Deltagelses rate"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Average Basic Wage"
+msgstr "Gennemsnitlig grundløn"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Average Gross Wage"
+msgstr "Gennemsnitlig bruttoløn"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Average Hours per Days of Work"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Average Net Wage"
+msgstr "Gennemsnitlig nettoløn"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Avg Hours/Days"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+msgid "Companies"
+msgstr "Virksomheder"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Current"
+msgstr "Aktuel"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Days"
+msgstr "Dage"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Employees"
+msgstr "Medarbejdere"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Employees (%)"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "FTE"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "FTE (%)"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+msgid "Job position"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Paid Time Off"
+msgstr "Betalt fri"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#: model:spreadsheet.dashboard,name:spreadsheet_dashboard_hr_payroll.spreadsheet_dashboard_payroll
+msgid "Payroll"
+msgstr "Løn"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Payroll Analysis"
+msgstr "Lønningsanalyse"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+msgid "Period"
+msgstr "Periode"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Previous"
+msgstr "Forrige"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Total Basic Wage"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Total Gross Wage"
+msgstr "Samlet bruttoløn"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Total Net Wage"
+msgstr "Samlet nettoløn"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Unpaid TIme Off"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Work Days"
+msgstr "Arbejdsdage"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Work Entries Analysis"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Work Hours"
+msgstr "Arbejdstimer"
+
+#. module: spreadsheet_dashboard_hr_payroll
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_payroll/data/files/payroll_sample_dashboard.json:0
+msgid "Work type"
+msgstr "Arbejdstype"

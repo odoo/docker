@@ -1,0 +1,365 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* spreadsheet_dashboard_hr_referral
+# 
+# Translators:
+# Wil Odoo, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-25 09:15+0000\n"
+"PO-Revision-Date: 2024-09-25 09:44+0000\n"
+"Last-Translator: Wil Odoo, 2024\n"
+"Language-Team: Russian (https://app.transifex.com/odoo/teams/41243/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+msgid " days"
+msgstr " дней"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "# Applications"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "# Offers"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "32 days"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "45 days"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Applications"
+msgstr "Приложения"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Applications refused per stage"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+msgid "Company"
+msgstr "Компания"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Consultant"
+msgstr "Консультант"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Contract Proposal"
+msgstr "Предложение по контракту"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Contract Signed"
+msgstr "Контракт подписан"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Creation date"
+msgstr "Дата создания"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Current"
+msgstr "Текущий"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Customer Support Representative"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Data Analyst"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+msgid "Date"
+msgstr "Дата"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Experienced Developer"
+msgstr "Опытный разработчик"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "First Interview"
+msgstr "Первое интервью"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Hired"
+msgstr "Нанят"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Hired Rate"
+msgstr "Наемная ставка"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Hired by referral"
+msgstr "Нанят по рекомендации"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+msgid "Hired ratio"
+msgstr "Соотношение наемных работников"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Human Resources Manager"
+msgstr "Менеджер по персоналу"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Initial Qualification"
+msgstr "Первоначальная квалификация"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Job Position"
+msgstr "Должность"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Junior Developer"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Marketing and Community Manager"
+msgstr "Менеджер по маркетингу и работе с населением"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Medium"
+msgstr "Канал"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Most Hired Job Positions"
+msgstr "Самые нанимаемые должности"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "New Applications"
+msgstr "Новые кандидаты"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "New Hires"
+msgstr "Новые сотрудники"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "New applicants"
+msgstr "Новые кандидаты"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Previous"
+msgstr "Предыдущий"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Process Duration"
+msgstr "Продолжительность процесса"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+msgid "Process duration"
+msgstr "Продолжительность процесса"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Rate"
+msgstr "Ставка"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Reason"
+msgstr "Причина"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Recent Job Positions"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Recruiter"
+msgstr "Специалист по подбору кадров"
+
+#. module: spreadsheet_dashboard_hr_referral
+#: model:spreadsheet.dashboard,name:spreadsheet_dashboard_hr_referral.spreadsheet_dashboard_recruitment
+msgid "Recruitment"
+msgstr "Найм"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Referral rate"
+msgstr "Доля рефералов"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Sales Manager"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Second Interview"
+msgstr "Второе интервью"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Source"
+msgstr "Источник"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Top Applicant Refuse Reasons"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Top Job Positions"
+msgstr "Лучшие вакансии"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Top Mediums"
+msgstr "Лучшие средства"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Top Offer Refuse Reasons"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Top Recruiters"
+msgstr "Лучшие рекрутеры"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Top Sources"
+msgstr "Лучшие источники"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Total offers per validity date"
+msgstr ""
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "Trainee"
+msgstr "Стажер"
+
+#. module: spreadsheet_dashboard_hr_referral
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_hr_referral/data/files/recruitment_sample_dashboard.json:0
+msgid "UX/UI Designer"
+msgstr ""

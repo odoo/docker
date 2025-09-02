@@ -1,0 +1,381 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* marketing_automation_website_sale
+# 
+# Translators:
+# Wil Odoo, 2024
+# Chloe Wang, 2024
+# Odoo哥 <vnsoft.he@gmail.com>, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-25 09:27+0000\n"
+"PO-Revision-Date: 2024-09-25 09:44+0000\n"
+"Last-Translator: Odoo哥 <vnsoft.he@gmail.com>, 2024\n"
+"Language-Team: Chinese (China) (https://app.transifex.com/odoo/teams/41243/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "! It's been a few days since your purchase. We hope you like it!"
+msgstr "! 您已经购买几天时间了。希望您喜欢！"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"-\n"
+"          <span style=\"color: rgb(183, 191, 199); font-size: 12.25px\">September 10 2024</span>"
+msgstr ""
+"-\n"
+"          <span style=\"color: rgb(183, 191, 199); font-size: 12.25px\">2024 年 9 月 10 日</span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"<br/>\n"
+"            <span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">To unsubscribe,</font></span>"
+msgstr ""
+"<br/>\n"
+"            <span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">取消订阅</font></span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "<font style=\"color: rgb(0, 0, 255)\">How's everything going?</font>"
+msgstr "<font style=\"color: rgb(0, 0, 255)\">一切进展如何？</font>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "<font style=\"color: rgb(255, 0, 0)\">THANK YOU FOR CHOOSING US</font>"
+msgstr "<font style=\"color: rgb(255, 0, 0)\">感谢您选择我们</font>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "<span style=\"font-size: 1.07143rem\">THANKS FOR YOUR PURCHASE</span>"
+msgstr "<span style=\"font-size: 1.07143rem\">感谢您的购买</span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid ""
+"<span style=\"font-size: 1.07143rem\">YOU MAKE OUR SUCCESS POSSIBLE</span>\n"
+"              <font style=\"font-size: 12px\">​</font><br/>"
+msgstr ""
+"<span style=\"font-size: 1.07143rem\">您让我们的成功成为可能</span>\n"
+"              <font style=\"font-size: 12px\">​</font><br/>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">250 Executive Park Blvd</font></span>\n"
+"            <br/>\n"
+"            <span style=\"font-size: 12px\"><font style=\"color: rgb(183, 191, 199)\">San Francisco, California 94134</font></span>\n"
+"            <br/>\n"
+"            <span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">You received this email from</font>\n"
+"            </span>"
+msgstr ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">250 Executive Park Blvd</font></span>\n"
+"            <br/>\n"
+"            <span style=\"font-size: 12px\"><font style=\"color: rgb(183, 191, 199)\">San Francisco, California 94134</font></span>\n"
+"            <br/>\n"
+"            <span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">您收到这封电子邮件来自</font>\n"
+"            </span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">.</font></span>"
+msgstr ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">。</font></span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">click here</font></span>"
+msgstr ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">点击此处</font></span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">info@mycompany.com</font></span>"
+msgstr ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">info@mycompany.com</font></span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+msgid "<strong>VISIT STORE</strong>"
+msgstr "<strong>访问商店</strong>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+msgid "CHECK OUT OUR LATEST ARRIVALS"
+msgstr "查看我们的最新产品"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Check out these new arrivals!"
+msgstr "查看我们的最新产品！"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "Cheers,"
+msgstr "谢谢！"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Create Repeat Customers"
+msgstr "创建回头客"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "Facebook"
+msgstr "脸书"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "Hey"
+msgstr "嘿"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "How is everything going?"
+msgstr "一切进展如何？"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid ""
+"If you have any questions or concerns about your product, please\n"
+"              don’t hesitate to reach out. We’re always here to help."
+msgstr "如果您对您的产品有任何疑问或疑虑，请不要犹豫联系我们，我们随时为您提供帮助。"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"If you need a hand or have any questions, please don't hesitate to\n"
+"              get in touch with our awesome customer service team. They are here\n"
+"              to help you with any inquiries or concerns you may have. Just\n"
+"              reach out to them, and they will be more than happy to assist you."
+msgstr ""
+"如果您需要帮助或有任何疑问，请不要犹豫与我们出色的客户服务团队取得联系。他们在这里帮助您解决您可能遇到的任何疑问或疑虑。请随时与他们联系，他们将非常乐意为您提供帮助。"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "Instagram"
+msgstr "Instagram"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "John Doe, from all of us at MyCompany"
+msgstr "约翰·多伊，来自我们全体在MyCompany的人"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "LinkedIn"
+msgstr "领英"
+
+#. module: marketing_automation_website_sale
+#: model:ir.model,name:marketing_automation_website_sale.model_marketing_campaign
+msgid "Marketing Campaign"
+msgstr "营销活动"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid ""
+"Michael Fletcher<br/>\n"
+"              <span style=\"font-size: 12px; font-weight: bolder\">CEO</span>"
+msgstr ""
+"迈克尔·弗莱彻<br/>\n"
+"              <span style=\"font-size: 12px; font-weight: bolder\">CEO</span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "Need anything?"
+msgstr "需要什么吗？"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "New Arrivals"
+msgstr "新到商品"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Purchase Follow-up"
+msgstr "跟进购买"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Purchase Thanks"
+msgstr "感谢购买"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "READ MORE"
+msgstr "阅读更多"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Recent Purchase Follow-up"
+msgstr "最近跟进购买"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid ""
+"Send an email to customers that bought a specific product after their "
+"purchase."
+msgstr "向购买特定产品后购买的客户发送电子邮件。"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "Signature"
+msgstr "签名"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "So...<strong>Thank you once again for choosing us</strong>."
+msgstr "<strong>再次感谢您选择我们</strong>。"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "Thank you again for choosing us!"
+msgstr "再次感谢您选择我们！"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Thank you for your purchase"
+msgstr "感谢您的惠顾！"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "TikTok"
+msgstr "TikTok"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Turn one-time visitors into repeat buyers."
+msgstr "将一次性访客变成回头客。"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "Unsubscribe"
+msgstr "退订"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "View Online"
+msgstr "线上查看"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "Warm regards,"
+msgstr "致以最诚挚的问候，"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+msgid ""
+"We are thrilled to announce that we have just received some\n"
+"              amazing new arrivals in our store that we know you're going to\n"
+"              love! 🎉 From trendy fashion pieces to must-have accessories,\n"
+"              we've got something special just for you. Come on in and check out\n"
+"              our latest collection - we can't wait to see you! Happy shopping!\n"
+"              🛍️✨"
+msgstr ""
+"我们很高兴地宣布，我们刚刚收到了一些\n"
+"              新产品，您一定会\n"
+"              喜欢！🎉 从流行时尚单品到必备配饰，\n"
+"              我们为您准备好了特别的东西。\n"
+"进来看看吧！\n"
+"              我们的最新系列 - 我们迫不及待地想见到您！购物愉快！\n"
+"              🛍️✨"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "We look forward to seeing you again soon!"
+msgstr "我们期待很快再次见到您！"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"We sincerely hope that you are delighted with your recent\n"
+"              purchase. Your satisfaction is our top priority, and we are\n"
+"              here to assist you with any questions or concerns you may\n"
+"              have."
+msgstr ""
+"我们真诚地希望您对最近的购买感到满意。\n"
+"您的满意是我们的首要任务，我们将在这里协助您解决任何疑问或问题。"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid ""
+"We’re absolutely thrilled to welcome you to the MyCompany family.\n"
+"              We can’t wait for you to experience our product/service and hear\n"
+"              how it went! Don’t hesitate to share your thoughts online using\n"
+"              our hashtag #MyCompany. We’re genuinely excited to see what you\n"
+"              have to say. After all, making people happy is what drives us\n"
+"              at MyCompany."
+msgstr ""
+"我们非常高兴并欢迎加入我们公司这个大家庭。 \n"
+"我们迫不及待地想让您体验我们的产品/服务并听取您的反馈！ \n"
+"请随时在网上分享您的想法。 我们真心期待看到您的评价。毕竟，让顾客满意是我们全公司人员的动力。"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid ""
+"What started as a small project in my garage has grown into a\n"
+"              global venture, shipping packages around the world. And what an\n"
+"              incredible journey it’s been... A journey that wouldn’t have been\n"
+"              possible without the support of customers like you."
+msgstr ""
+"起初只是在我车库里的一个小项目， \n"
+"现在已经发展成为全球性的业务，将包裹运往世界各地。\n"
+"这真是一段不可思议的旅程…… 如果没有像您这样的客户的支持，这一切都不可能实现。"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "eCommerce"
+msgstr "电子商务"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "© 2024 All Rights Reserved"
+msgstr "© 2024 版权所有"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+msgid "🌟 Exciting News Alert! 🌟"
+msgstr "🌟 激动人心的新提醒！ 🌟"

@@ -1,0 +1,43 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* account_accountant_check_printing
+# 
+# Translators:
+# Lasse L, 2024
+# Jakob Krabbe <jakob.krabbe@vertel.se>, 2024
+# Anders Wallenquist <anders.wallenquist@vertel.se>, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-25 09:26+0000\n"
+"PO-Revision-Date: 2024-09-25 09:43+0000\n"
+"Last-Translator: Anders Wallenquist <anders.wallenquist@vertel.se>, 2024\n"
+"Language-Team: Swedish (https://app.transifex.com/odoo/teams/41243/sv/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: sv\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: account_accountant_check_printing
+#: model:ir.model.fields,field_description:account_accountant_check_printing.field_account_move_line__check_number
+msgid "Check Number"
+msgstr "Kontrollera nummer"
+
+#. module: account_accountant_check_printing
+#: model:ir.model,name:account_accountant_check_printing.model_account_move_line
+msgid "Journal Item"
+msgstr "Journalpost"
+
+#. module: account_accountant_check_printing
+#: model:ir.model.fields,help:account_accountant_check_printing.field_account_move_line__check_number
+msgid ""
+"The selected journal is configured to print check numbers. If your pre-"
+"printed check paper already has numbers or if the current numbering is "
+"wrong, you can change it in the journal configuration page."
+msgstr ""
+"Den valda journalen är konfigurerad för att skriva ut checknummer. Om ditt "
+"förtryckta checkpapper redan har nummer eller om den nuvarande numreringen "
+"är felaktig kan du ändra den på sidan för journalkonfiguration."

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <t t-name="spreadsheet_edition.VersionHistoryItem">
+    <div
+      class="o-version-history-item border rounded p-2 mb-2 d-flex"
+      t-att-class="{'active': this.props.active}"
+      t-ref="item"
+      t-on-contextmenu.prevent.stop="this.openMenu"
+      t-on-click="() => props.onActivation(this.revision.nextRevisionId)">
+
+      <div>
+        <span t-if="isLatestVersion" class="o-sp-badge badge rounded-4 mb-1">Current</span>
+
+        <div class="d-flex o-version-history-item-text" t-ref="revisionNameDiv">
+          <TextInput
+            value="state.editName"
+            onChange.bind="renameRevision"
+          />
+        </div>
+        <div
+          t-if="revision.name"
+          class="o-version-history-timestamp smaller fst-italic"
+          t-esc="formattedTimeStamp"
+        />
+        <div
+          t-if="revision.user"
+          class="d-flex pt-1">
+          <span class="o_spreadsheet_user d-inline-flex align-items-center">
+            <img
+              t-attf-src="/web/image?model=res.users&amp;field=avatar_128&amp;id={{revision.user[0]}}"
+              class="pe-1 rounded-circle" />
+            <span t-esc="revision.user[1]" />
+          </span>
+        </div>
+      </div>
+      <div class="ms-auto">
+        <span
+          class="o-version-history-menu px-2"
+          t-ref="menuButton"
+          t-att-class="{'active': this.props.active}"
+          t-on-click.stop="this.openMenu"
+          t-on-contextmenu.prevent.stop="this.openMenu">
+          <i class="fa fa-ellipsis-v text-muted" />
+        </span>
+      </div>
+    </div>
+    <Menu
+      t-if="menuState.isOpen"
+      position="menuState.position"
+      menuItems="menuItems"
+      onClose.bind="closeMenu"
+    />
+  </t>
+</templates>

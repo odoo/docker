@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="helpdesk.SmileyBadge" owl="1">
+        <i t-if="props.record.data[props.name]" class="fa fa-fw fa-smile-o fa-lg" t-att-class="classFromDecoration"/>
+    </t>
+
+</templates>

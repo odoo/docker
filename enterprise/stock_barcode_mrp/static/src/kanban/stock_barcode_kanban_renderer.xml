@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="stock_barcode_mrp.KanbanRenderer" t-inherit-mode="extension" t-inherit="stock_barcode.KanbanRenderer">
+        <xpath expr="//div[hasclass('o_kanban_tip_filter')]/span[1]" position="after">
+            <span t-if="props.list.resModel === 'mrp.production'">
+                Scan an <b>order</b> or a <b>product</b> to filter your records
+            </span>
+        </xpath>
+    </t>
+
+</templates>

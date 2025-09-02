@@ -1,0 +1,724 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* spreadsheet_dashboard_sale_subscription
+# 
+# Translators:
+# Pere Martínez, 2024
+# Ivan Espinola, 2024
+# marcescu, 2024
+# M Palau <mpalau@tda.ad>, 2024
+# Marc Tormo i Bochaca <mtbochaca@gmail.com>, 2024
+# Arnau Ros, 2024
+# RGB Consulting <odoo@rgbconsulting.com>, 2024
+# Cristian Cruz, 2024
+# Manel Fernandez Ramirez <manelfera@outlook.com>, 2024
+# Martin Trigaux, 2024
+# Josep Anton Belchi, 2024
+# Quim - eccit <quim@eccit.com>, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-25 09:15+0000\n"
+"PO-Revision-Date: 2024-09-25 09:44+0000\n"
+"Last-Translator: Quim - eccit <quim@eccit.com>, 2024\n"
+"Language-Team: Catalan (https://app.transifex.com/odoo/teams/41243/ca/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ca\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "# Orders"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "# Subscriptions"
+msgstr "# Subscripcions"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "/sub."
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "ARR"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Average Revenue"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Avg MRR / Subscriptions"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "CLTV"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Camera Services"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Car Leasing"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "China"
+msgstr "Xina"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Churn"
+msgstr "Índex de cancel·lació "
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Churn ($)"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Churn ARR"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Churned"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Churned %"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Churns"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Contraction"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Contraction ($)"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Countries"
+msgstr "Països"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Country"
+msgstr "País"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Current"
+msgstr "Actiu"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Cust. Life Time Value"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Cust. Lifespan"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Cust. Lifetime Value"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Customer"
+msgstr "Client/a"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Customer Churn Rate"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Customer Churn rate"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Customer Life Time Value"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Customer churn rate"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Expansion"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Expansion ($)"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "France"
+msgstr "França"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Inbound"
+msgstr "Entrada"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Italy"
+msgstr "Itàlia"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "KPI"
+msgstr "KPI"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Last 30 days"
+msgstr "Últims 30 dies"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Lifespan"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Lifetime Value"
+msgstr "Valor del temps de vida"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "MRR"
+msgstr "MRR"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "MRR Breakdown"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "MRR Change (normalized)"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+#: model:spreadsheet.dashboard,name:spreadsheet_dashboard_sale_subscription.spreadsheet_dashboard_mrr_evolution
+msgid "MRR Evolution"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "MRR by Country"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "MRR by Products"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "MRR by Recurrence"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "MRR by Sales Team"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "MRR by Team"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "MRR delta"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "MRR over time"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Month(s)"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Monthly"
+msgstr "Mensualment"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Monthly Growth"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Monthly Rec. Rev."
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Motion Sensors"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Net New"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Net New ARR"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Net Retention"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Net Retention rate"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "New"
+msgstr "Nou"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "New ARR"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "New MRR"
+msgstr "Nou MRR"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "New Subscriptions"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "New subscriptions"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "New subscriptions ($)"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Non Rec. Invoiced "
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Non Rec. Rev."
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Non Recurring Invoiced"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Non Recurring Invoiced (%)"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Non-recurring revenue"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Office Cleaning"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Outbound"
+msgstr "Sortint"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Plans"
+msgstr "Plans"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Previous"
+msgstr "Anterior"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Product"
+msgstr "Producte"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Recurrence"
+msgstr "Recurrència"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Recurring Invoiced"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Recurring Invoiced (%)"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#: model:spreadsheet.dashboard,name:spreadsheet_dashboard_sale_subscription.spreadsheet_dashboard_retention
+msgid "Retention"
+msgstr "Retenció"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Revenue Churn"
+msgstr "Taxa d'ingrés"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/retention_sample_dashboard.json:0
+msgid "Revenue churn rate"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Sales Team"
+msgstr "Equip de vendes"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+#: model:spreadsheet.dashboard,name:spreadsheet_dashboard_sale_subscription.spreadsheet_dashboard_salesperson
+msgid "Salesperson"
+msgstr "Comercial"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Spain"
+msgstr "Espanya"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+#: model:spreadsheet.dashboard,name:spreadsheet_dashboard_sale_subscription.spreadsheet_dashboard_subscriptions
+#: model:spreadsheet.dashboard.group,name:spreadsheet_dashboard_sale_subscription.spreadsheet_dashboard_group_subscriptions
+msgid "Subscriptions"
+msgstr "Subscripcions"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Top Countries"
+msgstr "Principals països"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Top Expansion"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Top New"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Top Plans"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Top Products"
+msgstr "Productes Top"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Top Quotations"
+msgstr "Cites principals"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Top Recurrence"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Top Recurrences"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Top Sales Team"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Top Salesman"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Top Salesperson"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Top Subscriptions"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Top upgrades"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Total Subscriptions"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Total churned"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Transfer"
+msgstr "Transferència"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "United States"
+msgstr "Estats Units"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Up/Down ARR"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Up/Downgrade"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Value"
+msgstr "Valor"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Worst Churn"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "Worst Contraction"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "Worst Downgrades"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Yearly"
+msgstr "Anualment"
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/subscriptions_sample_dashboard.json:0
+msgid "Yearly Recurring"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/mrr_evolution_sample_dashboard.json:0
+msgid "of total invoiced"
+msgstr ""
+
+#. module: spreadsheet_dashboard_sale_subscription
+#. odoo-javascript
+#: code:addons/spreadsheet_dashboard_sale_subscription/data/files/salesperson_sample_dashboard.json:0
+msgid "over the period"
+msgstr ""

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="res_config_settings_view_form">
+        <field name="name">res.config.settings.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="hr_payroll.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='hr_payroll_settings']" position="after">
+                <field name="company_country_code" invisible="True"/>
+                <block title="Saudi Arabia Payroll" id="saudi_payroll_wps_settings" invisible="company_country_code != 'SA'">
+
+                    <setting string="Establishment Bank Account" help="Company bank account to be used in the WPS report" id="l10n_sa_bank_account_id">
+                        <field name="l10n_sa_bank_account_id" class="w-auto" domain="[('partner_id', '=', company_partner_id)]" context="{'default_partner_id': company_partner_id}"/>
+                    </setting>
+                    <setting string="Establishment Bank" help="Bank of the company account" id="l10n_sa_bank_id" invisible="not l10n_sa_bank_account_id">
+                        <field name="l10n_sa_bank_id" required="l10n_sa_bank_account_id" domain="[('country_code', '=', 'SA')]" context="{'default_country': %(base.sa)d}"/>
+                    </setting>
+                    <setting string="MoL Establishment ID" help="Ministry of Labor Establishment ID" id="l10n_sa_mol_establishment_code">
+                        <field name="l10n_sa_mol_establishment_code"/>
+                    </setting>
+                    <setting string="Bank Establishment ID" help="ID of the Establishment registered with the bank" id="l10n_sa_bank_establishment_code" invisible="not l10n_sa_bank_id">
+                        <field name="l10n_sa_bank_establishment_code" required="l10n_sa_bank_account_id"/>
+                    </setting>
+                    <setting></setting>
+                    <setting string="Bank SARIE Code" help="Establishment Bank SARIE code" id="l10n_sa_sarie_code" invisible="not l10n_sa_bank_id">
+                        <field name="l10n_sa_sarie_code" required="l10n_sa_bank_account_id"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

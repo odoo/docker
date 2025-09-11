@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+  <record id="odoo_studio_maintena_ace27d21-ea8d-4fee-b28b-1e5bce1c267b" model="ir.ui.view" context="{'studio': True}">
+    <field name="arch" type="xml">
+      <data>
+        <xpath expr="//list[1]/field[@name='name']" position="after">
+          <field optional="show" name="x_studio_team_members" widget="many2many_avatar_employee" domain="[('share', '=', False)]"/>
+        </xpath>
+        <xpath expr="//field[@name='member_ids']" position="attributes">
+          <attribute name="column_invisible">True</attribute>
+          <attribute name="options">{"color_field": "color", "no_create": false}</attribute>
+          <attribute name="widget">many2many_avatar_employee</attribute>
+        </xpath>
+      </data>
+    </field>
+    <field name="inherit_id" ref="maintenance.maintenance_team_view_tree"/>
+    <field name="mode">extension</field>
+    <field name="model">maintenance.team</field>
+    <field name="name">Odoo Studio: maintenance.team.list customization</field>
+    <field name="priority">99</field>
+    <field name="type">list</field>
+  </record>
+</odoo>

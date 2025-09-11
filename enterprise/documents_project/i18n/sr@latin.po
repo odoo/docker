@@ -1,0 +1,349 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* documents_project
+#
+# Translators:
+# Uros Kalajdzic <ukalajdzic@gmail.com>, 2022
+# Martin Trigaux, 2022
+# Dragan Vukosavljevic <dragan.vukosavljevic@gmail.com>, 2022
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0beta+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-03 09:04+0000\n"
+"PO-Revision-Date: 2022-09-22 05:46+0000\n"
+"Last-Translator: Dragan Vukosavljevic <dragan.vukosavljevic@gmail.com>, "
+"2022\n"
+"Language-Team: Serbian (https://app.transifex.com/odoo/teams/41243/sr/)\n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/project_project.py:0
+msgid "%(project_name)s's Documents"
+msgstr "%(project_name)s dokumenta"
+
+#. module: documents_project
+#: model:ir.model,name:documents_project.model_documents_workflow_rule
+msgid ""
+"A set of condition and actions which will be available to all attachments "
+"matching the conditions"
+msgstr ""
+"Grupa uslova i aktivnosti koji će biti dostupni svim prilozima koji "
+"zadovoljavaju uslove"
+
+#. module: documents_project
+#: model:documents.workflow.rule,name:documents_project.documents_project_rule_ask_for_validation
+msgid "Ask for Validation"
+msgstr "Zatražite validaciju"
+
+#. module: documents_project
+#: model:ir.model,name:documents_project.model_ir_attachment
+msgid "Attachment"
+msgstr "Prilog"
+
+#. module: documents_project
+#: model_terms:ir.ui.view,arch_db:documents_project.edit_project_document_form_inherit
+msgid "Categorize and share your documents with your customers"
+msgstr "Kategorišite i delite svoja dokumenta sa svojim klijentima"
+
+#. module: documents_project
+#: model:ir.model,name:documents_project.model_documents_facet
+msgid "Category"
+msgstr "Kategorija"
+
+#. module: documents_project
+#: model:ir.model.fields,field_description:documents_project.field_documents_workflow_rule__create_model
+msgid "Create"
+msgstr "Kreirajte"
+
+#. module: documents_project
+#: model:documents.workflow.rule,name:documents_project.documents_project_rule
+#: model:documents.workflow.rule,name:documents_project.documents_project_rule_task
+msgid "Create a Task"
+msgstr "Kreiraj zadatak"
+
+#. module: documents_project
+#: model:ir.model.fields,field_description:documents_project.field_project_project__documents_tag_ids
+msgid "Default Tags"
+msgstr "Podrazumevane oznake"
+
+#. module: documents_project
+#: model:documents.workflow.rule,name:documents_project.documents_project_rule_deprecate
+msgid "Deprecate"
+msgstr ""
+
+#. module: documents_project
+#: model:documents.tag,name:documents_project.documents_project_status_deprecated
+msgid "Deprecated"
+msgstr ""
+
+#. module: documents_project
+#: model:ir.model,name:documents_project.model_documents_document
+msgid "Document"
+msgstr "Dokument"
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/project_project.py:0
+#: model:ir.actions.act_window,name:documents_project.action_view_documents_project_project
+#: model:ir.actions.act_window,name:documents_project.action_view_documents_project_task
+#: model:ir.embedded.actions,name:documents_project.project_embedded_action_documents
+#: model:ir.model.fields,field_description:documents_project.field_project_project__use_documents
+#: model:ir.model.fields,field_description:documents_project.field_project_task__document_ids
+#: model_terms:ir.ui.view,arch_db:documents_project.portal_my_task
+#: model_terms:ir.ui.view,arch_db:documents_project.portal_tasks_list
+#: model_terms:ir.ui.view,arch_db:documents_project.project_sharing_project_task_view_form_inherit
+#: model_terms:ir.ui.view,arch_db:documents_project.project_view_kanban_inherit_documents
+#: model_terms:ir.ui.view,arch_db:documents_project.view_task_form2_document_inherit
+msgid "Documents"
+msgstr "Dokumenti"
+
+#. module: documents_project
+#: model_terms:ir.ui.view,arch_db:documents_project.edit_project_document_form_inherit
+msgid "Documents &amp; Analytics"
+msgstr "Dokumenta &amp; Analitika"
+
+#. module: documents_project
+#: model:ir.model,name:documents_project.model_documents_folder
+msgid "Documents Workspace"
+msgstr "Dokumenta radni prostor"
+
+#. module: documents_project
+#: model:documents.tag,name:documents_project.documents_project_status_draft
+msgid "Draft"
+msgstr "Priprema"
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/documents_document.py:0
+msgid "Invalid project search"
+msgstr ""
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/documents_document.py:0
+msgid "Invalid task search"
+msgstr ""
+
+#. module: documents_project
+#: model:documents.workflow.rule,name:documents_project.documents_project_rule_mark_as_draft
+msgid "Mark As Draft"
+msgstr "Označi kao Priprema"
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/documents_workflow_rule.py:0
+msgid "New task from Documents"
+msgstr "Novi zadatak od Dokumenta"
+
+#. module: documents_project
+#: model:ir.model,name:documents_project.model_project_project
+#: model_terms:ir.ui.view,arch_db:documents_project.document_view_search_inherit
+msgid "Project"
+msgstr "Projekat"
+
+#. module: documents_project
+#: model:documents.folder,name:documents_project.documents_project_folder
+msgid "Projects"
+msgstr "Projekti"
+
+#. module: documents_project
+#: model:documents.facet,name:documents_project.documents_project_status
+msgid "Status"
+msgstr "Status"
+
+#. module: documents_project
+#: model:ir.model,name:documents_project.model_project_task
+#: model:ir.model.fields.selection,name:documents_project.selection__documents_workflow_rule__create_model__project_task
+#: model_terms:ir.ui.view,arch_db:documents_project.document_view_search_inherit
+msgid "Task"
+msgstr "Zadatak"
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/documents_workflow_rule.py:0
+msgid "Task created from document %s"
+msgstr ""
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/documents_workflow_rule.py:0
+#, fuzzy
+msgid "Task created from documents"
+msgstr "Novi zadatak od Dokumenta"
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/project_task.py:0
+msgid "Task's Documents"
+msgstr ""
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/project_project.py:0
+#, fuzzy
+msgid ""
+"The \"%(workspace)s\" workspace should either be in the \"%(company)s\" "
+"company like this project or be open to all companies."
+msgstr ""
+"\"%s\" radni prostor treba da bude ili u \"%s\" kompaniji poput ovog "
+"projekta, ili da bde otvoren za sve kompanije."
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/documents_folder.py:0
+msgid ""
+"The \"%s\" workspace is required by the Project application and cannot be "
+"deleted."
+msgstr ""
+"\"%s\" radni prostor je obavezan za aplikaciju Projekat i ne može biti "
+"obrisan."
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/documents_document.py:0
+msgid "The search does not support operator %(operator)s or value %(value)s."
+msgstr ""
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/documents_folder.py:0
+#, fuzzy
+msgid ""
+"This workspace should remain in the same company as the \"%(project)s\" "
+"project to which it is linked. Please update the company of the "
+"\"%(project)s\" project, or leave the company of this workspace empty."
+msgstr ""
+"Ovaj radni prostor treba da ostane u istoj kompaniji kao i \"%s\" projekat "
+"sa kojime je povezan. Molimo ažurirajte kompaniju \"%s\" projekta, ili "
+"ostavite kompaniju ovog radnog prostora praznu."
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/documents_folder.py:0
+msgid ""
+"This workspace should remain in the same company as the following projects "
+"to which it is linked:\n"
+"%s\n"
+"\n"
+"Please update the company of those projects, or leave the company of this "
+"workspace empty."
+msgstr ""
+"Ovaj radni prostor treba da ostane u istoj kompaniji kao i sledeći projekti "
+"sa kojima je povezan:\n"
+"%s\n"
+"\n"
+"Molimo ažurirajte kompaniju tih projekata, ili ostavite kompaniju ovog "
+"radnog prostora praznu."
+
+#. module: documents_project
+#: model:documents.tag,name:documents_project.documents_project_status_to_validate
+msgid "To Validate"
+msgstr "Za potvrditi"
+
+#. module: documents_project
+#: model_terms:ir.actions.act_window,help:documents_project.action_view_documents_project_project
+#: model_terms:ir.actions.act_window,help:documents_project.action_view_documents_project_task
+msgid ""
+"Upload <span class=\"fw-normal\">a file or </span>drag <span class=\"fw-"
+"normal\">it here.</span>"
+msgstr ""
+"Učitaj <span class=\"fw-normal\">datoteku ili </span>je prevuci <span "
+"class=\"fw-normal\">ovde.</span>"
+
+#. module: documents_project
+#: model:documents.workflow.rule,name:documents_project.documents_project_rule_validate
+msgid "Validate"
+msgstr "Potvrdi"
+
+#. module: documents_project
+#: model:documents.tag,name:documents_project.documents_project_status_validated
+msgid "Validated"
+msgstr "Potvrđeno"
+
+#. module: documents_project
+#: model:ir.model.fields,field_description:documents_project.field_project_project__documents_folder_id
+msgid "Workspace"
+msgstr "Radni prostor"
+
+#. module: documents_project
+#: model:ir.model.fields,help:documents_project.field_project_project__documents_folder_id
+#: model:ir.model.fields,help:documents_project.field_project_task__documents_folder_id
+msgid ""
+"Workspace in which all of the documents of this project will be categorized. "
+"All of the attachments of your tasks will be automatically added as "
+"documents in this workspace as well."
+msgstr ""
+"Radni prostor u kojem će biti kategorisana sva dokumenta ovog projekta. Svi "
+"prilozi vaših zadataka će takođe biti automatski dodati kao dokumenta u ovaj "
+"radni prostor."
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/project_project.py:0
+#, fuzzy
+msgid ""
+"You cannot change the company of this project, because its workspace is "
+"linked to the other following projects that are still in the "
+"\"%(other_company)s\" company:\n"
+"%(other_workspaces)s\n"
+"\n"
+"Please update the company of all projects so that they remain in the same "
+"company as their workspace, or leave the company of the \"%(workspace)s\" "
+"workspace blank."
+msgstr ""
+"Ne možete da promenite kompaniju ovog projekta, jer je njegov radni prostor "
+"povezan sa drugim projektima koji su još uvek u \"%s\" kompaniji:\n"
+"%s\n"
+"\n"
+"Molimo ažurirajte kompaniju svih projekata tako da oni ostanu u istoj "
+"kompaniji kao i radni prostor, ili ostavite kompaniju \"%s\" radnog prostora "
+"praznu."
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/documents_folder.py:0
+msgid "You cannot set a company on the %s workspace."
+msgstr ""
+
+#. module: documents_project
+#: model_terms:ir.ui.view,arch_db:documents_project.share_page
+msgid "documents shared"
+msgstr "dokumenata podeljeno"
+
+#. module: documents_project
+#. odoo-python
+#: code:addons/documents_project/models/documents_workflow_rule.py:0
+msgid "new %(model)s from %(new_record)s"
+msgstr ""
+
+#~ msgid "Is Shared"
+#~ msgstr "Je podeljeno"
+
+#~ msgid "Merged Workspace"
+#~ msgstr "Spojeni radni prostori"
+
+#~ msgid "Number of documents in Project"
+#~ msgstr "Broj dokumenata u projektu"
+
+#~ msgid "Number of documents in Task"
+#~ msgstr "Broj dokumenata u zadatku"
+
+#~ msgid "Shared Documents"
+#~ msgstr "Deljena dokumenta"
+
+#~ msgid "Shared Documents Count"
+#~ msgstr "Brojač deljenih dokumenata"
+
+#~ msgid "Use Documents"
+#~ msgstr "Koristi Dokumenta"
+
+#~ msgid "new %s from %s"
+#~ msgstr "novi %s od %s"

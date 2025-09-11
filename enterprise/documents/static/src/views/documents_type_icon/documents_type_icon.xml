@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="documents.DocumentsTypeIcon">
+        <t t-set="mimetype" t-value="this.props.record.data['mimetype']"/>
+        <t t-set="type" t-value="this.props.record.data['type']"/>
+
+        <i t-if="type === 'folder'" class="fa fa-folder-o ms-1" title="Folder"/>
+        <i t-elif="type === 'url'" class="fa fa-link ms-1" title="Link"/>
+        <i t-elif="type === 'binary' and mimetype" class="o_documents_mimetype_icon o_image" t-att-data-mimetype="mimetype" t-att-title="mimetype"/>
+        <i t-else="" class="fa fa-file-o ms-1" title="File"/>
+    </t>
+
+</templates>

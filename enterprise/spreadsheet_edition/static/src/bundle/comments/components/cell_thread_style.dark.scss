@@ -1,0 +1,29 @@
+
+/** Shame css to counteract dark mode */
+.o-spreadsheet {
+    .o-cell-thread, .o-thread-start-composer {
+        background-color: white;
+    }
+
+    .o-thread-popover{
+        .border, .border-top {
+            border-color: #d8dadd !important;
+        }
+        .bg-view {
+            color: #333;
+            background-color: white !important;
+        }
+        .o-mail-Composer-send {
+            color: white !important;
+        }
+        .btn {
+            color: #374151;
+        }
+        .text-primary {
+            color: #374151 !important;
+        }
+        .o-mail-Message-actions button:hover, .o-mail-Message-actions .focus {
+            background-color: #e7e9ed !important;
+        }
+    }
+}

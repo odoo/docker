@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_settle_due
+# 
+# Translators:
+# Jumshud Sultanov <cumshud@gmail.com>, 2024
+# erpgo translator <jumshud@erpgo.az>, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-25 09:25+0000\n"
+"PO-Revision-Date: 2024-09-25 09:44+0000\n"
+"Last-Translator: erpgo translator <jumshud@erpgo.az>, 2024\n"
+"Language-Team: Azerbaijani (https://app.transifex.com/odoo/teams/41243/az/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: az\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/overrides/components/partner_list/partner_line/partner_line.xml:0
+msgid "(with cart:"
+msgstr ""
+
+#. module: pos_settle_due
+#: model:ir.model,name:pos_settle_due.model_res_company
+msgid "Companies"
+msgstr "Şirkətlər"
+
+#. module: pos_settle_due
+#: model:ir.model,name:pos_settle_due.model_res_partner
+msgid "Contact"
+msgstr "Kontakt"
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/overrides/components/partner_list/partner_list.xml:0
+msgid "Credit limit reached!"
+msgstr ""
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/overrides/components/partner_list/partner_line/partner_line.xml:0
+msgid "Credit limit:"
+msgstr ""
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/overrides/components/partner_list/partner_line/partner_line.xml:0
+msgid "Deposit money"
+msgstr ""
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/overrides/components/payment_screen/payment_screen.js:0
+msgid "Do you want to deposit %s to %s?"
+msgstr ""
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/overrides/components/payment_screen/payment_screen.js:0
+msgid ""
+"Do you want to deposit %s to a specific customer? If so, first select "
+"him/her."
+msgstr ""
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/overrides/models/pos_store.js:0
+msgid "Select the payment method to settle the due"
+msgstr ""
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/overrides/components/partner_list/partner_line/partner_line.xml:0
+msgid "Settle due accounts"
+msgstr ""
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/overrides/components/payment_screen/payment_screen.js:0
+msgid "The order is empty"
+msgstr ""
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/overrides/components/partner_list/partner_line/partner_line.xml:0
+msgid "Total due:"
+msgstr ""
+
+#. module: pos_settle_due
+#. odoo-javascript
+#: code:addons/pos_settle_due/static/src/overrides/components/payment_screen/payment_screen.js:0
+msgid "Yes"
+msgstr "Bəli"

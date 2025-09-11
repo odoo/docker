@@ -1,0 +1,355 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_uk_hmrc
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-11 11:46+0000\n"
+"PO-Revision-Date: 2024-11-11 11:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.hmrc_transaction_engine_base
+msgid "1.0"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.hmrc_transaction_engine_base
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.hmrc_transaction_engine_request
+msgid "2.0"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.hmrc_transaction_engine_base
+msgid "9117"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_res_company__l10n_uk_hmrc_account_office_reference
+msgid "Account Office Reference"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/hmrc_transaction.py:0
+msgid "An error happened when sending the document. Please try again later"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/hmrc_transaction.py:0
+msgid "Code"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model,name:l10n_uk_hmrc.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/res_company.py:0
+msgid "Company Account Office Reference should be filled."
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/res_company.py:0
+msgid "Company HMRC sender id should be filled."
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/res_company.py:0
+msgid "Company HMRC tax office number should be filled."
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/res_company.py:0
+msgid "Company HMRC tax office reference should be filled."
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_res_partner__l10n_uk_hmrc_company_registration_number
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_res_users__l10n_uk_hmrc_company_registration_number
+msgid "Company Registration Number"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/res_company.py:0
+msgid "Company Unique Taxpayer Reference should be filled."
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__completed_datetime
+msgid "Completed Time"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model,name:l10n_uk_hmrc.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model,name:l10n_uk_hmrc.model_l10n_uk_hmrc_transaction
+msgid "Contains a single transaction made to hmrc"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__company_id
+msgid "Contractor"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.res_company_form_inherit
+msgid "Contractor Details"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__correlation_id
+msgid "Correlation ID"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.actions.server,name:l10n_uk_hmrc.ir_cron_l10n_uk_hmrc_delete_processed_transactions_ir_actions_server
+msgid "Delete all processed transactions"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields.selection,name:l10n_uk_hmrc.selection__l10n_uk_hmrc_transaction__state__deleted
+msgid "Deleted"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__period_end
+msgid "Document period end"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__period_start
+msgid "Document period start"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields.selection,name:l10n_uk_hmrc.selection__l10n_uk_hmrc_transaction__state__error
+msgid "Error"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/hmrc_transaction.py:0
+msgid "Go to company"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.res_company_form_inherit
+msgid "HMRC"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.res_company_form_inherit
+msgid "HMRC Credentials"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.res_partner_form_inherit
+msgid "HMRC Details"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/hmrc_transaction.py:0
+msgid "HMRC Monthly return from %(period_start)s to %(period_end)s succeeded"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/hmrc_transaction.py:0
+msgid "Hmrc transaction deletion error"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/hmrc_transaction.py:0
+msgid "Hmrc transaction error"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/res_company.py:0
+msgid "Invalid Account Office Reference."
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/res_partner.py:0
+msgid "Invalid National Insurance Number."
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/res_company.py:0
+msgid ""
+"Invalid Unique Taxpayer Reference. A valid format contains only 10 numbers."
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_res_partner__l10n_uk_hmrc_national_insurance_number
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_res_users__l10n_uk_hmrc_national_insurance_number
+msgid "National Insurance Number"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__next_polling
+msgid "Next Polling Time"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__next_endpoint
+msgid "Next request endpoint"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.hmrc_transaction_engine_base
+msgid "Odoo"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields.selection,name:l10n_uk_hmrc.selection__l10n_uk_hmrc_transaction__state__polling
+msgid "Polling"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.actions.server,name:l10n_uk_hmrc.ir_cron_l10n_uk_hmrc_process_transactions_ir_actions_server
+msgid "Process all posted transactions"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__response_attachment_id
+msgid "Response Attachment"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__sender_user_id
+msgid "Sender"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_res_company__l10n_uk_hmrc_sender_id
+msgid "Sender ID"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__state
+msgid "State"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields.selection,name:l10n_uk_hmrc.selection__l10n_uk_hmrc_transaction__state__success
+msgid "Success"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_res_company__l10n_uk_hmrc_tax_office_number
+msgid "Tax office number"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_res_company__l10n_uk_hmrc_tax_office_reference
+msgid "Tax office reference"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#. odoo-python
+#: code:addons/l10n_uk_hmrc/models/hmrc_transaction.py:0
+msgid ""
+"The authentication has failed. Please verify your HMRC details on the "
+"company."
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields.selection,name:l10n_uk_hmrc.selection__l10n_uk_hmrc_transaction__state__to_send
+msgid "To Send"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_l10n_uk_hmrc_transaction__transaction_type
+msgid "Transaction type"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_res_company__l10n_uk_hmrc_unique_taxpayer_reference
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_res_partner__l10n_uk_hmrc_unique_taxpayer_reference
+#: model:ir.model.fields,field_description:l10n_uk_hmrc.field_res_users__l10n_uk_hmrc_unique_taxpayer_reference
+msgid "Unique Taxpayer Reference"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model:ir.model.fields.selection,name:l10n_uk_hmrc.selection__l10n_uk_hmrc_transaction__transaction_type__unknown
+msgid "Unknown"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.hmrc_transaction_engine_base
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.hmrc_transaction_engine_request
+msgid "XML"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.hmrc_transaction_engine_base
+msgid "clear"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.hmrc_transaction_engine_base
+msgid "principal"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.hmrc_transaction_engine_base
+msgid "request"
+msgstr ""
+
+#. module: l10n_uk_hmrc
+#: model_terms:ir.ui.view,arch_db:l10n_uk_hmrc.hmrc_transaction_engine_base
+msgid "submit"
+msgstr ""

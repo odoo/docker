@@ -1,0 +1,152 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_vn_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.5alpha1+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-08 10:12+0000\n"
+"PO-Revision-Date: 2024-08-09 10:06+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.3.2\n"
+
+#. module: l10n_vn_reports
+#: model:account.report.column,name:l10n_vn_reports.purchase_tax_report_partner_id
+#: model:account.report.column,name:l10n_vn_reports.sales_tax_report_partner_id
+msgid "Customer"
+msgstr "Tên người mua/bán"
+
+#. module: l10n_vn_reports
+#: model:account.report.column,name:l10n_vn_reports.purchase_tax_report_ref
+#: model:account.report.column,name:l10n_vn_reports.sales_tax_report_ref
+msgid "Description"
+msgstr "Diễn giải"
+
+#. module: l10n_vn_reports
+#. odoo-python
+#: code:addons/l10n_vn_reports/models/tax_report.py:0
+msgid "Grand Total"
+msgstr "Tổng"
+
+#. module: l10n_vn_reports
+#: model:account.report.column,name:l10n_vn_reports.purchase_tax_report_invoice_date
+#: model:account.report.column,name:l10n_vn_reports.sales_tax_report_invoice_date
+msgid "Invoice Date"
+msgstr "Ngày/tháng/năm lập hoá đơn"
+
+#. module: l10n_vn_reports
+#: model:account.report.column,name:l10n_vn_reports.purchase_tax_report_invoice_number
+#: model:account.report.column,name:l10n_vn_reports.sales_tax_report_invoice_number
+msgid "Invoice Number"
+msgstr "Số hoá đơn"
+
+#. module: l10n_vn_reports
+#: model:account.report,name:l10n_vn_reports.purchase_tax_report
+msgid "Purchase"
+msgstr "Mua vào"
+
+#. module: l10n_vn_reports
+#: model:account.report,name:l10n_vn_reports.sales_tax_report
+msgid "Sales"
+msgstr "Bán ra"
+
+#. module: l10n_vn_reports
+#: model:account.report,name:l10n_vn_reports.tax_report
+msgid "Sales/Purchase Tax Report"
+msgstr "Bảng kê hoá đơn mua vào/bán ra"
+
+#. module: l10n_vn_reports
+#: model:account.report.column,name:l10n_vn_reports.purchase_tax_report_tax_id
+#: model:account.report.column,name:l10n_vn_reports.sales_tax_report_tax_id
+msgid "Tax ID"
+msgstr "MST"
+
+#. module: l10n_vn_reports
+#: model:ir.model,name:l10n_vn_reports.model_l10n_vn_purchase_tax_report_handler
+#: model:ir.model,name:l10n_vn_reports.model_l10n_vn_sales_tax_report_handler
+#: model:ir.model,name:l10n_vn_reports.model_l10n_vn_tax_report_handler
+msgid "Taxes Custom Handler"
+msgstr "Người xử lý tuỳ chỉnh thuế"
+
+#. module: l10n_vn_reports
+#: model:account.report.column,name:l10n_vn_reports.purchase_tax_report_untaxed_amount
+msgid "Untaxed purchase of goods and services"
+msgstr "Doanh số mua chưa có thuế"
+
+#. module: l10n_vn_reports
+#: model:account.report.column,name:l10n_vn_reports.sales_tax_report_untaxed_amount
+msgid "Untaxed sales of goods and services"
+msgstr "Doanh thu chưa có thuế GTGT"
+
+#. module: l10n_vn_reports
+#: model:account.report.column,name:l10n_vn_reports.purchase_tax_report_amount_tax
+#: model:account.report.column,name:l10n_vn_reports.sales_tax_report_amount_tax
+msgid "VAT Amount"
+msgstr "Thuế GTGT"
+
+#. module: l10n_vn_reports
+#. odoo-python
+#: code:addons/l10n_vn_reports/models/tax_report.py:0
+msgid "VAT Exemption on sales of goods and services"
+msgstr "Hàng hoá dịch vụ bán ra không chịu thuế"
+
+#. module: l10n_vn_reports
+#. odoo-python
+#: code:addons/l10n_vn_reports/models/tax_report.py:0
+msgid "VAT on Purchase of Goods and Services Tax Exempt"
+msgstr "Hàng hoá dịch vụ mua vào không chịu thuế"
+
+#. module: l10n_vn_reports
+#. odoo-python
+#: code:addons/l10n_vn_reports/models/tax_report.py:0
+msgid "VAT on purchase of goods and services 0%"
+msgstr "Hàng hóa, dịch vụ mua vào thuế suất 0%"
+
+#. module: l10n_vn_reports
+#. odoo-python
+#: code:addons/l10n_vn_reports/models/tax_report.py:0
+msgid "VAT on purchase of goods and services 10%"
+msgstr "Hàng hóa, dịch vụ mua vào thuế suất 10%"
+
+#. module: l10n_vn_reports
+#. odoo-python
+#: code:addons/l10n_vn_reports/models/tax_report.py:0
+msgid "VAT on purchase of goods and services 8%"
+msgstr "Hàng hóa, dịch vụ mua vào thuế suất 8%"
+
+#. module: l10n_vn_reports
+#. odoo-python
+#: code:addons/l10n_vn_reports/models/tax_report.py:0
+msgid "VAT on purchase of goods and services 5%"
+msgstr "Hàng hóa, dịch vụ mua vào thuế suất 5%"
+
+#. module: l10n_vn_reports
+#. odoo-python
+#: code:addons/l10n_vn_reports/models/tax_report.py:0
+msgid "VAT on sales of goods and services 0%"
+msgstr "Hàng hóa, dịch vụ bán ra thuế suất 0%"
+
+#. module: l10n_vn_reports
+#. odoo-python
+#: code:addons/l10n_vn_reports/models/tax_report.py:0
+msgid "VAT on sales of goods and services 10%"
+msgstr "Hàng hóa, dịch vụ bán ra thuế suất 10%"
+
+#. module: l10n_vn_reports
+#. odoo-python
+#: code:addons/l10n_vn_reports/models/tax_report.py:0
+msgid "VAT on sales of goods and services 8%"
+msgstr "Hàng hóa, dịch vụ bán ra thuế suất 8%"
+
+#. module: l10n_vn_reports
+#. odoo-python
+#: code:addons/l10n_vn_reports/models/tax_report.py:0
+msgid "VAT on sales of goods and services 5%"
+msgstr "Hàng hóa, dịch vụ bán ra thuế suất 5%"

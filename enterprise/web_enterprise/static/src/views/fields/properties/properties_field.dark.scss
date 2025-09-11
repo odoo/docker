@@ -1,0 +1,19 @@
+.o_field_property_definition_type, .o_field_property_definition_type_menu {
+    .o_field_property_dropdown > img {
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+}
+.o_property_field_value {
+    select {
+        option {
+            background-color: $border-color;
+        }
+    }
+}
+.o_field_property_definition_type_popover.popover {
+    .dropdown-item img {
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+    }
+}

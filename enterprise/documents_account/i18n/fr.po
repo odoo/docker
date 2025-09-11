@@ -1,0 +1,394 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* documents_account
+# 
+# Translators:
+# Wil Odoo, 2024
+# Manon Rondou, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-26 09:15+0000\n"
+"PO-Revision-Date: 2024-09-25 09:44+0000\n"
+"Last-Translator: Manon Rondou, 2024\n"
+"Language-Team: French (https://app.transifex.com/odoo/teams/41243/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid "<b>Deselect this page</b> as we plan to process all bills first."
+msgstr ""
+"<b>Désélectionner cette page</b> puisque nous prévoyons de d'abord traiter "
+"toutes les factures."
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid "<b>Select</b> this page to continue."
+msgstr "<b>Sélectionnez</b> cette page pour continuer."
+
+#. module: documents_account
+#: model_terms:ir.ui.view,arch_db:documents_account.account_move_view_form
+msgid "<span class=\"o_stat_text\">Documents</span>"
+msgstr "<span class=\"o_stat_text\">Documents</span>"
+
+#. module: documents_account
+#: model:ir.model.constraint,message:documents_account.constraint_documents_account_folder_setting_journal_unique
+msgid "A setting already exists for this journal"
+msgstr "Un paramètre est déjà existant pour ce journal"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_res_config_settings__documents_account_settings
+msgid "Accounting "
+msgstr "Comptabilité"
+
+#. module: documents_account
+#: model:ir.model,name:documents_account.model_account_report
+msgid "Accounting Report"
+msgstr "Rapport comptable"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_documents_account_folder_setting__company_account_folder_id
+#: model:ir.model.fields,field_description:documents_account.field_res_company__account_folder_id
+msgid "Accounting Workspace"
+msgstr "Espace de travail comptabilité"
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid ""
+"As this PDF contains multiple documents, let's split and process in bulk."
+msgstr ""
+"Comme ce PDF contient plusieurs documents, divisons-le et traitons-le en "
+"masse."
+
+#. module: documents_account
+#: model:ir.model,name:documents_account.model_ir_attachment
+msgid "Attachment"
+msgstr "Pièce jointe"
+
+#. module: documents_account
+#: model_terms:ir.ui.view,arch_db:documents_account.res_config_settings_view_form
+msgid "Centralize accounting files and documents"
+msgstr "Centraliser les fichiers et documents comptables"
+
+#. module: documents_account
+#: model_terms:ir.ui.view,arch_db:documents_account.view_account_move_form_inherit_documents_account
+msgid "Check them"
+msgstr "Vérifiez-les"
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid "Click on a card to <b>select the document</b>."
+msgstr "Cliquez sur une carte <b>pour sélectionner le document.</b>"
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid "Click on a thumbnail to <b>preview the document</b>."
+msgstr "Cliquez sur une vignette pour <b>prévisualiser le document</b>."
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid ""
+"Click on the <b>page separator</b>: we don't want to split these two pages "
+"as they belong to the same document."
+msgstr ""
+"Cliquez sur le <b>séparateur de pages</b> : nous ne souhaitons pas séparer "
+"ces deux pages car elles appartiennent au même document."
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid "Click the cross to <b>exit preview</b>."
+msgstr "Cliquez sur la croix pour <b>quitter la prévisualisation</b>."
+
+#. module: documents_account
+#: model:ir.model,name:documents_account.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_documents_account_folder_setting__company_id
+msgid "Company"
+msgstr "Société"
+
+#. module: documents_account
+#: model:ir.model,name:documents_account.model_res_config_settings
+msgid "Config Settings"
+msgstr "Paramètres de configuration"
+
+#. module: documents_account
+#. odoo-python
+#: code:addons/documents_account/models/account_report.py:0
+msgid "Copy to Documents"
+msgstr ""
+
+#. module: documents_account
+#: model:ir.actions.server,name:documents_account.ir_actions_server_create_credit_note
+#: model:ir.actions.server,name:documents_account.ir_actions_server_create_credit_note_code
+msgid "Create Customer Credit Note"
+msgstr "Créer un avoir client"
+
+#. module: documents_account
+#: model:ir.actions.server,name:documents_account.ir_actions_server_create_customer_invoice
+#: model:ir.actions.server,name:documents_account.ir_actions_server_create_customer_invoice_code
+msgid "Create Customer Invoice"
+msgstr "Créer une facture client"
+
+#. module: documents_account
+#: model:ir.actions.server,name:documents_account.ir_actions_server_create_misc_entry
+#: model:ir.actions.server,name:documents_account.ir_actions_server_create_misc_entry_code
+msgid "Create Misc Entry"
+msgstr ""
+
+#. module: documents_account
+#: model:ir.actions.server,name:documents_account.ir_actions_server_create_vendor_bill
+#: model:ir.actions.server,name:documents_account.ir_actions_server_create_vendor_bill_code
+msgid "Create Vendor Bill"
+msgstr "Créer une facture fournisseur"
+
+#. module: documents_account
+#: model:ir.actions.server,name:documents_account.ir_actions_server_create_vendor_receipt
+msgid "Create Vendor Receipt"
+msgstr "Créer un reçu fournisseur"
+
+#. module: documents_account
+#: model:ir.actions.server,name:documents_account.ir_actions_server_create_vendor_refund
+#: model:ir.actions.server,name:documents_account.ir_actions_server_create_vendor_refund_code
+msgid "Create Vendor Refund"
+msgstr "Créer un remboursement fournisseur"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_documents_account_folder_setting__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_documents_account_folder_setting__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_documents_account_folder_setting__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: documents_account
+#: model:ir.model,name:documents_account.model_documents_document
+msgid "Document"
+msgstr "Document"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_res_company__documents_account_settings
+msgid "Documents Account Settings"
+msgstr "Paramètres du compte de documents"
+
+#. module: documents_account
+#. odoo-python
+#: code:addons/documents_account/models/account_report.py:0
+msgid "Export"
+msgstr "Exporter"
+
+#. module: documents_account
+#: model:ir.model,name:documents_account.model_account_reports_export_wizard_format
+msgid "Export format for accounting's reports"
+msgstr "Format d'export pour les rapports de comptabilité"
+
+#. module: documents_account
+#: model:ir.model,name:documents_account.model_account_reports_export_wizard
+msgid "Export wizard for accounting's reports"
+msgstr "Assistant d'export pour les rapports de comptabilité"
+
+#. module: documents_account
+#: model:mail.activity.type,name:documents_account.mail_documents_activity_data_fs
+msgid "Financial Statement"
+msgstr "État financier"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_account_reports_export_wizard__folder_id
+msgid "Folder"
+msgstr "Dossier"
+
+#. module: documents_account
+#: model:ir.model.fields,help:documents_account.field_account_reports_export_wizard__folder_id
+msgid "Folder where to save the generated file"
+msgstr "Dossier dans lequel enregistrer le fichier généré"
+
+#. module: documents_account
+#. odoo-python
+#: code:addons/documents_account/wizard/account_reports_export_wizard.py:0
+msgid "Generated Documents"
+msgstr "Documents générés"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_account_bank_statement_line__has_documents
+#: model:ir.model.fields,field_description:documents_account.field_account_move__has_documents
+msgid "Has Documents"
+msgstr "Dispose de documents"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_documents_document__has_embedded_pdf
+msgid "Has Embedded PDF"
+msgstr "A PDF intégré"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_documents_account_folder_setting__id
+msgid "ID"
+msgstr "ID"
+
+#. module: documents_account
+#: model:ir.actions.server,name:documents_account.ir_actions_server_bank_statement
+#: model:ir.actions.server,name:documents_account.ir_actions_server_bank_statement_code
+msgid "Import Bank Statement"
+msgstr "Import d'un relevé bancaire"
+
+#. module: documents_account
+#. odoo-python
+#: code:addons/documents_account/models/documents_document.py:0
+msgid "Invoices"
+msgstr "Factures clients"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_documents_account_folder_setting__journal_id
+msgid "Journal"
+msgstr "Journal"
+
+#. module: documents_account
+#: model:ir.model,name:documents_account.model_account_move
+msgid "Journal Entry"
+msgstr "Pièce comptable"
+
+#. module: documents_account
+#: model:ir.model,name:documents_account.model_documents_account_folder_setting
+msgid "Journal and Folder settings"
+msgstr "Paramètres du journal et du dossier"
+
+#. module: documents_account
+#: model_terms:ir.ui.view,arch_db:documents_account.res_config_settings_view_form
+msgid "Journals"
+msgstr "Journaux"
+
+#. module: documents_account
+#: model:ir.actions.act_window,name:documents_account.action_folder_settings_installer
+msgid "Journals to synchronize"
+msgstr "Journal à synchroniser"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_documents_account_folder_setting__write_uid
+msgid "Last Updated by"
+msgstr "Mis à jour par"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_documents_account_folder_setting__write_date
+msgid "Last Updated on"
+msgstr "Mis à jour le"
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid ""
+"Let's process documents in your Inbox.<br/><i>Tip: Use Tags to filter "
+"documents and structure your process.</i>"
+msgstr ""
+"Traitons les documents dans votre boîte de réception.<br/><i>Astuce : "
+"utilisez des étiquettes pour filtrer les documents et structurer votre "
+"processus.</i>"
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid "Let's process these bills: turn them into vendor bills."
+msgstr "Traitons ces factures : transformons-les en factures fournisseurs."
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid "Let's process this document, coming from our scanner."
+msgstr "Traitons ce document, provenant de notre scanner."
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid ""
+"Let's tag this mail as legal<br/> <i>Tips: actions can be tailored to your "
+"process, according to the workspace.</i>"
+msgstr ""
+"Marquons cet e-mail comme Juridique<br/> <i>Astuce : les actions peuvent "
+"être adaptées à votre processus, en fonction de l'espace de travail.</i>"
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_account_bank_statement_line__suspense_statement_line_id
+#: model:ir.model.fields,field_description:documents_account.field_account_move__suspense_statement_line_id
+msgid "Request document from a bank statement line"
+msgstr "Demander un document à partir d'une ligne de relevé bancaire"
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid "Send this letter to the legal department, by assigning the right tags."
+msgstr ""
+"Envoyez cette lettre au département juridique, en attribuant les bonnes "
+"étiquettes."
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_account_reports_export_wizard__tag_ids
+#: model:ir.model.fields,field_description:documents_account.field_documents_account_folder_setting__tag_ids
+msgid "Tags"
+msgstr "Étiquettes"
+
+#. module: documents_account
+#: model:mail.activity.type,name:documents_account.mail_documents_activity_data_vat
+msgid "Tax Statement"
+msgstr "Déclaration d'impôt"
+
+#. module: documents_account
+#: model_terms:ir.ui.view,arch_db:documents_account.view_account_move_form_inherit_documents_account
+msgid "This invoice has been initiated by a bank transaction."
+msgstr "Cette facture a été initiée par une transaction bancaire."
+
+#. module: documents_account
+#. odoo-javascript
+#: code:addons/documents_account/static/src/js/tour.js:0
+msgid ""
+"Want to become a <b>paperless company</b>? Let's discover Odoo Documents."
+msgstr ""
+"Envie de devenir une <b>société sans papier</b> ? Découvrons Odoo Documents."
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_documents_account_folder_setting__folder_id
+#: model_terms:ir.ui.view,arch_db:documents_account.res_config_settings_view_form
+msgid "Workspace"
+msgstr "Espace de travail "
+
+#. module: documents_account
+#: model_terms:web_tour.tour,rainbow_man_message:documents_account.documents_account_tour
+msgid ""
+"Wow... 6 documents processed in a few seconds, You're good.<br>The tour is "
+"complete. Try uploading your own documents now."
+msgstr ""
+
+#. module: documents_account
+#. odoo-python
+#: code:addons/documents_account/models/documents_document.py:0
+msgid "You can not create account move on folder."
+msgstr ""
+
+#. module: documents_account
+#: model:ir.model.fields,field_description:documents_account.field_res_config_settings__account_folder_id
+msgid "account default folder"
+msgstr "dossier par défaut du compte"
+
+#. module: documents_account
+#: model_terms:ir.ui.view,arch_db:documents_account.view_account_move_form_inherit_documents_account
+msgid "to mark this invoice as paid."
+msgstr "afin de marquer cette facture comme payée."

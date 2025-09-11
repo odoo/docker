@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="ir_cron_update_dgi_state" model="ir.cron">
+        <field name="name">UY: Update DGI Status</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="model_id" ref="account.model_account_move"/>
+        <field name="state">code</field>
+        <field name="code">model._l10n_uy_edi_cron_update_dgi_status()</field>
+    </record>
+
+</odoo>

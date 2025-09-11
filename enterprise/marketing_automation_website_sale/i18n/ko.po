@@ -1,0 +1,390 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* marketing_automation_website_sale
+# 
+# Translators:
+# Wil Odoo, 2024
+# Daye Jeong, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-09-25 09:27+0000\n"
+"PO-Revision-Date: 2024-09-25 09:44+0000\n"
+"Last-Translator: Daye Jeong, 2024\n"
+"Language-Team: Korean (https://app.transifex.com/odoo/teams/41243/ko/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ko\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "! It's been a few days since your purchase. We hope you like it!"
+msgstr "! 구매하신 지 며칠이 지났습니다. 상품이 마음에 드셨기를 바랍니다!"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"-\n"
+"          <span style=\"color: rgb(183, 191, 199); font-size: 12.25px\">September 10 2024</span>"
+msgstr ""
+"-\n"
+"          <span style=\"color: rgb(183, 191, 199); font-size: 12.25px\">2024년 9월 10일</span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"<br/>\n"
+"            <span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">To unsubscribe,</font></span>"
+msgstr ""
+"<br/>\n"
+"            <span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">구독을 취소하려면,</font></span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "<font style=\"color: rgb(0, 0, 255)\">How's everything going?</font>"
+msgstr "<font style=\"color: rgb(0, 0, 255)\">어떻게 되고 있나요?</font>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "<font style=\"color: rgb(255, 0, 0)\">THANK YOU FOR CHOOSING US</font>"
+msgstr "<font style=\"color: rgb(255, 0, 0)\">이용해 주셔서 감사합니다.</font>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "<span style=\"font-size: 1.07143rem\">THANKS FOR YOUR PURCHASE</span>"
+msgstr "<span style=\"font-size: 1.07143rem\">구매해 주셔서 감사합니다</span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid ""
+"<span style=\"font-size: 1.07143rem\">YOU MAKE OUR SUCCESS POSSIBLE</span>\n"
+"              <font style=\"font-size: 12px\">​</font><br/>"
+msgstr ""
+"<span style=\"font-size: 1.07143rem\">여러분이 우리의 성공을 가능하게 합니다.</span>\n"
+"              <font style=\"font-size: 12px\">​</font><br/>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">250 Executive Park Blvd</font></span>\n"
+"            <br/>\n"
+"            <span style=\"font-size: 12px\"><font style=\"color: rgb(183, 191, 199)\">San Francisco, California 94134</font></span>\n"
+"            <br/>\n"
+"            <span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">You received this email from</font>\n"
+"            </span>"
+msgstr ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">250 Executive Park Blvd</font></span>\n"
+"            <br/>\n"
+"            <span style=\"font-size: 12px\"><font style=\"color: rgb(183, 191, 199)\">San Francisco, California 94134</font></span>\n"
+"            <br/>\n"
+"            <span style=\"font-size: 12px\" class=\"o_default_snippet_text\">\n"
+"              <font style=\"color: rgb(183, 191, 199)\">You received this email from</font>\n"
+"            </span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">.</font></span>"
+msgstr ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">.</font></span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">click here</font></span>"
+msgstr ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">여기를 누르세요</font></span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">info@mycompany.com</font></span>"
+msgstr ""
+"<span style=\"font-size: 12px\" class=\"o_default_snippet_text\"><font "
+"style=\"color: rgb(183, 191, 199)\">info@mycompany.com</font></span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+msgid "<strong>VISIT STORE</strong>"
+msgstr "<strong>매장 방문</strong>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+msgid "CHECK OUT OUR LATEST ARRIVALS"
+msgstr "최신 소식 확인하기"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Check out these new arrivals!"
+msgstr "새롭게 추가된 기능을 확인해 보세요!"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "Cheers,"
+msgstr "감사합니다."
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Create Repeat Customers"
+msgstr "단골 고객 만들기"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "Facebook"
+msgstr "페이스북"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "Hey"
+msgstr "안녕하세요"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "How is everything going?"
+msgstr "어떻게 진행되고 있나요?"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid ""
+"If you have any questions or concerns about your product, please\n"
+"              don’t hesitate to reach out. We’re always here to help."
+msgstr ""
+"제품에 대한 질문이나 우려 사항이 있으면 언제든지 문의해 주세요.\n"
+"              언제든지 도움을 드리겠습니다."
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"If you need a hand or have any questions, please don't hesitate to\n"
+"              get in touch with our awesome customer service team. They are here\n"
+"              to help you with any inquiries or concerns you may have. Just\n"
+"              reach out to them, and they will be more than happy to assist you."
+msgstr ""
+"도움이 필요하거나 궁금한 점이 있으면 언제든지 고객 서비스 팀에 문의하세요.\n"
+"              문의 사항이나 우려 사항에 대해 언제든지\n"
+"              도움을 드릴 준비가 되어 있습니다.\n"
+"              연락만 주시면 기꺼이 도와드리겠습니다!"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "Instagram"
+msgstr "인스타그램"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "John Doe, from all of us at MyCompany"
+msgstr "John Doe, MyCompany 직원 일동"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "LinkedIn"
+msgstr "링크드인"
+
+#. module: marketing_automation_website_sale
+#: model:ir.model,name:marketing_automation_website_sale.model_marketing_campaign
+msgid "Marketing Campaign"
+msgstr "마케팅 캠페인"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid ""
+"Michael Fletcher<br/>\n"
+"              <span style=\"font-size: 12px; font-weight: bolder\">CEO</span>"
+msgstr ""
+"Michael Fletcher<br/>\n"
+"              <span style=\"font-size: 12px; font-weight: bolder\">CEO</span>"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "Need anything?"
+msgstr "필요한 게 있으신가요?"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "New Arrivals"
+msgstr "신규 상품"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Purchase Follow-up"
+msgstr "구매 후속 조치"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Purchase Thanks"
+msgstr "구매 감사"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "READ MORE"
+msgstr "더 보기"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Recent Purchase Follow-up"
+msgstr "최근 구매 후속 조치"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid ""
+"Send an email to customers that bought a specific product after their "
+"purchase."
+msgstr "특정 제품을 구매한 고객에게 후속 이메일을 전송합니다."
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "Signature"
+msgstr "서명"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "So...<strong>Thank you once again for choosing us</strong>."
+msgstr "다시 한번, <strong>이용해 주셔서 감사합니다</strong>."
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "Thank you again for choosing us!"
+msgstr "이용해 주셔서 다시 한 번 감사드립니다!"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Thank you for your purchase"
+msgstr "구매해 주셔서 감사합니다"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "TikTok"
+msgstr "틱톡"
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "Turn one-time visitors into repeat buyers."
+msgstr "일회성 방문자를 재구매자로 전환하세요."
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "Unsubscribe"
+msgstr "구독 취소"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid "View Online"
+msgstr "온라인 보기"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "Warm regards,"
+msgstr "감사합니다."
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+msgid ""
+"We are thrilled to announce that we have just received some\n"
+"              amazing new arrivals in our store that we know you're going to\n"
+"              love! 🎉 From trendy fashion pieces to must-have accessories,\n"
+"              we've got something special just for you. Come on in and check out\n"
+"              our latest collection - we can't wait to see you! Happy shopping!\n"
+"              🛍️✨"
+msgstr ""
+"고객님들이 좋아하실 만한\n"
+"              새롭고 특별한 아이템들을\n"
+"              소개합니다! 🎉 스타일리시한 패션 아이템부터 필수 액세서리까지,\n"
+"              특별한 아이템이 여러분을 기다리고 있습니다.\n"
+"              저희 매장에 들러서 최신 컬렉션을 둘러보세요! 즐거운 쇼핑 시간이 되시길 바랍니다!\n"
+"              🛍️✨"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "We look forward to seeing you again soon!"
+msgstr "곧 다시 뵙기를 기대하겠습니다!"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_purchase_followup_arch
+msgid ""
+"We sincerely hope that you are delighted with your recent\n"
+"              purchase. Your satisfaction is our top priority, and we are\n"
+"              here to assist you with any questions or concerns you may\n"
+"              have."
+msgstr ""
+"최근 구매에 만족하셨기를 진심으로 바랍니다.\n"
+"              저희는 고객 만족을 최우선으로 생각하고 있습니다.\n"
+"              궁금한 점이 있으시면 언제든지 문의해 주시기\n"
+"              바랍니다."
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid ""
+"We’re absolutely thrilled to welcome you to the MyCompany family.\n"
+"              We can’t wait for you to experience our product/service and hear\n"
+"              how it went! Don’t hesitate to share your thoughts online using\n"
+"              our hashtag #MyCompany. We’re genuinely excited to see what you\n"
+"              have to say. After all, making people happy is what drives us\n"
+"              at MyCompany."
+msgstr ""
+"MyCompany 패밀리에 가입하신 것을 환영합니다!.\n"
+"              저희의 제품/서비스를 사용해 보신 고객님들의 소중한 경험에 대한 모든 이야기를\n"
+"              듣고 싶습니다. 해시태그 #MyCompany와 함께 여러분의 의견을\n"
+"              온라인에서 자유롭게 공유해 주세요.\n"
+"              여러분의 의견을 기다리고 있습니다.\n"
+"              고객님들의 행복을 위해 최선을 다하는 MyCompany가 되겠습니다."
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid ""
+"What started as a small project in my garage has grown into a\n"
+"              global venture, shipping packages around the world. And what an\n"
+"              incredible journey it’s been... A journey that wouldn’t have been\n"
+"              possible without the support of customers like you."
+msgstr ""
+"차고에서 시작한 작은 프로젝트가 전 세계로 소포를 배송하는\n"
+"              글로벌 벤처로 발전했습니다.\n"
+"              여러분과 같은 고객의 지원이 없었다면\n"
+"              불가능했을 놀라운 여정이었습니다."
+
+#. module: marketing_automation_website_sale
+#. odoo-python
+#: code:addons/marketing_automation_website_sale/models/marketing_campaign.py:0
+msgid "eCommerce"
+msgstr "이커머스"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_purchase_arch
+msgid "© 2024 All Rights Reserved"
+msgstr "© 2024 All Rights Reserved"
+
+#. module: marketing_automation_website_sale
+#: model_terms:ir.ui.view,arch_db:marketing_automation_website_sale.mailing_repeat_customer_new_arrivals_arch
+msgid "🌟 Exciting News Alert! 🌟"
+msgstr "🌟 재밌는 소식 알림! 🌟"

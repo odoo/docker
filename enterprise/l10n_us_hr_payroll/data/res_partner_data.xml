@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_partner_irs" model="res.partner">
+        <field name="name">Internal Revenue Service (IRS)</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_edd_ca" model="res.partner">
+        <field name="name">Employment Development Department (EDD) - State of California</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_tax_finance_ny" model="res.partner">
+        <field name="name">Department of Taxation and Finance - State of New York</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_labor_department_ny" model="res.partner">
+        <field name="name">Department of Labor - State of New York</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_revenue_al" model="res.partner">
+        <field name="name">Alabama Department of Revenue</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_department_employment_nv" model="res.partner">
+        <field name="name">Nevada Department of Employment, Training and Rehabilitation</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_esd_wa" model="res.partner">
+        <field name="name">Washington State Employment Security Department (WA ESD)</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_social_health_department_wa" model="res.partner">
+        <field name="name">Washington State Department of Social and Health Services</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_revenue_co" model="res.partner">
+        <field name="name">Colorado Department of Revenue</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_treasury_division_denver" model="res.partner">
+        <field name="name">Denver Treasury Division</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_finance_department_aurora" model="res.partner">
+        <field name="name">Aurora Finance Department</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_finance_department_glendale" model="res.partner">
+        <field name="name">City of Glendale Finance Department</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_greenwood_village" model="res.partner">
+        <field name="name">Greenwood Village</field>
+        <field name="company_type">company</field>
+    </record>
+
+    <record id="res_partner_finance_department_sheridan" model="res.partner">
+        <field name="name">City of Sheridan Finance Department</field>
+        <field name="company_type">company</field>
+    </record>
+</odoo>

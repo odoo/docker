@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="spreadsheet.documents.ControlPanel" t-inherit="documents.ControlPanel"
+        t-inherit-mode="extension">
+        <xpath expr="//*[hasclass('o_documents_share_button')]" position="after">
+            <button type="button" class="btn btn-secondary"
+                t-if="userIsInternal and singleSelection?.data?.handler === 'spreadsheet'"
+                t-on-click.prevent="onClickFreezeAndShareSpreadsheet" data-hotkey="s">
+                <t t-call="spreadsheet_edition.SpreadsheetIcon"/> Freeze and share
+            </button>
+        </xpath>
+        <xpath expr="//*[hasclass('o_documents_download_button')]" position="attributes">
+            <attribute name="t-if">
+                this.targetRecords.some((r) => r.data.attachment_id and r.data.handler !== "spreadsheet")
+            </attribute>
+        </xpath>
+    </t>
+</templates>

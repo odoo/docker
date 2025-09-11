@@ -1,0 +1,275 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_nz_eft
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-26 04:40+0000\n"
+"PO-Revision-Date: 2024-08-26 04:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields.selection,name:l10n_nz_eft.selection__account_batch_payment__l10n_nz_file_format__anz
+msgid "ANZ"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields.selection,name:l10n_nz_eft.selection__account_batch_payment__l10n_nz_file_format__asb
+msgid "ASB"
+msgstr ""
+
+#. module: l10n_nz_eft
+#. odoo-python
+#: code:addons/l10n_nz_eft/models/account_batch_payment.py:0
+#, python-format
+msgid ""
+"All payments batched using the New Zealand EFT format must have the same "
+"payment listing indicator."
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_batch_payment__l10n_nz_batch_code
+#: model_terms:ir.ui.view,arch_db:l10n_nz_eft.view_payment_form_inherit_l10n_nz
+msgid "Analysis Code"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,help:l10n_nz_eft.field_account_payment__l10n_nz_payee_code
+#: model:ir.model.fields,help:l10n_nz_eft.field_account_payment__l10n_nz_payer_code
+msgid "Analysis code to use for the payment in the bank account."
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields.selection,name:l10n_nz_eft.selection__account_batch_payment__l10n_nz_file_format__bnz
+msgid "BNZ"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_payment__l10n_nz_dd_account_id
+msgid "Bank Account"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model,name:l10n_nz_eft.model_account_batch_payment
+msgid "Batch Payment"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model_terms:ir.ui.view,arch_db:l10n_nz_eft.view_account_journal_form_eft
+msgid "Bulk Listing"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,help:l10n_nz_eft.field_account_payment_method_line__payment_listing_indicator
+msgid ""
+"Bulk Listing = combine all transactions contained in the file and show as one transaction on the payer’s bank statement.\n"
+"C = Individual listing, details copied from other party.\n"
+"I = Individual listing, payer’s and other party’s details entered individually.\n"
+"O = Individual listing, payer’s details all the same."
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields.selection,name:l10n_nz_eft.selection__account_batch_payment__l10n_nz_file_format__westpac
+msgid "DeskBank"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_batch_payment__l10n_nz_dd_info
+msgid "Direct Debit Information"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_batch_payment__l10n_nz_dishonour_account_id
+msgid "Dishonour Account"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_batch_payment__l10n_nz_file_format
+msgid "EFT file format"
+msgstr ""
+
+#. module: l10n_nz_eft
+#. odoo-python
+#: code:addons/l10n_nz_eft/models/account_batch_payment.py:0
+#, python-format
+msgid "For ANZ, you need to specify the Dishonour Account."
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,help:l10n_nz_eft.field_account_batch_payment__l10n_nz_dd_info
+msgid ""
+"For BNZ it should be the Direct Debit Authority\n"
+"For ASB it should be the Registration ID assigned by ASB MSL"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,help:l10n_nz_eft.field_account_batch_payment__l10n_nz_batch_code
+msgid "If sent in bulk, this will be used instead of the payments code."
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,help:l10n_nz_eft.field_account_batch_payment__l10n_nz_batch_particulars
+msgid ""
+"If sent in bulk, this will be used instead of the payments particulars."
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,help:l10n_nz_eft.field_account_batch_payment__l10n_nz_batch_reference
+msgid "If sent in bulk, this will be used instead of the payments references."
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model,name:l10n_nz_eft.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_payment__l10n_nz_available_dd_bank_ids
+msgid "L10N Nz Available Dd Bank"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:account.payment.method,name:l10n_nz_eft.account_payment_method_eft_inbound
+#: model:account.payment.method,name:l10n_nz_eft.account_payment_method_eft_outbound
+msgid "New Zealand EFT"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model_terms:ir.ui.view,arch_db:l10n_nz_eft.view_payment_form_inherit_l10n_nz
+msgid "Particulars"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,help:l10n_nz_eft.field_account_payment__l10n_nz_payee_particulars
+#: model:ir.model.fields,help:l10n_nz_eft.field_account_payment__l10n_nz_payer_particulars
+msgid "Particulars to write down on the payment in the bank account."
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_batch_payment__l10n_nz_company_partner_id
+msgid "Partner"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model_terms:ir.ui.view,arch_db:l10n_nz_eft.view_payment_form_inherit_l10n_nz
+msgid "Payee"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_payment__l10n_nz_payee_code
+msgid "Payee Analysis Code"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_payment__l10n_nz_payee_particulars
+msgid "Payee Particulars"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model_terms:ir.ui.view,arch_db:l10n_nz_eft.view_payment_form_inherit_l10n_nz
+msgid "Payer"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_payment__l10n_nz_payer_code
+msgid "Payer Analysis Code"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_payment__l10n_nz_payer_particulars
+msgid "Payer Particulars"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_payment_method_line__payment_listing_indicator
+msgid "Payment Listing Indicator"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model,name:l10n_nz_eft.model_account_payment_method
+#: model:ir.model,name:l10n_nz_eft.model_account_payment_method_line
+msgid "Payment Methods"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model,name:l10n_nz_eft.model_account_payment
+msgid "Payments"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_batch_payment__l10n_nz_batch_particulars
+msgid "Payments Particulars"
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,field_description:l10n_nz_eft.field_account_batch_payment__l10n_nz_batch_reference
+msgid "Payments Reference"
+msgstr ""
+
+#. module: l10n_nz_eft
+#. odoo-python
+#: code:addons/l10n_nz_eft/models/account_batch_payment.py:0
+#, python-format
+msgid "Please specify a file format before validation."
+msgstr ""
+
+#. module: l10n_nz_eft
+#. odoo-python
+#: code:addons/l10n_nz_eft/models/account_batch_payment.py:0
+#, python-format
+msgid "Please specify the Direct Debit Information."
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model_terms:ir.ui.view,arch_db:l10n_nz_eft.view_batch_payment_form_inherit_eft
+msgid "Select a file format..."
+msgstr ""
+
+#. module: l10n_nz_eft
+#. odoo-python
+#: code:addons/l10n_nz_eft/models/account_batch_payment.py:0
+#, python-format
+msgid ""
+"The bank account of journal %(journal_name)s is missing or the account "
+"number is missing."
+msgstr ""
+
+#. module: l10n_nz_eft
+#. odoo-python
+#: code:addons/l10n_nz_eft/models/account_batch_payment.py:0
+#, python-format
+msgid ""
+"The format of the account \"%s\" was not recognized.\n"
+"The supported formats are:\n"
+"BBbbbbAAAAAAASS\n"
+"BBbbbbAAAAAAASSS\n"
+"BBbbbbAAAAAAAASSS"
+msgstr ""
+
+#. module: l10n_nz_eft
+#. odoo-python
+#: code:addons/l10n_nz_eft/models/account_batch_payment.py:0
+#, python-format
+msgid "The specified file format is not supported."
+msgstr ""
+
+#. module: l10n_nz_eft
+#. odoo-python
+#: code:addons/l10n_nz_eft/models/account_payment.py:0
+#, python-format
+msgid ""
+"To record payments with %s, the Payer Bank Account must be manually "
+"validated. You should go on the bank account in order to validate it."
+msgstr ""
+
+#. module: l10n_nz_eft
+#: model:ir.model.fields,help:l10n_nz_eft.field_account_batch_payment__l10n_nz_dishonour_account_id
+msgid "Used by ANZ as a fallback account in case of dishonored payment."
+msgstr ""

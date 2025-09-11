@@ -1,0 +1,509 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_uk_reports_cis
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-11 11:46+0000\n"
+"PO-Revision-Date: 2024-11-11 11:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.email_body_template_cis_notification
+msgid ""
+",\n"
+"                    <br/><br/>\n"
+"                    We would like to remind you that your CIS Deduction report for the period ending"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.email_body_template_cis_notification
+msgid ""
+".\n"
+"                    <br/><br/>\n"
+"                    Please ensure that the report is sent on time to avoid any potential penalties.\n"
+"                    <br/><br/>\n"
+"                    Best regards,"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:mail.template,body_html:l10n_uk_reports_cis.email_template_cis_response_success
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Dear <t t-out=\"object.sender_user_id.name\"/>,\n"
+"                        <br/><br/>\n"
+"                        Your CIS return response for <t t-out=\"format_date(object.period_end)\"/> is now available on the Chatter section of your company page.\n"
+"                        <br/><br/>\n"
+"                        Please log in to review the details at your convenience.\n"
+"                        <br/><br/>\n"
+"                        Best regards,\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:mail.template,body_html:l10n_uk_reports_cis.email_template_cis_response_failure
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                        Dear <t t-out=\"object.sender_user_id.name\"/>,\n"
+"                        <br/><br/>\n"
+"                        Your CIS return response for <t t-out=\"format_date(object.period_end)\"/> is now available on the Chatter section of your company page. Please note that an error was detected in the initial submission.\n"
+"                        <br/><br/>\n"
+"                        A new submission may be necessary to ensure compliance with HMRC requirements.\n"
+"                        <br/><br/>\n"
+"                        Best regards,\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.cis_monthly_return_wizard_form
+msgid "A CIS Monthly return has already been submited for this period."
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model,name:l10n_uk_reports_cis.model_account_chart_template
+msgid "Account Chart Template"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model,name:l10n_uk_reports_cis.model_account_tax_report_handler
+msgid "Account Report Handler for Tax Reports"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__already_submited_period
+msgid "Already Submited Period"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model,name:l10n_uk_reports_cis.model_cis_tax_report_handler
+msgid "British Tax Report Custom Handler"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:account.report,name:l10n_uk_reports_cis.tax_report_cis
+msgid "CIS Deduction"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:account.report.line,name:l10n_uk_reports_cis.account_uk_cis_report_line_purchase
+msgid "CIS Deduction Purchase"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:mail.template,name:l10n_uk_reports_cis.email_template_cis_notification
+#: model:mail.template,subject:l10n_uk_reports_cis.email_template_cis_notification
+msgid "CIS Deduction Report Submission Due"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:account.report.line,name:l10n_uk_reports_cis.account_uk_cis_report_line_sales
+msgid "CIS Deduction Sales"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields.selection,name:l10n_uk_reports_cis.selection__l10n_uk_hmrc_transaction__transaction_type__cis_monthly_return
+msgid "CIS Monthly Return"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:mail.template,name:l10n_uk_reports_cis.email_template_cis_response_failure
+#: model:mail.template,name:l10n_uk_reports_cis.email_template_cis_response_success
+#: model:mail.template,subject:l10n_uk_reports_cis.email_template_cis_response_failure
+#: model:mail.template,subject:l10n_uk_reports_cis.email_template_cis_response_success
+msgid "CIS Return Response"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-python
+#: code:addons/l10n_uk_reports_cis/models/tax_report.py:0
+msgid "CIS monthly return"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model,name:l10n_uk_reports_cis.model_cis_monthly_return_wizard
+msgid "CIS monthly return wizard"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__hmrc_cis_password
+msgid "CIS password"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.cis_monthly_return_wizard_form
+msgid "Cancel"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model,name:l10n_uk_reports_cis.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.res_partner_form_inherit
+msgid "Construction Industry Scheme"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.view_move_form_asset_inherit
+msgid "Construction Industry Scheme hasn't been enabled for this"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model,name:l10n_uk_reports_cis.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model,name:l10n_uk_reports_cis.model_l10n_uk_hmrc_transaction
+msgid "Contains a single transaction made to hmrc"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__date_from
+msgid "Date From"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__date_to
+msgid "Date To"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.email_body_template_cis_notification
+msgid "Dear"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.cis_monthly_return_wizard_form
+msgid "Declaration"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:account.report.column,name:l10n_uk_reports_cis.cis_report_deduction
+msgid "Deduction"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_partner__l10n_uk_reports_cis_deduction_rate
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_users__l10n_uk_reports_cis_deduction_rate
+msgid "Deduction Rate"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_l10n_uk_hmrc_transaction__document_attachment_id
+msgid "Document Attachment"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__employment_status
+msgid "Employment Status"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_partner__l10n_uk_reports_cis_forename
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_users__l10n_uk_reports_cis_forename
+msgid "Forename"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.hmrc_cis_monthly_return_body
+msgid "GBP"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields.selection,name:l10n_uk_reports_cis.selection__res_partner__l10n_uk_reports_cis_deduction_rate__gross
+msgid "Gross (0%)"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__id
+msgid "ID"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__inactivity_indicator
+msgid "Inactivity Indicator"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__information_correct
+msgid "Information Correct"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.cis_monthly_return_wizard_form
+msgid "Information correct declaration"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-python
+#: code:addons/l10n_uk_reports_cis/models/res_partner.py:0
+msgid "Invalid CIS Verification Number."
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model,name:l10n_uk_reports_cis.model_account_move
+msgid "Journal Entry"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_partner__l10n_uk_cis_enabled
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_users__l10n_uk_cis_enabled
+msgid "L10N Uk Cis Enabled"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_account_bank_statement_line__l10n_uk_cis_inactive_partner
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_account_move__l10n_uk_cis_inactive_partner
+msgid "L10N Uk Cis Inactive Partner"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_account_bank_statement_line__l10n_uk_cis_wrong_taxes
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_account_move__l10n_uk_cis_wrong_taxes
+msgid "L10N Uk Cis Wrong Taxes"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:account.report.column,name:l10n_uk_reports_cis.cis_report_materials
+msgid "Materials"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields.selection,name:l10n_uk_reports_cis.selection__res_partner__l10n_uk_reports_cis_deduction_rate__net
+msgid "Net (20%)"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.actions.server,name:l10n_uk_reports_cis.ir_cron_l10n_uk_reports_cis_notify_cis_return_ir_actions_server
+msgid "Notify companies for CIS return"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-python
+#: code:addons/l10n_uk_reports_cis/wizard/monthly_return_wizard.py:0
+msgid "Open the company form"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.cis_monthly_return_wizard_form
+msgid "Password"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:account.report.column,name:l10n_uk_reports_cis.cis_report_payment
+msgid "Payment"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-python
+#: code:addons/l10n_uk_reports_cis/wizard/monthly_return_wizard.py:0
+msgid "Please fill the CIS fields on the company."
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-python
+#: code:addons/l10n_uk_reports_cis/models/tax_report.py:0
+msgid "Refresh HMRC request"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_partner__l10n_uk_reports_cis_second_forename
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_users__l10n_uk_reports_cis_second_forename
+msgid "Second Forename"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-javascript
+#: code:addons/l10n_uk_reports_cis/static/src/components/send_monthly_return_button.xml:0
+msgid "Send"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-javascript
+#: code:addons/l10n_uk_reports_cis/static/src/components/send_monthly_return_button.js:0
+msgid "Send CIS monthly return to HMRC"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-python
+#: code:addons/l10n_uk_reports_cis/models/tax_report.py:0
+msgid "Send to HMRC"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:mail.template,description:l10n_uk_reports_cis.email_template_cis_notification
+msgid ""
+"Sent to companies to inform that they need to return they CIS deductions to "
+"HMRC"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:mail.template,description:l10n_uk_reports_cis.email_template_cis_response_failure
+#: model:mail.template,description:l10n_uk_reports_cis.email_template_cis_response_success
+msgid ""
+"Sent to users who sent a CIS return to HMRC to notify that it resulted in "
+"either an error or a success"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-javascript
+#: code:addons/l10n_uk_reports_cis/static/src/components/report_warning.xml:0
+msgid "Some"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__subcontractor_verification
+msgid "Subcontractor Verification"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_partner__l10n_uk_reports_cis_surname
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_users__l10n_uk_reports_cis_surname
+msgid "Surname"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,help:l10n_uk_reports_cis.field_res_partner__l10n_uk_reports_cis_verification_number
+#: model:ir.model.fields,help:l10n_uk_reports_cis.field_res_users__l10n_uk_reports_cis_verification_number
+msgid ""
+"Ten digits number starting with 'V' provided by HMRC when verifying this "
+"partner"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.view_move_form_asset_inherit
+msgid ""
+"The CIS deduction does not correspond to the CIS deduction rate expected for"
+" this vendor."
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.cis_monthly_return_wizard_form
+msgid ""
+"The report period is not correctly aligned to the CIS period from HMRC, "
+"therefore you cannot send the report. Please use the tax period filter."
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_l10n_uk_hmrc_transaction__transaction_type
+msgid "Transaction type"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields.selection,name:l10n_uk_reports_cis.selection__res_partner__l10n_uk_reports_cis_deduction_rate__unmatched
+msgid "Unmatched (30%)"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-python
+#: code:addons/l10n_uk_reports_cis/models/tax_report.py:0
+msgid "Unregistered partner"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-python
+#: code:addons/l10n_uk_reports_cis/models/tax_report.py:0
+msgid "Unregistered partners"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_cis_monthly_return_wizard__use_wrong_period
+msgid "Use Wrong Password"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_partner__l10n_uk_reports_cis_verification_number
+#: model:ir.model.fields,field_description:l10n_uk_reports_cis.field_res_users__l10n_uk_reports_cis_verification_number
+msgid "Verification Number"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-python
+#: code:addons/l10n_uk_reports_cis/models/res_partner.py:0
+msgid "When a partner is an individual, a forename needs to be set."
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-python
+#: code:addons/l10n_uk_reports_cis/models/res_partner.py:0
+msgid "When a partner is an individual, a surname needs to be set."
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.cis_monthly_return_wizard_form
+msgid ""
+"When you submit this CIS monthly return, you are making a legal declaration "
+"that the information is true and complete."
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-javascript
+#: code:addons/l10n_uk_reports_cis/static/src/components/report_warning.xml:0
+msgid "in this report are not registered to the Construction Industry Scheme."
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.email_body_template_cis_notification
+msgid "is due to be submitted to HMRC by"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.hmrc_cis_monthly_return_body
+msgid "no"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#. odoo-javascript
+#: code:addons/l10n_uk_reports_cis/static/src/components/report_warning.xml:0
+msgid "partners"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.view_move_form_asset_inherit
+msgid "vendor"
+msgstr ""
+
+#. module: l10n_uk_reports_cis
+#: model_terms:ir.ui.view,arch_db:l10n_uk_reports_cis.hmrc_cis_monthly_return_body
+msgid "yes"
+msgstr ""

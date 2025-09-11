@@ -1,0 +1,19 @@
+
+.o_documents_kanban_view, .o_documents_list_view {
+    .btn-group {
+        > .btn, .btn-group {
+            // Overriding rules from bootstrap_review_backend to ensure active
+            // button will always be rendered on top of stacked kanban cards or
+            // document previews.
+            &:active, &.active, &:active:hover, &.active:hover {
+                z-index: $zindex-dropdown;
+            }
+        }
+    }
+
+    @media (min-width: 992px) {
+        .o_control_panel_breadcrumbs {
+            min-height: 5.6vh;
+        }
+    }
+}

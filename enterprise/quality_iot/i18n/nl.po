@@ -1,0 +1,103 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* quality_iot
+# 
+# Translators:
+# Wil Odoo, 2024
+# Manon Rondou, 2024
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-19 13:02+0000\n"
+"PO-Revision-Date: 2024-09-25 09:44+0000\n"
+"Last-Translator: Manon Rondou, 2024\n"
+"Language-Team: Dutch (https://app.transifex.com/odoo/teams/41243/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: quality_iot
+#. odoo-javascript
+#: code:addons/quality_iot/static/src/iot_picture/iot_picture.js:0
+msgid "Capture image..."
+msgstr "Maak foto..."
+
+#. module: quality_iot
+#. odoo-javascript
+#: code:addons/quality_iot/static/src/iot_measure.js:0
+#: code:addons/quality_iot/static/src/iot_picture/iot_picture.js:0
+msgid "Connection to device failed"
+msgstr "Verbinden met apparaat mislukt"
+
+#. module: quality_iot
+#: model:ir.model.fields,field_description:quality_iot.field_quality_point__device_id
+msgid "Device"
+msgstr "Apparaat"
+
+#. module: quality_iot
+#: model:ir.model.fields,field_description:quality_iot.field_quality_check__device_name
+msgid "Device Name: "
+msgstr "Apparaatnaam: "
+
+#. module: quality_iot
+#: model:ir.model.fields,field_description:quality_iot.field_quality_check__ip
+msgid "Domain Address"
+msgstr "Domein adres"
+
+#. module: quality_iot
+#. odoo-javascript
+#: code:addons/quality_iot/static/src/iot_measure.xml:0
+msgid "Get Measurement"
+msgstr "Meting verkrijgen"
+
+#. module: quality_iot
+#. odoo-javascript
+#: code:addons/quality_iot/static/src/iot_measure.js:0
+msgid "Getting measurement..."
+msgstr "Meting wordt uitgevoerd ..."
+
+#. module: quality_iot
+#: model:ir.model,name:quality_iot.model_iot_device
+msgid "IOT Device"
+msgstr "IoT toestel"
+
+#. module: quality_iot
+#: model:ir.model.fields,field_description:quality_iot.field_quality_check__identifier
+msgid "Identifier"
+msgstr "Identificatie "
+
+#. module: quality_iot
+#. odoo-javascript
+#: code:addons/quality_iot/static/src/iot_measure.js:0
+#: code:addons/quality_iot/static/src/iot_picture/iot_picture.js:0
+msgid "Please check if the device is still connected."
+msgstr "Controleer of het toestel nog steeds verbonden is."
+
+#. module: quality_iot
+#: model:ir.model.fields,field_description:quality_iot.field_iot_device__qcp_test_type
+msgid "Qcp Test Type"
+msgstr "Controlepunt test type"
+
+#. module: quality_iot
+#: model:ir.model,name:quality_iot.model_quality_check
+msgid "Quality Check"
+msgstr "Kwaliteitscontrole"
+
+#. module: quality_iot
+#: model:ir.model,name:quality_iot.model_quality_point
+msgid "Quality Control Point"
+msgstr "Kwaliteit controlepunt"
+
+#. module: quality_iot
+#: model_terms:ir.ui.view,arch_db:quality_iot.iot_device_view_form_inherit
+msgid "Quality Control Points"
+msgstr "Kwaliteitscontrolepunten"
+
+#. module: quality_iot
+#: model:ir.model.fields,field_description:quality_iot.field_iot_device__quality_point_ids
+msgid "Quality Point"
+msgstr "Kwaliteitscontrolepunt"

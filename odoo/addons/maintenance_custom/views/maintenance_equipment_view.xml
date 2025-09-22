@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Tree/List view customization -->
+    <record id="maintenance_equipment_list_custom" model="ir.ui.view">
+        <field name="name">maintenance.equipment.list.custom</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_tree"/>
+        <field name="arch" type="xml">
+            <!-- Add "Assigned Company" after category -->
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="assigned_company" optional="show"/>
+            </xpath>
+
+            <!-- Add TRN + other fields after company -->
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="trn_no" string="TRN No." optional="show"/>
+                <field name="project_reference" optional="show"/>
+                <field name="sla" optional="show"/>
+                <field name="effective_date" string="Start Date" optional="show"/>
+                <field name="warranty_date" string="Expiration Date" optional="show"/>
+                <field name="active" optional="show"/>
+                <field name="maintenance_team_id" string="Assigned Department" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Form view customization -->
+    <record id="maintenance_equipment_form_custom" model="ir.ui.view">
+        <field name="name">maintenance.equipment.form.custom</field>
+        <field name="model">maintenance.equipment</field>
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_form"/>
+        <field name="arch" type="xml">
+            <!-- Add "Assigned Company" after Company field -->
+            <xpath expr="//form/sheet/group/group/field[@name='company_id']" position="after">
+                <field name="assigned_company"/>
+            </xpath>
+
+            <!-- Add Active after Location -->
+            <xpath expr="//field[@name='location']" position="after">
+                <field name="active"/>
+            </xpath>
+
+            <!-- Add Project Reference after Model -->
+            <xpath expr="//field[@name='model']" position="after">
+                <field name="project_reference"/>
+            </xpath>
+
+            <!-- Add SLA after Project Refence -->
+            <xpath expr="//field[@name='project_reference']" position="after">
+                <field name="sla"/>
+            </xpath>
+
+            <!-- Add TRN before Project Description -->
+            <xpath expr="//field[@name='partner_ref']" position="before">
+                <field name="trn_no" string="TRN No."/>
+            </xpath>
+            
+            <xpath expr="//field[@name='effective_date']" position="before">
+                <field name="preventive_maintenance_coverage"/>
+            </xpath>
+            <!-- Rename Effective Date -->
+            <xpath expr="//field[@name='effective_date']" position="attributes">
+                <attribute name="string">Starting Date</attribute>
+            </xpath>
+
+            <!-- Move warranty_date after effective_date -->
+            <xpath expr="//field[@name='effective_date']" position="after">
+                <field name="warranty_date"/>
+            </xpath>
+
+            <!-- Rename Warranty Date -->
+            <xpath expr="//field[@name='warranty_date']" position="attributes">
+                <attribute name="string">End Date</attribute>
+            </xpath>
+            
+            <!-- Rename Maintenance Team -->
+            <xpath expr="//field[@name='maintenance_team_id']" position="attributes">
+                <attribute name="string">Assigned Department</attribute>
+            </xpath>
+
+            <xpath expr="//page[@name='maintenance']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <!-- Inject Studio-generated xpaths (preserved) -->
+            <xpath expr="//form/sheet/notebook" position="inside">
+                <page string="Client Information" name="studio_page_2a6_1j4uabvn7">
+                    <group name="studio_group_2a6">
+                        <group name="studio_group_2a6_left">
+                            <field name="client_name"/>
+                            <field name="phone_no"/>
+                            <field name="email"/>
+                            <field name="position"/>
+                        </group>
+                        <group name="studio_group_2a6_right"/>
+                    </group>
+                </page>
+            </xpath>
+
+            <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='product_information']/group[1]/group[2]/field[@name='warranty_date'][2]" position="replace"/>
+            <xpath expr="//field[@name='cost']" position="replace">
+                <xpath expr="//form[1]/sheet[1]/group[1]/group[2]/field[@name='active']" position="move"/>
+            </xpath>
+            <xpath expr="//page[@name='description']" position="replace"/>
+            <xpath expr="//field[@name='scrap_date']" position="replace">
+                <xpath expr="//field[@name='employee_id']" position="move"/>
+            </xpath>
+            <xpath expr="//field[@name='assign_date']" position="replace"/>
+            <xpath expr="//field[@name='technician_user_id']" position="replace"/>
+            <xpath expr="//field[@name='equipment_assign_to']" position="replace">
+                <xpath expr="//form[1]/sheet[1]/notebook[1]/page[@name='product_information']/group[1]/group[1]/field[@name='serial_no']" position="move"/>
+            </xpath>
+            <xpath expr="//field[@name='assigned_company']" position="replace"/>
+            <xpath expr="//form[1]/sheet[1]/group[1]/group[1]/field[@name='company_id']" position="replace">
+                <xpath expr="//field[@name='model']" position="move"/>
+            </xpath>
+            <xpath expr="//form[1]/sheet[1]/div[not(@name)][1]/label[1]" position="attributes">
+                <attribute name="string">Brand</attribute>
+            </xpath>
+            <xpath expr="//field[@name='department_id']" position="before">
+                <xpath expr="//field[@name='location']" position="move"/>
+                <xpath expr="//field[@name='partner_id']" position="move"/>
+            </xpath>
+            <xpath expr="//field[@name='maintenance_team_id']" position="before">
+                <xpath expr="//field[@name='category_id']" position="move"/>
+            </xpath>
+            <xpath expr="//field[@name='employee_id']" position="attributes">
+                <attribute name="string">Assigned Engineer</attribute>
+            </xpath>
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="account_executive"/>
+            </xpath>
+            <xpath expr="//field[@name='location']" position="attributes">
+                <attribute name="string">Machine Location</attribute>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="string">Company</attribute>
+            </xpath>
+            <xpath expr="//field[@name='partner_ref']" position="attributes">
+                <attribute name="string">Project Description</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Extra Studio customization: Kanban -->
+    <record id="odoo_studio_equipmen_5fd486a3_0adc_4797_8f13_701dd5f8565c" model="ir.ui.view" context="{'studio': True}">
+        <field name="inherit_id" ref="maintenance.hr_equipment_view_kanban"/>
+        <field name="model">maintenance.equipment</field>
+        <field name="name">maintenance.equipment.kanban.custom</field>
+        <field name="priority">200</field>
+        <field name="type">kanban</field>
+        <field name="arch" type="xml">
+            <xpath expr="//kanban[1]/templates[1]/t[@t-name='card']/div[1]" position="before">
+                <field name="partner_id" display="full"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

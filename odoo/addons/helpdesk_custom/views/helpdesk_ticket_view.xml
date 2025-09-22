@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Main Customization -->
+    <record id="view_helpdesk_ticket_form_custom" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.custom</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="priority">160</field>
+        <field name="arch" type="xml">
+
+            <!-- ========================= -->
+            <!-- Field Customizations -->
+            <!-- ========================= -->
+
+            <!-- Rename Assigned Group -->
+            <xpath expr="//field[@name='team_id']" position="attributes">
+                <attribute name="string">Assigned Group</attribute>
+            </xpath>
+
+            <!-- Insert TSD Duty after Responsible -->
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="tsd_duty"/>
+            </xpath>
+
+            <!-- Insert Start/End Dates after Priority -->
+            <xpath expr="//field[@name='priority']" position="after">
+                <field name="start_date"/>
+                <field name="end_date"/>
+            </xpath>
+
+            <!-- Insert Engineer, Companion, Service Code after Customer -->
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="assigned_engineer"/>
+                <field name="companion"/>
+                <field name="service_code"/>
+            </xpath>
+
+            <!-- Move Tags right after Email CC -->
+            <xpath expr="//field[@name='email_cc']" position="after">
+                <xpath expr="//field[@name='tag_ids']" position="move"/>
+            </xpath>
+
+            <!-- ========================= -->
+            <!-- Hide Unwanted Default Pages -->
+            <!-- ========================= -->
+
+            <!-- Hide the default Extra Info page -->
+            <xpath expr="//page[@name='extra_info']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <!-- ========================= -->
+            <!-- Custom Notebook Pages -->
+            <!-- ========================= -->
+
+            <!-- Add a new notebook page for Additional Information -->
+            <xpath expr="//form/sheet/notebook" position="inside">
+                <page string="Additional Information" name="custom_additional_info">
+
+                    <!-- Equipment Many2Many table -->
+                    <group>
+                        <field name="equipment_ids" nolabel="1">
+                            <list string="Equipment" editable="bottom">
+                                <field name="trn_no" string="TRN No."/>
+                                <field name="category_id" string="Category"/>
+                                <field name="name" string="Equipment Name"/>
+                                <field name="serial_no" string="Serial Number"/>
+                                <field name="company_id" string="Company" groups="base.group_multi_company"/>
+                                <field name="warranty_date" string="Expiration Date"/>
+                                <field name="active" string="Active"/>
+                            </list>
+                        </field>
+                    </group>
+
+                    <!-- Resolution Notes & Attachments -->
+                    <group>
+                        <group>
+                            <field name="resolution_note"/>
+                        </group>
+                        <group>
+                            <field name="attached_files" widget="file" filename="attached_files_filename"/>
+                            <field name="attached_files_filename" invisible="1"/>
+                        </group>
+                    </group>
+
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- ========================= -->
+    <!-- Reorder Tabs -->
+    <!-- ========================= -->
+    <record id="view_helpdesk_ticket_form_custom_reorder" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.custom.reorder</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="priority">180</field>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='description']" position="before">
+                <page name="custom_additional_info" position="move"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

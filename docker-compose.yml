@@ -28,6 +28,9 @@ services:
       - odoo_data:/var/lib/odoo
       - ./config:/etc/odoo
       - ./enterprise:/mnt/enterprise-addons
+      - ./odoo/addons:/mnt/extra-addons
+      - ./odoo/outputs:/var/log/odoo
+
     restart: unless-stopped
 volumes:
   db_data:

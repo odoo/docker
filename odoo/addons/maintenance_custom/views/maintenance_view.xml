@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!-- Extend the Maintenance Team tree view -->
+  <record id="maintenance_team_list_customization" model="ir.ui.view">
+    <field name="name">maintenance.team.list.customization</field>
+    <field name="model">maintenance.team</field>
+    <field name="inherit_id" ref="maintenance.maintenance_team_view_tree"/>
+    <field name="priority">99</field>
+    <field name="arch" type="xml">
+      <data>
+        <!-- Add custom_team_members after name -->
+        <xpath expr="//list[1]/field[@name='name']" position="after">
+          <field name="custom_team_members" widget="many2many_avatar_employee"
+                 domain="[('share', '=', False)]"
+                 optional="show"/>
+        </xpath>
+
+        <!-- Hide original member_ids field -->
+        <xpath expr="//field[@name='member_ids']" position="attributes">
+          <attribute name="column_invisible">True</attribute>
+          <attribute name="options">{"color_field": "color", "no_create": false}</attribute>
+          <attribute name="widget">many2many_avatar_employee</attribute>
+        </xpath>
+      </data>
+    </field>
+  </record>
+</odoo>

@@ -1,0 +1,107 @@
+name: Auto-update Odoo Dockerfiles
+
+on:
+  schedule:
+    # Every Sunday at midnight UTC
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  update-dockerfiles:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update Dockerfiles to latest nightly releases
+        id: update
+        run: |
+          CHANGED=false
+          FIRST_VERSION=""
+          LAST_VERSION=""
+          NEW_REL=""
+
+          for dockerfile in */Dockerfile; do
+            dir=$(dirname "$dockerfile")
+            version="$dir"
+
+            echo "========================================="
+            echo "Processing version: $version"
+            echo "========================================="
+
+            NIGHTLY_BASE="https://nightly.odoo.com/${version}/nightly/deb"
+
+            # Find the latest dated .deb package from the nightly index
+            LATEST_DEB=$(curl -sfL "${NIGHTLY_BASE}/" \
+              | grep -oP "odoo_${version}\.\d{8}_all\.deb" \
+              | sort -V \
+              | tail -1)
+
+            if [ -z "$LATEST_DEB" ]; then
+              echo "WARNING: Could not find .deb for version ${version}, skipping."
+              continue
+            fi
+
+            echo "Latest deb: ${LATEST_DEB}"
+
+            # Extract ODOO_RELEASE (the date part) from the filename
+            # e.g. odoo_17.0.20260217_all.deb -> 20260217
+            NEW_RELEASE=$(echo "$LATEST_DEB" | sed -E "s/odoo_${version}\.([0-9]+)_all\.deb/\1/")
+            echo "New ODOO_RELEASE: ${NEW_RELEASE}"
+
+            # Read current ODOO_RELEASE from Dockerfile
+            CURRENT_RELEASE=$(grep -oP 'ODOO_RELEASE=\K[^\s]+' "$dockerfile" || true)
+            echo "Current ODOO_RELEASE: ${CURRENT_RELEASE}"
+
+            # Skip if already up to date
+            if [ "$NEW_RELEASE" = "$CURRENT_RELEASE" ]; then
+              echo "No changes for version ${version}."
+              continue
+            fi
+
+            # Download the .deb and compute its SHA1 (matching Dockerfile's sha1sum check)
+            DEB_URL="${NIGHTLY_BASE}/${LATEST_DEB}"
+            echo "Downloading ${DEB_URL} ..."
+            curl -sfL -o "/tmp/${LATEST_DEB}" "${DEB_URL}"
+
+            if [ ! -f "/tmp/${LATEST_DEB}" ]; then
+              echo "WARNING: Failed to download ${DEB_URL}, skipping."
+              continue
+            fi
+
+            NEW_SHA=$(sha1sum "/tmp/${LATEST_DEB}" | awk '{print $1}')
+            echo "New ODOO_SHA: ${NEW_SHA}"
+            rm -f "/tmp/${LATEST_DEB}"
+
+            # Update ODOO_RELEASE and ODOO_SHA in the Dockerfile
+            sed -i -E "s/(ARG ODOO_RELEASE=).*/\1${NEW_RELEASE}/" "$dockerfile"
+            sed -i -E "s/(ARG ODOO_SHA=).*/\1${NEW_SHA}/" "$dockerfile"
+
+            CHANGED=true
+            NEW_REL="${NEW_RELEASE}"
+            if [ -z "$FIRST_VERSION" ]; then
+              FIRST_VERSION="${version}"
+            fi
+            LAST_VERSION="${version}"
+            echo "Updated ${version}: RELEASE=${NEW_RELEASE}, SHA=${NEW_SHA}"
+          done
+
+          echo "changed=${CHANGED}" >> "$GITHUB_OUTPUT"
+          echo "release=${NEW_REL}" >> "$GITHUB_OUTPUT"
+          if [ "$FIRST_VERSION" = "$LAST_VERSION" ]; then
+            echo "versions=${FIRST_VERSION}" >> "$GITHUB_OUTPUT"
+          else
+            echo "versions=${FIRST_VERSION}-${LAST_VERSION}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push changes
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add */Dockerfile
+          git commit -m "[REF] Odoo ${{ steps.update.outputs.versions }}: update to release ${{ steps.update.outputs.release }}"
+          git push

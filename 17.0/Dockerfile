@@ -67,7 +67,6 @@ RUN echo 'deb http://apt.postgresql.org/pub/repos/apt/ jammy-pgdg main' > /etc/a
 
 # Install rtlcss (on Debian buster)
 RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends nodejs npm \
     && npm install -g rtlcss \
     && apt-get purge --autoremove -y npm \
@@ -75,8 +74,8 @@ RUN apt-get update && \
 
 # Install Odoo
 ENV ODOO_VERSION=17.0
-ARG ODOO_RELEASE=20260716
-ARG ODOO_SHA=cd9e6f860feb0d058a1a35e7547485ca698c46e0
+ARG ODOO_RELEASE=20260723
+ARG ODOO_SHA=5ff18afa5597d4ac5498d1ea788c0ea8d7b80ef4
 RUN curl -o odoo.deb -sSL http://nightly.odoo.com/${ODOO_VERSION}/nightly/deb/odoo_${ODOO_VERSION}.${ODOO_RELEASE}_all.deb \
     && echo "${ODOO_SHA} odoo.deb" | sha1sum -c - \
     && apt-get update \
